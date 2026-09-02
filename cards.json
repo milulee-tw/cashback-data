@@ -1,0 +1,3259 @@
+{
+  "schemaVersion": 2,
+  "dataVersion": "2026-09-03",
+  "generatedAt": "2026-09-02T23:08:30Z",
+  "enums": {
+    "cards.status": {
+      "active": "發行中",
+      "discontinued": "已停辦",
+      "soldout": "已停售"
+    },
+    "components.archetype": {
+      "base": "無腦型",
+      "merchantList": "特店名單型",
+      "dailyBenefit": "每日權益型",
+      "channel": "通路指定型",
+      "external": "外部達標型"
+    },
+    "components.unit": {
+      "percent": "百分比",
+      "point": "點數",
+      "mile": "哩程"
+    },
+    "components.capType": {
+      "none": "無上限",
+      "amount": "金額上限",
+      "spend": "消費上限",
+      "count": "次數上限",
+      "spendDynamic": "動態消費上限"
+    },
+    "components.capPeriod": {
+      "calendarMonth": "日曆月",
+      "statementCycle": "帳單週期",
+      "campaign": "活動期間",
+      "cardAnchor": "核卡日錨點"
+    },
+    "conditions.attachType": {
+      "component": "掛在回饋組件",
+      "membership": "掛在身份"
+    },
+    "conditions.stateClass": {
+      "structural": "結構前提",
+      "recoverable": "期間內可補救",
+      "onsite": "當場可操作"
+    },
+    "conditions.type": {
+      "membership": "需具備身份",
+      "spendThreshold": "消費門檻",
+      "assetThreshold": "資產門檻",
+      "externalGoal": "外部達標",
+      "payment": "指定支付",
+      "benefitSlot": "權益方案選擇",
+      "registration": "活動登錄",
+      "autopay": "自動扣繳設定",
+      "pointPayment": "以點數支付",
+      "ebill": "電子帳單設定",
+      "appBinding": "綁定指定App",
+      "fxExchange": "換匯",
+      "securityTrade": "證券交易"
+    },
+    "conditions.operator": {
+      "gte": "大於等於",
+      "lte": "小於等於",
+      "eq": "等於"
+    },
+    "conditions.valueUnit": {
+      "TWD": "新台幣元",
+      "times": "次",
+      "point": "點",
+      "kcal": "大卡",
+      "rings": "環"
+    },
+    "conditions.valuePeriod": {
+      "thisMonth": "本月",
+      "lastMonth": "上月",
+      "statementCycle": "本期帳單",
+      "campaign": "活動期間",
+      "thisDay": "當日"
+    },
+    "conditions.countsThisTx": {
+      "Y": "本次算進門檻",
+      "N": "本次不算",
+      "NA": "不適用"
+    },
+    "memberships.kind": {
+      "tier": "等級",
+      "subscription": "訂閱方案",
+      "registration": "活動登錄"
+    },
+    "memberships.scope": {
+      "account": "帳戶層級",
+      "card": "卡片層級"
+    },
+    "conditions.targetId": {
+      "esun-plan-simple": "玉山Unicard 簡單選",
+      "esun-plan-custom": "玉山Unicard 任意選",
+      "esunwallet": "玉山Wallet 電子支付",
+      "dacard": "大咖 DACARD App",
+      "cube-plan-digital": "玩數位",
+      "cube-plan-food": "樂饗購",
+      "cube-plan-travel": "趣旅行",
+      "cube-plan-select": "集精選",
+      "cube-plan-fpg": "台塑家",
+      "cube-plan-pluspay": "全支付",
+      "cube-plan-fixed": "固定回饋",
+      "pluspay": "全支付"
+    },
+    "components.stackMode": {
+      "add": "相加",
+      "replace": "取代",
+      "exclusive": "互斥擇一"
+    }
+  },
+  "categories": [
+    {
+      "id": "dining",
+      "name": "餐飲",
+      "parentId": null,
+      "keywords": [
+        "餐廳",
+        "飯",
+        "麵",
+        "火鍋",
+        "咖啡",
+        "燒肉",
+        "壽司",
+        "早午餐"
+      ]
+    },
+    {
+      "id": "supermarket",
+      "name": "超市量販",
+      "parentId": null,
+      "keywords": [
+        "全聯",
+        "家樂福",
+        "大潤發",
+        "愛買",
+        "好市多",
+        "Costco"
+      ]
+    },
+    {
+      "id": "convenience",
+      "name": "便利商店",
+      "parentId": null,
+      "keywords": [
+        "7-11",
+        "統一超商",
+        "全家",
+        "萊爾富",
+        "OK超商"
+      ]
+    },
+    {
+      "id": "ecommerce",
+      "name": "網購",
+      "parentId": null,
+      "keywords": [
+        "蝦皮",
+        "momo",
+        "PChome",
+        "博客來",
+        "淘寶",
+        "Amazon"
+      ]
+    },
+    {
+      "id": "transport",
+      "name": "交通",
+      "parentId": null,
+      "keywords": [
+        "加油",
+        "停車",
+        "高鐵",
+        "台鐵",
+        "捷運",
+        "計程車",
+        "Uber"
+      ]
+    },
+    {
+      "id": "streaming",
+      "name": "影音訂閱",
+      "parentId": null,
+      "keywords": [
+        "Netflix",
+        "Disney",
+        "Spotify",
+        "YouTube",
+        "KKBOX"
+      ]
+    },
+    {
+      "id": "delivery",
+      "name": "外送",
+      "parentId": null,
+      "keywords": [
+        "foodpanda",
+        "Uber Eats",
+        "熊貓"
+      ]
+    },
+    {
+      "id": "mobilepay",
+      "name": "行動支付",
+      "parentId": null,
+      "keywords": [
+        "LINE Pay",
+        "街口",
+        "悠遊付",
+        "全支付"
+      ]
+    },
+    {
+      "id": "travel",
+      "name": "旅遊",
+      "parentId": null,
+      "keywords": [
+        "旅行社",
+        "訂房",
+        "機票",
+        "Agoda",
+        "Booking",
+        "KLOOK"
+      ]
+    },
+    {
+      "id": "department",
+      "name": "百貨",
+      "parentId": null,
+      "keywords": [
+        "新光三越",
+        "遠百",
+        "SOGO",
+        "微風",
+        "誠品"
+      ]
+    },
+    {
+      "id": "medical",
+      "name": "醫療",
+      "parentId": null,
+      "keywords": [
+        "醫院",
+        "診所",
+        "藥局",
+        "牙醫"
+      ]
+    },
+    {
+      "id": "utility",
+      "name": "繳費",
+      "parentId": null,
+      "keywords": [
+        "水費",
+        "電費",
+        "瓦斯",
+        "電信",
+        "保費",
+        "稅"
+      ]
+    },
+    {
+      "id": "other",
+      "name": "其他",
+      "parentId": null,
+      "keywords": []
+    },
+    {
+      "id": "sports",
+      "name": "運動健身",
+      "parentId": null,
+      "keywords": [
+        "World Gym",
+        "健身工廠",
+        "Curves",
+        "摩曼頓",
+        "Anytime Fitness",
+        "運動中心",
+        "健身"
+      ]
+    },
+    {
+      "id": "pharmacy",
+      "name": "醫藥保健",
+      "parentId": "medical",
+      "keywords": [
+        "屈臣氏",
+        "康是美",
+        "寶雅",
+        "杏一",
+        "大樹藥局",
+        "丁丁藥局",
+        "新高橋"
+      ]
+    },
+    {
+      "id": "gaming",
+      "name": "電競娛樂",
+      "parentId": "streaming",
+      "keywords": [
+        "App Store",
+        "Google Play",
+        "Nintendo",
+        "PlayStation",
+        "Steam"
+      ]
+    },
+    {
+      "id": "transitcard",
+      "name": "電子票證加值",
+      "parentId": null,
+      "keywords": [
+        "悠遊卡自動加值",
+        "一卡通加值",
+        "icash加值"
+      ]
+    },
+    {
+      "id": "overseas",
+      "name": "國外消費",
+      "parentId": null,
+      "keywords": []
+    },
+    {
+      "id": "shopping",
+      "name": "綜合購物",
+      "parentId": null,
+      "keywords": [
+        "百貨",
+        "網購",
+        "零售"
+      ]
+    },
+    {
+      "id": "entertainment",
+      "name": "娛樂",
+      "parentId": null,
+      "keywords": [
+        "電影",
+        "樂園",
+        "KTV",
+        "展演"
+      ]
+    },
+    {
+      "id": "ticketing",
+      "name": "售票",
+      "parentId": "entertainment",
+      "keywords": [
+        "拓元",
+        "tixCraft",
+        "KKTIX",
+        "年代售票"
+      ]
+    },
+    {
+      "id": "insurance",
+      "name": "保費",
+      "parentId": "utility",
+      "keywords": [
+        "保險",
+        "保費"
+      ]
+    }
+  ],
+  "pointCurrencies": [
+    {
+      "id": "esun-epoint",
+      "name": "玉山 e point",
+      "issuer": "玉山銀行",
+      "cashValue": 1.0,
+      "expiryMonths": null
+    },
+    {
+      "id": "sinopac-fengpoint",
+      "name": "豐點",
+      "issuer": "永豐銀行",
+      "cashValue": 1.0,
+      "expiryMonths": null
+    },
+    {
+      "id": "cathay-treepoint",
+      "name": "小樹點",
+      "issuer": "國泰世華",
+      "cashValue": 1.0,
+      "expiryMonths": 36
+    },
+    {
+      "id": "hsbc-cashpoint",
+      "name": "滙豐現金積點",
+      "issuer": "滙豐銀行",
+      "cashValue": 1.0,
+      "expiryMonths": 24
+    }
+  ],
+  "merchantLists": [
+    {
+      "id": "sinopac-sport-list",
+      "name": "永豐SPORT卡指定支付／通路",
+      "merchants": [
+        {
+          "name": "Apple Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Google Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Samsung Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Garmin Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "World Gym",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "健身工廠",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "Curves",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "喬山健康科技",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "Welltivity",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "台北市運動中心",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "新北市運動中心",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "Nuli女力APP",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "摩曼頓",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "Anytime Fitness",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "超核心健身中心",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "DAZN",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "屈臣氏",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "康是美",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "寶雅",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "好心肝健檢中心",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "杏一藥局",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "大樹藥局",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "丁丁藥局",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "新高橋藥局",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "App Store",
+          "aliases": [],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Google Play商店應用程式",
+          "aliases": [],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Nintendo",
+          "aliases": [],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "PlayStation",
+          "aliases": [],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Steam",
+          "aliases": [],
+          "categoryId": "gaming"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-sport-newpay",
+      "name": "永豐SPORT卡新戶指定行動支付",
+      "merchants": [
+        {
+          "name": "LINE Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Apple Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Google Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Samsung Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "全支付",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "55688 APP",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Mitsui Shopping Park Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-dawho-newpay",
+      "name": "DAWHO卡新戶指定行動支付",
+      "merchants": [
+        {
+          "name": "LINE Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Apple Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Google Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Samsung Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "全支付",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "55688 APP",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Mitsui Shopping Park Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        }
+      ]
+    },
+    {
+      "id": "esun-up-list",
+      "name": "玉山Unicard百大指定消費",
+      "merchants": [
+        {
+          "name": "（名單待補）",
+          "aliases": [],
+          "categoryId": null
+        }
+      ]
+    },
+    {
+      "id": "ubot-line-list",
+      "name": "聯邦LINE Bank指定網購/影音/遊戲/購票",
+      "merchants": [
+        {
+          "name": "MOMO購物網",
+          "aliases": [],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "PChome線上購物",
+          "aliases": [],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "淘寶",
+          "aliases": [],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "蝦皮",
+          "aliases": [],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "酷澎",
+          "aliases": [],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Netflix",
+          "aliases": [],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "Disney+",
+          "aliases": [],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "CatchPlay",
+          "aliases": [],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "Spotify",
+          "aliases": [],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "LINE TV",
+          "aliases": [],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "KKTV",
+          "aliases": [],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "KKBOX",
+          "aliases": [],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "Steam",
+          "aliases": [],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "PlayStation",
+          "aliases": [],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Nintendo",
+          "aliases": [],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Blizzard",
+          "aliases": [],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Garena",
+          "aliases": [],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "MyCard",
+          "aliases": [],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "tixCraft拓元",
+          "aliases": [],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "KKTIX",
+          "aliases": [],
+          "categoryId": "ticketing"
+        }
+      ]
+    },
+    {
+      "id": "cathay-cube-digital",
+      "name": "CUBE 玩數位指定通路",
+      "merchants": [
+        {
+          "name": "蝦皮購物",
+          "aliases": [],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "momo購物網",
+          "aliases": [],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "PChome 24h購物",
+          "aliases": [],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "小樹購",
+          "aliases": [],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Coupang 酷澎",
+          "aliases": [],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Apple 媒體服務",
+          "aliases": [],
+          "categoryId": "streaming"
+        }
+      ]
+    },
+    {
+      "id": "cathay-cube-food",
+      "name": "CUBE 樂饗購指定通路",
+      "merchants": [
+        {
+          "name": "遠東SOGO",
+          "aliases": [],
+          "categoryId": "department"
+        },
+        {
+          "name": "新光三越",
+          "aliases": [],
+          "categoryId": "department"
+        },
+        {
+          "name": "微風百貨",
+          "aliases": [],
+          "categoryId": "department"
+        },
+        {
+          "name": "統一時代",
+          "aliases": [],
+          "categoryId": "department"
+        },
+        {
+          "name": "Uber Eats",
+          "aliases": [],
+          "categoryId": "delivery"
+        },
+        {
+          "name": "誠品生活",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "康是美",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "屈臣氏",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        }
+      ]
+    },
+    {
+      "id": "cathay-cube-travel",
+      "name": "CUBE 趣旅行指定通路",
+      "merchants": [
+        {
+          "name": "海外實體消費",
+          "aliases": [],
+          "categoryId": "overseas"
+        },
+        {
+          "name": "日本指定遊樂園",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "指定航空",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "指定飯店住宿",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "高鐵",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "Uber",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "Apple錢包SUICA/PASMO/ICOCA",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "國內旅行社",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "旅遊訂房平台",
+          "aliases": [],
+          "categoryId": "travel"
+        }
+      ]
+    },
+    {
+      "id": "cathay-cube-select",
+      "name": "CUBE 集精選指定通路",
+      "merchants": [
+        {
+          "name": "全聯福利中心實體門市",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "7-ELEVEN",
+          "aliases": [],
+          "categoryId": "convenience"
+        },
+        {
+          "name": "全家",
+          "aliases": [],
+          "categoryId": "convenience"
+        },
+        {
+          "name": "台灣中油直營站",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "車麻吉",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "uTagGo",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "萬家福（樂家康）",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "LOPIA台灣",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "充電站",
+          "aliases": [],
+          "categoryId": "transport"
+        }
+      ]
+    },
+    {
+      "id": "cathay-cube-fpg",
+      "name": "CUBE 台塑家指定通路",
+      "merchants": [
+        {
+          "name": "台塑石油",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "台亞",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "福懋",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "統一速邁樂",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "台塑生醫",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "長庚生技",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "7-ELEVEN",
+          "aliases": [],
+          "categoryId": "convenience"
+        },
+        {
+          "name": "全家",
+          "aliases": [],
+          "categoryId": "convenience"
+        },
+        {
+          "name": "萊爾富",
+          "aliases": [],
+          "categoryId": "convenience"
+        }
+      ]
+    }
+  ],
+  "memberships": [
+    {
+      "id": "esun-up-sub",
+      "name": "玉山 UP選",
+      "kind": "subscription",
+      "issuer": "玉山銀行",
+      "scope": "card",
+      "level": null,
+      "userPrompt": "你這個月有訂閱 UP選嗎？",
+      "qualifyPaths": [
+        [
+          {
+            "id": "esun-up-sub-1",
+            "stateClass": "recoverable",
+            "type": "spendThreshold",
+            "targetId": null,
+            "operator": "gte",
+            "value": 30000.0,
+            "valueUnit": "TWD",
+            "valuePeriod": "lastMonth",
+            "countsThisTx": null,
+            "userPrompt": "上月 Unicard 簽帳滿 3 萬了嗎？"
+          },
+          {
+            "id": "esun-up-sub-2",
+            "stateClass": "recoverable",
+            "type": "assetThreshold",
+            "targetId": null,
+            "operator": "gte",
+            "value": 300000.0,
+            "valueUnit": "TWD",
+            "valuePeriod": "lastMonth",
+            "countsThisTx": null,
+            "userPrompt": "上月玉山平均資產有 30 萬嗎？"
+          }
+        ],
+        [
+          {
+            "id": "esun-up-sub-3",
+            "stateClass": "recoverable",
+            "type": "pointPayment",
+            "targetId": "esun-epoint",
+            "operator": "gte",
+            "value": 149.0,
+            "valueUnit": "point",
+            "valuePeriod": "thisMonth",
+            "countsThisTx": null,
+            "userPrompt": "或用 149 點玉山 e point 付費訂閱"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "sinopac-dawho-tier0",
+      "name": "DAWHO 大大等級",
+      "kind": "tier",
+      "issuer": "永豐銀行",
+      "scope": "account",
+      "level": 0,
+      "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？",
+      "qualifyPaths": []
+    },
+    {
+      "id": "sinopac-dawho-tier1",
+      "name": "DAWHO 大戶等級",
+      "kind": "tier",
+      "issuer": "永豐銀行",
+      "scope": "account",
+      "level": 1,
+      "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？",
+      "qualifyPaths": [
+        [
+          {
+            "id": "tier1-p1",
+            "stateClass": "recoverable",
+            "type": "assetThreshold",
+            "targetId": null,
+            "operator": "gte",
+            "value": 300000.0,
+            "valueUnit": "TWD",
+            "valuePeriod": "thisMonth",
+            "countsThisTx": null,
+            "userPrompt": "這個月 DAWHO 平均財富有 30 萬嗎？"
+          }
+        ],
+        [
+          {
+            "id": "tier1-p2",
+            "stateClass": "recoverable",
+            "type": "fxExchange",
+            "targetId": null,
+            "operator": "gte",
+            "value": 5000.0,
+            "valueUnit": "TWD",
+            "valuePeriod": "thisMonth",
+            "countsThisTx": null,
+            "userPrompt": "這個月有完成單筆新臺幣換外幣 5,000 元以上嗎？"
+          }
+        ],
+        [
+          {
+            "id": "tier1-p3",
+            "stateClass": "recoverable",
+            "type": "securityTrade",
+            "targetId": null,
+            "operator": "gte",
+            "value": 1.0,
+            "valueUnit": "times",
+            "valuePeriod": "thisMonth",
+            "countsThisTx": null,
+            "userPrompt": "這個月有用 DAWHO 帳戶完成台股現貨交易嗎？"
+          }
+        ],
+        [
+          {
+            "id": "tier1-p4",
+            "stateClass": "structural",
+            "type": "autopay",
+            "targetId": null,
+            "operator": null,
+            "value": null,
+            "valueUnit": null,
+            "valuePeriod": null,
+            "countsThisTx": null,
+            "userPrompt": "你有用 DAWHO 帳戶當永豐信貸的授權扣款帳戶嗎？"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "sinopac-dawho-tier2",
+      "name": "DAWHO 大戶Plus等級",
+      "kind": "tier",
+      "issuer": "永豐銀行",
+      "scope": "account",
+      "level": 2,
+      "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？",
+      "qualifyPaths": [
+        [
+          {
+            "id": "tier2-p1",
+            "stateClass": "recoverable",
+            "type": "assetThreshold",
+            "targetId": null,
+            "operator": "gte",
+            "value": 1000000.0,
+            "valueUnit": "TWD",
+            "valuePeriod": "thisMonth",
+            "countsThisTx": null,
+            "userPrompt": "這個月 DAWHO 平均財富有 100 萬嗎？"
+          },
+          {
+            "id": "tier2-p2",
+            "stateClass": "recoverable",
+            "type": "fxExchange",
+            "targetId": null,
+            "operator": "gte",
+            "value": 5000.0,
+            "valueUnit": "TWD",
+            "valuePeriod": "thisMonth",
+            "countsThisTx": null,
+            "userPrompt": "這個月有完成單筆換匯 5,000 元以上嗎？"
+          }
+        ],
+        [
+          {
+            "id": "tier2-p3",
+            "stateClass": "recoverable",
+            "type": "assetThreshold",
+            "targetId": null,
+            "operator": "gte",
+            "value": 1000000.0,
+            "valueUnit": "TWD",
+            "valuePeriod": "thisMonth",
+            "countsThisTx": null,
+            "userPrompt": "這個月 DAWHO 平均財富有 100 萬嗎？"
+          },
+          {
+            "id": "tier2-p4",
+            "stateClass": "recoverable",
+            "type": "securityTrade",
+            "targetId": null,
+            "operator": "gte",
+            "value": 1.0,
+            "valueUnit": "times",
+            "valuePeriod": "thisMonth",
+            "countsThisTx": null,
+            "userPrompt": "這個月有用 DAWHO 綁定永豐金證券完成台股現貨交易嗎？"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "esun-newuser",
+      "name": "玉山信用卡新戶",
+      "kind": "registration",
+      "issuer": "玉山銀行",
+      "scope": "account",
+      "level": null,
+      "userPrompt": "你是玉山信用卡新戶嗎？（核卡日前六個月內未持有玉山任一張流通正卡）",
+      "qualifyPaths": []
+    },
+    {
+      "id": "sinopac-newuser",
+      "name": "永豐信用卡新戶",
+      "kind": "registration",
+      "issuer": "永豐銀行",
+      "scope": "account",
+      "level": null,
+      "userPrompt": "你是永豐信用卡新戶嗎？（從未持有永豐信用卡或停卡已滿6個月以上）",
+      "qualifyPaths": []
+    },
+    {
+      "id": "ubot-newuser",
+      "name": "聯邦信用卡新戶",
+      "kind": "registration",
+      "issuer": "聯邦銀行",
+      "scope": "account",
+      "level": null,
+      "userPrompt": "你是聯邦信用卡新戶嗎？（核卡前六個月內未曾持有任何一張聯邦信用卡）",
+      "qualifyPaths": []
+    },
+    {
+      "id": "cathay-cube-lv1",
+      "name": "CUBE 權益分級 Level 1",
+      "kind": "tier",
+      "issuer": "國泰世華",
+      "scope": "card",
+      "level": 1,
+      "userPrompt": "你的 CUBE 卡是哪一個權益分級？",
+      "qualifyPaths": []
+    },
+    {
+      "id": "cathay-cube-lv2",
+      "name": "CUBE 權益分級 Level 2",
+      "kind": "tier",
+      "issuer": "國泰世華",
+      "scope": "card",
+      "level": 2,
+      "userPrompt": "你的 CUBE 卡是哪一個權益分級？",
+      "qualifyPaths": [
+        [
+          {
+            "id": "cube-lv2-p1",
+            "stateClass": "recoverable",
+            "type": "autopay",
+            "targetId": null,
+            "operator": null,
+            "value": null,
+            "valueUnit": null,
+            "valuePeriod": null,
+            "countsThisTx": null,
+            "userPrompt": "你有用國泰世華帳戶設定自動扣繳 CUBE 卡費嗎？"
+          }
+        ],
+        [
+          {
+            "id": "cube-lv2-p2",
+            "stateClass": "recoverable",
+            "type": "appBinding",
+            "targetId": "cube-app",
+            "operator": null,
+            "value": null,
+            "valueUnit": null,
+            "valuePeriod": null,
+            "countsThisTx": null,
+            "userPrompt": "你有用 CUBE App 繳這張卡的卡費嗎？"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "cathay-cube-lv3",
+      "name": "CUBE 權益分級 Level 3",
+      "kind": "tier",
+      "issuer": "國泰世華",
+      "scope": "card",
+      "level": 3,
+      "userPrompt": "你的 CUBE 卡是哪一個權益分級？",
+      "qualifyPaths": [
+        [
+          {
+            "id": "cube-lv3-p1",
+            "stateClass": "structural",
+            "type": "assetThreshold",
+            "targetId": null,
+            "operator": null,
+            "value": null,
+            "valueUnit": null,
+            "valuePeriod": null,
+            "countsThisTx": null,
+            "userPrompt": "你是國泰世華財富管理貴賓嗎？"
+          }
+        ]
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": "esun-unicard",
+      "name": "Unicard 信用卡",
+      "aliases": [
+        "玉山Unicard",
+        "玉山U卡",
+        "Unicard"
+      ],
+      "issuer": "玉山銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://event.esunbank.com.tw/credit/unicard/index.html",
+      "applyUrl": null,
+      "lastVerified": "2026-08-30",
+      "components": [
+        {
+          "id": "esun-unicard-c1",
+          "label": "一般消費（僅帳單e化）",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 0.3,
+          "unit": "point",
+          "pointCurrencyId": "esun-epoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-general",
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-c1-1",
+                "stateClass": "structural",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-unicard-c2",
+          "label": "一般消費（e化＋自動扣繳）",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "esun-epoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-general",
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-c2-1",
+                "stateClass": "structural",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦玉山帳單e化嗎？"
+              },
+              {
+                "id": "esun-c2-2",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定玉山臺幣帳戶自動扣繳卡費嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-unicard-c3",
+          "label": "百大指定消費－簡單選",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": "esun-up-list",
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "esun-epoint",
+          "cap": {
+            "type": "amount",
+            "value": 1000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-c3-1",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "esun-plan-simple",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisMonth",
+                "countsThisTx": null,
+                "userPrompt": "這個月你的 Unicard 方案設定是哪一個？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-unicard-c4",
+          "label": "百大指定消費－任意選",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": "esun-up-list",
+          "rate": 2.5,
+          "unit": "point",
+          "pointCurrencyId": "esun-epoint",
+          "cap": {
+            "type": "amount",
+            "value": 1000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-c4-1",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "esun-plan-custom",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisMonth",
+                "countsThisTx": null,
+                "userPrompt": "這個月你的 Unicard 方案設定是哪一個？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-unicard-c5",
+          "label": "百大指定消費－UP選",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": "esun-up-list",
+          "rate": 3.5,
+          "unit": "point",
+          "pointCurrencyId": "esun-epoint",
+          "cap": {
+            "type": "amount",
+            "value": 5000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-c5-1",
+                "stateClass": "recoverable",
+                "type": "membership",
+                "targetId": "esun-up-sub",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisMonth",
+                "countsThisTx": null,
+                "userPrompt": "你這個月有訂閱 UP選嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-unicard-c6",
+          "label": "期間限定新申辦－新戶玉山Wallet加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 15.5,
+          "unit": "point",
+          "pointCurrencyId": "esun-epoint",
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-08-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-newpromo",
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-c6-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "esun-newuser",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是玉山信用卡新戶嗎？"
+              },
+              {
+                "id": "esun-c6-2",
+                "stateClass": "structural",
+                "type": "payment",
+                "targetId": "esunwallet",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆有用玉山Wallet電子支付嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-unicard-c7",
+          "label": "期間限定新申辦－舊戶玉山Wallet加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 5.5,
+          "unit": "point",
+          "pointCurrencyId": "esun-epoint",
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-08-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-newpromo",
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-c7-1",
+                "stateClass": "structural",
+                "type": "payment",
+                "targetId": "esunwallet",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆有用玉山Wallet電子支付嗎？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sinopac-sport",
+      "name": "永豐SPORT卡",
+      "aliases": [
+        "永豐SPORT",
+        "運動卡",
+        "汗水不白流卡",
+        "SPORT卡"
+      ],
+      "issuer": "永豐銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://bank.sinopac.com/sinopacBT/webevents/2008_SportCard2/index.html",
+      "applyUrl": null,
+      "lastVerified": "2026-08-30",
+      "components": [
+        {
+          "id": "sinopac-sport-c1",
+          "label": "卡片基本回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 0.3,
+          "unit": "point",
+          "pointCurrencyId": "sinopac-fengpoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "sinopac-sport-c2",
+          "label": "電子化帳單加碼",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 0.7,
+          "unit": "point",
+          "pointCurrencyId": "sinopac-fengpoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "sport-c2-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐電子或行動帳單嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-sport-c3",
+          "label": "運動獎勵",
+          "archetype": "external",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "sinopac-fengpoint",
+          "cap": {
+            "type": "amount",
+            "value": 50.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "sport-c3-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "dacard",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有下載大咖 DACARD App 並串接運動數據嗎？"
+              },
+              {
+                "id": "sport-c3-2",
+                "stateClass": "recoverable",
+                "type": "externalGoal",
+                "targetId": null,
+                "operator": "gte",
+                "value": 10000.0,
+                "valueUnit": "kcal",
+                "valuePeriod": "thisMonth",
+                "countsThisTx": null,
+                "userPrompt": "這個月運動累積 10,000 大卡了嗎？"
+              },
+              {
+                "id": "sport-c3-3",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳卡費嗎？"
+              }
+            ],
+            [
+              {
+                "id": "sport-c3-4",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "dacard",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有下載大咖 DACARD App 並串接運動數據嗎？"
+              },
+              {
+                "id": "sport-c3-5",
+                "stateClass": "recoverable",
+                "type": "externalGoal",
+                "targetId": null,
+                "operator": "gte",
+                "value": 10.0,
+                "valueUnit": "rings",
+                "valuePeriod": "thisMonth",
+                "countsThisTx": null,
+                "userPrompt": "這個月 Apple Watch 完成 10 次圓滿畫圈了嗎？"
+              },
+              {
+                "id": "sport-c3-6",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳卡費嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-sport-c4",
+          "label": "指定支付／通路加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": "sinopac-sport-list",
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "sinopac-fengpoint",
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "sport-c4-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "dacard",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有下載大咖 DACARD App 並串接運動數據嗎？"
+              },
+              {
+                "id": "sport-c4-2",
+                "stateClass": "recoverable",
+                "type": "externalGoal",
+                "targetId": null,
+                "operator": "gte",
+                "value": 10000.0,
+                "valueUnit": "kcal",
+                "valuePeriod": "thisMonth",
+                "countsThisTx": null,
+                "userPrompt": "這個月運動累積 10,000 大卡了嗎？"
+              },
+              {
+                "id": "sport-c4-3",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳卡費嗎？"
+              }
+            ],
+            [
+              {
+                "id": "sport-c4-4",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "dacard",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有下載大咖 DACARD App 並串接運動數據嗎？"
+              },
+              {
+                "id": "sport-c4-5",
+                "stateClass": "recoverable",
+                "type": "externalGoal",
+                "targetId": null,
+                "operator": "gte",
+                "value": 10.0,
+                "valueUnit": "rings",
+                "valuePeriod": "thisMonth",
+                "countsThisTx": null,
+                "userPrompt": "這個月 Apple Watch 完成 10 次圓滿畫圈了嗎？"
+              },
+              {
+                "id": "sport-c4-6",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳卡費嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-sport-c5",
+          "label": "新戶指定行動支付",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": "sinopac-sport-newpay",
+          "rate": 20.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "sport-c5-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "sinopac-newuser",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是永豐信用卡新戶嗎？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sinopac-dawho",
+      "name": "DAWHO現金回饋信用卡",
+      "aliases": [
+        "永豐大戶卡",
+        "大戶卡",
+        "DAWHO卡"
+      ],
+      "issuer": "永豐銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/DAWHO.html",
+      "applyUrl": null,
+      "lastVerified": "2026-08-30",
+      "components": [
+        {
+          "id": "sinopac-dawho-c1",
+          "label": "基本回饋－國內",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": null,
+          "validTo": null,
+          "stackMode": "add",
+          "stackGroup": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "sinopac-dawho-c2",
+          "label": "基本回饋－國外",
+          "archetype": "base",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "rate": 2.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": null,
+          "validTo": null,
+          "stackMode": "add",
+          "stackGroup": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "sinopac-dawho-c3",
+          "label": "指定任務加碼－大戶",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 2.5,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 400.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "dawho-tier-bonus",
+          "conditionPaths": [
+            [
+              {
+                "id": "dawho-c3-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "sinopac-dawho-tier1",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？"
+              },
+              {
+                "id": "dawho-c3-2",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定 DAWHO 帳戶自動扣繳卡費嗎？"
+              },
+              {
+                "id": "dawho-c3-3",
+                "stateClass": "structural",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定電子或行動帳單並取消實體帳單嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-dawho-c4",
+          "label": "指定任務加碼－大戶Plus",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 4.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 1000.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "dawho-tier-bonus",
+          "conditionPaths": [
+            [
+              {
+                "id": "dawho-c4-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "sinopac-dawho-tier2",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？"
+              },
+              {
+                "id": "dawho-c4-2",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定 DAWHO 帳戶自動扣繳卡費嗎？"
+              },
+              {
+                "id": "dawho-c4-3",
+                "stateClass": "structural",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定電子或行動帳單並取消實體帳單嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-dawho-c5",
+          "label": "悠遊卡自動加值－大戶",
+          "archetype": "channel",
+          "categoryIds": [
+            "transitcard"
+          ],
+          "merchantListId": null,
+          "rate": 3.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 100.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": null,
+          "validTo": null,
+          "stackMode": "replace",
+          "stackGroup": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "dawho-c5-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "sinopac-dawho-tier1",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？"
+              },
+              {
+                "id": "dawho-c5-2",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定 DAWHO 帳戶自動扣繳卡費嗎？"
+              },
+              {
+                "id": "dawho-c5-3",
+                "stateClass": "structural",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定電子或行動帳單並取消實體帳單嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-dawho-c6",
+          "label": "悠遊卡自動加值－大戶Plus",
+          "archetype": "channel",
+          "categoryIds": [
+            "transitcard"
+          ],
+          "merchantListId": null,
+          "rate": 5.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": null,
+          "validTo": null,
+          "stackMode": "replace",
+          "stackGroup": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "dawho-c6-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "sinopac-dawho-tier2",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？"
+              },
+              {
+                "id": "dawho-c6-2",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定 DAWHO 帳戶自動扣繳卡費嗎？"
+              },
+              {
+                "id": "dawho-c6-3",
+                "stateClass": "structural",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定電子或行動帳單並取消實體帳單嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-dawho-c7",
+          "label": "新戶指定行動支付",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": "sinopac-dawho-newpay",
+          "rate": 20.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "dawho-c7-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "sinopac-newuser",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是永豐信用卡新戶嗎？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsbc-liveplus",
+      "name": "滙豐Live+現金回饋卡",
+      "aliases": [
+        "滙豐Live+",
+        "Live+卡",
+        "滙豐現金回饋卡"
+      ],
+      "issuer": "滙豐銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://www.hsbc.com.tw/credit-cards/products/liveplus/",
+      "applyUrl": null,
+      "lastVerified": "2026-09-03",
+      "components": [
+        {
+          "id": "hsbc-liveplus-c1",
+          "label": "一般通路消費",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 0.88,
+          "unit": "point",
+          "pointCurrencyId": "hsbc-cashpoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "hsbc-liveplus-c2",
+          "label": "三大通路加碼（餐飲/購物/娛樂）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "dining",
+            "shopping",
+            "entertainment"
+          ],
+          "merchantListId": null,
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "hsbc-cashpoint",
+          "cap": {
+            "type": "amount",
+            "value": 888.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "hsbc-liveplus-c3",
+          "label": "精選國家餐飲加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "dining"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "hsbc-cashpoint",
+          "cap": {
+            "type": "amount",
+            "value": 200.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "hsbc-liveplus-c4",
+          "label": "自動扣繳任務加碼",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "hsbc-cashpoint",
+          "cap": {
+            "type": "amount",
+            "value": 200.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "hsbc-c4-1",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有用滙豐帳戶設定自動扣繳這張卡的帳單嗎？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubot-linebank",
+      "name": "聯邦LINE Bank聯名信用卡",
+      "aliases": [
+        "LINE Bank聯名卡",
+        "minini卡",
+        "聯邦LINE Bank卡"
+      ],
+      "issuer": "聯邦銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://activity.ubot.com.tw/LINEBankCard/index.htm",
+      "applyUrl": null,
+      "lastVerified": "2026-09-03",
+      "components": [
+        {
+          "id": "ubot-linebank-c1",
+          "label": "國內一般消費",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-08-01",
+          "validTo": "2027-07-31",
+          "stackMode": "exclusive",
+          "stackGroup": "ubot-line-base",
+          "conditionPaths": []
+        },
+        {
+          "id": "ubot-linebank-c2",
+          "label": "國外一般消費",
+          "archetype": "base",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "rate": 2.5,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-08-01",
+          "validTo": "2027-07-31",
+          "stackMode": "exclusive",
+          "stackGroup": "ubot-line-base",
+          "conditionPaths": []
+        },
+        {
+          "id": "ubot-linebank-c3",
+          "label": "保費",
+          "archetype": "base",
+          "categoryIds": [
+            "insurance"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-08-01",
+          "validTo": "2027-07-31",
+          "stackMode": "exclusive",
+          "stackGroup": "ubot-line-base",
+          "conditionPaths": []
+        },
+        {
+          "id": "ubot-linebank-c4",
+          "label": "指定通路加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "ecommerce",
+            "streaming",
+            "gaming",
+            "ticketing"
+          ],
+          "merchantListId": "ubot-line-list",
+          "rate": 3.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-08-01",
+          "validTo": "2027-07-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "ubot-linebank-c5",
+          "label": "新戶自動扣款禮",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 5.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "count",
+            "value": 3.0,
+            "period": "cardAnchor",
+            "anchorDays": 180
+          },
+          "validFrom": "2026-08-01",
+          "validTo": "2027-07-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubot-c5-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "ubot-newuser",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是聯邦信用卡新戶嗎？"
+              },
+              {
+                "id": "ubot-c5-2",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有用 LINE Bank 主帳戶設定自動扣繳這張卡嗎？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cathay-cube",
+      "name": "CUBE信用卡",
+      "aliases": [
+        "CUBE卡",
+        "國泰CUBE",
+        "CUBE icash"
+      ],
+      "issuer": "國泰世華",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://www.cathay-cube.com.tw/cathaybk/personal/product/credit-card/cards/cube",
+      "applyUrl": null,
+      "lastVerified": "2026-09-03",
+      "components": [
+        {
+          "id": "cathay-cube-c0",
+          "label": "一般消費",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 0.3,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": []
+        },
+        {
+          "id": "cathay-cube-c1",
+          "label": "玩數位（Level 1）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "ecommerce",
+            "streaming"
+          ],
+          "merchantListId": "cathay-cube-digital",
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "spendDynamic",
+            "value": 500000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "cube-c1-slot",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "cube-plan-digital",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisDay",
+                "countsThisTx": null,
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              },
+              {
+                "id": "cube-c1-lv",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "cathay-cube-lv1",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "cathay-cube-c2",
+          "label": "玩數位（Level 2）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "ecommerce",
+            "streaming"
+          ],
+          "merchantListId": "cathay-cube-digital",
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "spendDynamic",
+            "value": 500000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "cube-c2-slot",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "cube-plan-digital",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisDay",
+                "countsThisTx": null,
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              },
+              {
+                "id": "cube-c2-lv",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "cathay-cube-lv2",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "cathay-cube-c3",
+          "label": "玩數位（Level 3）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "ecommerce",
+            "streaming"
+          ],
+          "merchantListId": "cathay-cube-digital",
+          "rate": 3.3,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "spendDynamic",
+            "value": 500000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "cube-c3-slot",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "cube-plan-digital",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisDay",
+                "countsThisTx": null,
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              },
+              {
+                "id": "cube-c3-lv",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "cathay-cube-lv3",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "cathay-cube-c4",
+          "label": "樂饗購（Level 1）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "dining",
+            "delivery",
+            "department",
+            "shopping"
+          ],
+          "merchantListId": "cathay-cube-food",
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "spendDynamic",
+            "value": 500000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "cube-c4-slot",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "cube-plan-food",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisDay",
+                "countsThisTx": null,
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              },
+              {
+                "id": "cube-c4-lv",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "cathay-cube-lv1",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "cathay-cube-c5",
+          "label": "樂饗購（Level 2）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "dining",
+            "delivery",
+            "department",
+            "shopping"
+          ],
+          "merchantListId": "cathay-cube-food",
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "spendDynamic",
+            "value": 500000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "cube-c5-slot",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "cube-plan-food",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisDay",
+                "countsThisTx": null,
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              },
+              {
+                "id": "cube-c5-lv",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "cathay-cube-lv2",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "cathay-cube-c6",
+          "label": "樂饗購（Level 3）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "dining",
+            "delivery",
+            "department",
+            "shopping"
+          ],
+          "merchantListId": "cathay-cube-food",
+          "rate": 3.3,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "spendDynamic",
+            "value": 500000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "cube-c6-slot",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "cube-plan-food",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisDay",
+                "countsThisTx": null,
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              },
+              {
+                "id": "cube-c6-lv",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "cathay-cube-lv3",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "cathay-cube-c7",
+          "label": "趣旅行（Level 1）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "travel",
+            "transport",
+            "overseas"
+          ],
+          "merchantListId": "cathay-cube-travel",
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "spendDynamic",
+            "value": 500000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "cube-c7-slot",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "cube-plan-travel",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisDay",
+                "countsThisTx": null,
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              },
+              {
+                "id": "cube-c7-lv",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "cathay-cube-lv1",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "cathay-cube-c8",
+          "label": "趣旅行（Level 2）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "travel",
+            "transport",
+            "overseas"
+          ],
+          "merchantListId": "cathay-cube-travel",
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "spendDynamic",
+            "value": 500000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "cube-c8-slot",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "cube-plan-travel",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisDay",
+                "countsThisTx": null,
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              },
+              {
+                "id": "cube-c8-lv",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "cathay-cube-lv2",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "cathay-cube-c9",
+          "label": "趣旅行（Level 3）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "travel",
+            "transport",
+            "overseas"
+          ],
+          "merchantListId": "cathay-cube-travel",
+          "rate": 3.3,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "spendDynamic",
+            "value": 500000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "cube-c9-slot",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "cube-plan-travel",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisDay",
+                "countsThisTx": null,
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              },
+              {
+                "id": "cube-c9-lv",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "cathay-cube-lv3",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "cathay-cube-c10",
+          "label": "集精選",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "supermarket",
+            "convenience",
+            "transport"
+          ],
+          "merchantListId": "cathay-cube-select",
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "spendDynamic",
+            "value": 500000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "cube-c10-slot",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "cube-plan-select",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisDay",
+                "countsThisTx": null,
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "cathay-cube-c11",
+          "label": "台塑家",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "transport",
+            "convenience",
+            "pharmacy"
+          ],
+          "merchantListId": "cathay-cube-fpg",
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "spendDynamic",
+            "value": 500000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "cube-c11-slot",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "cube-plan-fpg",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisDay",
+                "countsThisTx": null,
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "cathay-cube-c12",
+          "label": "全支付",
+          "archetype": "channel",
+          "categoryIds": [
+            "mobilepay",
+            "supermarket"
+          ],
+          "merchantListId": null,
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "spendDynamic",
+            "value": 500000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "cube-c12-slot",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "cube-plan-pluspay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisDay",
+                "countsThisTx": null,
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              },
+              {
+                "id": "cube-c12-pay",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "pluspay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆有用全支付綁 CUBE 卡付款嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "cathay-cube-c13",
+          "label": "固定回饋－一般消費",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.2,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "cube-c13-slot",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "cube-plan-fixed",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisDay",
+                "countsThisTx": null,
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "cathay-cube-c14",
+          "label": "固定回饋－海外實體消費",
+          "archetype": "base",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "rate": 2.5,
+          "unit": "point",
+          "pointCurrencyId": "cathay-treepoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "cube-plan",
+          "conditionPaths": [
+            [
+              {
+                "id": "cube-c14-slot",
+                "stateClass": "recoverable",
+                "type": "benefitSlot",
+                "targetId": "cube-plan-fixed",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisDay",
+                "countsThisTx": null,
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
