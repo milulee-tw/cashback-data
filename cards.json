@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "dataVersion": "2026-09-05",
-  "generatedAt": "2026-09-04T18:08:31Z",
+  "generatedAt": "2026-09-04T19:24:25Z",
   "enums": {
     "cards.status": {
       "active": "發行中",
@@ -112,7 +112,13 @@
       "linepay": "LINE Pay",
       "linepay-marketing-consent": "LINE Pay 行銷資訊提供政策同意",
       "wowprime-pay": "王品瘋Pay",
-      "applepay": "Apple Pay"
+      "applepay": "Apple Pay",
+      "pi-wallet": "Pi 拍錢包",
+      "icashpay": "icash Pay",
+      "openwallet": "OPEN 錢包",
+      "ipassmoney": "iPASS MONEY",
+      "esun-line-notify": "玉山 LINE 官方帳號綁定",
+      "pxpay": "PX Pay"
     },
     "components.stackMode": {
       "add": "相加",
@@ -435,6 +441,41 @@
       "issuer": "王品集團",
       "cashValue": 1.0,
       "expiryMonths": 12
+    },
+    {
+      "id": "pi-pcoin",
+      "name": "P幣",
+      "issuer": "Pi 拍錢包",
+      "cashValue": 1.0,
+      "expiryMonths": 6
+    },
+    {
+      "id": "openpoint",
+      "name": "OPENPOINT",
+      "issuer": "統一超商",
+      "cashValue": null,
+      "expiryMonths": null
+    },
+    {
+      "id": "ipass-greenpoint",
+      "name": "一卡通綠點",
+      "issuer": "一卡通票證",
+      "cashValue": 1.0,
+      "expiryMonths": 12
+    },
+    {
+      "id": "pluspay-point",
+      "name": "全點",
+      "issuer": "全支付",
+      "cashValue": 1.0,
+      "expiryMonths": 12
+    },
+    {
+      "id": "pxmart-point",
+      "name": "全聯福利點",
+      "issuer": "全聯實業",
+      "cashValue": 0.1,
+      "expiryMonths": null
     }
   ],
   "merchantLists": [
@@ -2500,6 +2541,2091 @@
           "categoryId": "dining"
         }
       ]
+    },
+    {
+      "id": "esun-ubear-eclist",
+      "name": "玉山U Bear常見網路消費特店",
+      "merchants": [
+        {
+          "name": "玉山Wallet",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "LINE Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "街口支付",
+          "aliases": [
+            "JKOPAY"
+          ],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "悠遊付",
+          "aliases": [
+            "Easy Wallet",
+            "EasyWallet"
+          ],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "橘子支付",
+          "aliases": [
+            "GAMA PAY",
+            "GAMAPAY"
+          ],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "全盈+PAY",
+          "aliases": [
+            "全盈PAY",
+            "PLUS PAY"
+          ],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "全支付",
+          "aliases": [
+            "PX Pay Plus",
+            "pxpay plus"
+          ],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "OPEN錢包",
+          "aliases": [
+            "OPEN Wallet"
+          ],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "icash Pay",
+          "aliases": [
+            "icashpay",
+            "愛金卡"
+          ],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "skm pay",
+          "aliases": [
+            "新光三越skm pay",
+            "SKM Pay"
+          ],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "歐付寶",
+          "aliases": [
+            "allPay",
+            "OPay"
+          ],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "中油Pay",
+          "aliases": [
+            "CPC Pay",
+            "台灣中油Pay"
+          ],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Coupang酷澎",
+          "aliases": [
+            "酷澎",
+            "Coupang"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "PChome線上購物",
+          "aliases": [
+            "PChome",
+            "PChome24h"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "momo購物網",
+          "aliases": [
+            "momo",
+            "富邦媒"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "蝦皮購物",
+          "aliases": [
+            "蝦皮",
+            "Shopee"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Yahoo購物中心",
+          "aliases": [
+            "Yahoo拍賣",
+            "Yahoo奇摩購物"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "淘寶",
+          "aliases": [
+            "Taobao",
+            "淘寶網"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "露天市集",
+          "aliases": [
+            "露天",
+            "Ruten",
+            "露天拍賣"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "樂天市場",
+          "aliases": [
+            "Rakuten",
+            "樂天"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "91APP",
+          "aliases": [
+            "91-APP"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Apple官網",
+          "aliases": [
+            "Apple Store官網",
+            "apple.com"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "STUDIO A官網",
+          "aliases": [
+            "STUDIO A"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Straight A官網",
+          "aliases": [
+            "Straight A"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "全電商",
+          "aliases": [
+            "PXmart全電商",
+            "全聯全電商"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Uber Eats",
+          "aliases": [
+            "UberEats"
+          ],
+          "categoryId": "delivery"
+        },
+        {
+          "name": "foodpanda",
+          "aliases": [
+            "熊貓",
+            "富胖達"
+          ],
+          "categoryId": "delivery"
+        },
+        {
+          "name": "foodomo",
+          "aliases": [],
+          "categoryId": "delivery"
+        },
+        {
+          "name": "lalamove",
+          "aliases": [
+            "啦啦快送"
+          ],
+          "categoryId": "delivery"
+        },
+        {
+          "name": "你訂",
+          "aliases": [
+            "nidin"
+          ],
+          "categoryId": "delivery"
+        },
+        {
+          "name": "台灣高鐵T-EX行動購票",
+          "aliases": [
+            "T-EX",
+            "台灣高鐵"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "台鐵線上購票",
+          "aliases": [
+            "台鐵",
+            "臺鐵"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "中華航空",
+          "aliases": [
+            "China Airlines",
+            "華航"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "長榮航空",
+          "aliases": [
+            "EVA Air"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "台灣虎航",
+          "aliases": [
+            "tigerair"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "易遊網",
+          "aliases": [
+            "ezTravel"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Agoda",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Hotels.com",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Expedia",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Klook",
+          "aliases": [
+            "客路"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "KKday",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Booking.com",
+          "aliases": [
+            "booking"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Airbnb",
+          "aliases": [
+            "AIRBNB"
+          ],
+          "categoryId": "travel"
+        }
+      ]
+    },
+    {
+      "id": "esun-ubear-3ch",
+      "name": "玉山U Bear新卡友指定三大通路",
+      "merchants": [
+        {
+          "name": "Apple 媒體服務",
+          "aliases": [
+            "Apple Music",
+            "Apple TV",
+            "App Store",
+            "iCloud",
+            "APPLE.COM/BILL"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Google媒體服務",
+          "aliases": [
+            "Google Play",
+            "YouTube Premium",
+            "Google One",
+            "Google Gemini",
+            "GOOGLE*"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "GASH",
+          "aliases": [],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "MyCard",
+          "aliases": [
+            "智冠科技"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "tixCraft拓元售票",
+          "aliases": [
+            "拓元售票",
+            "拓元",
+            "tixcraft"
+          ],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "KKTIX",
+          "aliases": [],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "Ticket Plus遠大售票系統",
+          "aliases": [
+            "遠大售票",
+            "Ticket Plus"
+          ],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "OPENTIX兩廳院文化生活",
+          "aliases": [
+            "兩廳院文化生活",
+            "OPENTIX"
+          ],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "寬宏售票系統",
+          "aliases": [
+            "寬宏售票",
+            "寬宏藝術"
+          ],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "ibon售票系統",
+          "aliases": [
+            "ibon售票"
+          ],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "蝦皮購物",
+          "aliases": [
+            "蝦皮",
+            "Shopee"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "momo",
+          "aliases": [
+            "momo購物網"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "PChome",
+          "aliases": [
+            "PChome線上購物"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "樂天市場購物網",
+          "aliases": [
+            "樂天市場",
+            "Rakuten"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Yahoo購物中心",
+          "aliases": [
+            "Yahoo奇摩購物中心"
+          ],
+          "categoryId": "ecommerce"
+        }
+      ]
+    },
+    {
+      "id": "esun-ubear-subs",
+      "name": "玉山U Bear指定數位訂閱平台",
+      "merchants": [
+        {
+          "name": "Netflix",
+          "aliases": [],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "ChatGPT",
+          "aliases": [
+            "Chat GPT",
+            "OpenAI"
+          ],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "Gemini",
+          "aliases": [
+            "Google One",
+            "Google Services"
+          ],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "Steam",
+          "aliases": [],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Nintendo",
+          "aliases": [
+            "任天堂",
+            "Nintendo eShop"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "PlayStation",
+          "aliases": [
+            "PS Store",
+            "PSN",
+            "索尼"
+          ],
+          "categoryId": "gaming"
+        }
+      ]
+    },
+    {
+      "id": "esun-ubear-711",
+      "name": "玉山U Bear icash Pay 7-ELEVEN實體門市",
+      "merchants": [
+        {
+          "name": "7-ELEVEN",
+          "aliases": [
+            "統一超商",
+            "7-11",
+            "小七"
+          ],
+          "categoryId": "convenience"
+        }
+      ]
+    },
+    {
+      "id": "esun-ubear-sty",
+      "name": "玉山U Bear icash Pay 新東陽指定門市",
+      "merchants": [
+        {
+          "name": "新東陽指定門市",
+          "aliases": [
+            "新東陽"
+          ],
+          "categoryId": "other"
+        }
+      ]
+    },
+    {
+      "id": "ubot-mcard-scene",
+      "name": "聯邦M卡指定五大場景",
+      "merchants": [
+        {
+          "name": "國內外航空公司",
+          "aliases": [
+            "航空"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Klook",
+          "aliases": [
+            "客路"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "KKday",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Funnow",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "萬達通",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "國內飯店",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Booking.com",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Agoda",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Hotels.com",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Expedia",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Trip.com",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "AsiaYo",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "ezTravel易遊網",
+          "aliases": [
+            "易遊網"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Airbnb",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "台鐵購票",
+          "aliases": [
+            "台灣鐵路"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "國光客運",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "統聯客運",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "和欣客運",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "葛瑪蘭客運",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "Uber",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "LINE GO",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "yoxi",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "台灣大車隊",
+          "aliases": [
+            "55688"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "大都會計程車",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "聯邦租車",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "和運租車",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "格上租車",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "東南旅遊",
+          "aliases": [
+            "東南"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "山富旅遊",
+          "aliases": [
+            "山富"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "五福旅遊",
+          "aliases": [
+            "五福"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "雄獅旅遊",
+          "aliases": [
+            "雄獅"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "鳳凰旅遊",
+          "aliases": [
+            "鳳凰"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "可樂旅遊",
+          "aliases": [
+            "康福旅行社",
+            "康福"
+          ],
+          "categoryId": "travel"
+        }
+      ]
+    },
+    {
+      "id": "ubot-green-list",
+      "name": "聯邦綠卡指定綠色消費通路",
+      "merchants": [
+        {
+          "name": "仙桃素",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "鈺善閣．素．養生懷石",
+          "aliases": [
+            "鈺善閣"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "祥和蔬食料理",
+          "aliases": [
+            "祥和蔬食"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "曙光居",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "毛蔬 亞洲蔬食",
+          "aliases": [
+            "毛蔬"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "MIACUCINA",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "小小樹食",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "陽明春天",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "寬心園",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "養心茶樓",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "熱浪島南洋蔬食茶堂",
+          "aliases": [
+            "熱浪島"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "原素食府",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "EVALUE華城電能充電費用",
+          "aliases": [
+            "EVALUE",
+            "華城電能"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "EVOASIS源點科技充電費用",
+          "aliases": [
+            "EVOASIS",
+            "源點科技"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "台灣特斯拉充電費用",
+          "aliases": [
+            "Tesla",
+            "特斯拉"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "全國特急電充電費用",
+          "aliases": [
+            "全國特急電"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "Gogoro資費方案",
+          "aliases": [
+            "Gogoro"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "eMoving資費方案",
+          "aliases": [
+            "eMoving",
+            "中華電動二輪車"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "iRent",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "GoShare",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "WeMo Scooter",
+          "aliases": [
+            "WeMo"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "聖德科斯",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "里仁",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "棉花田",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "台灣主婦聯盟",
+          "aliases": [
+            "主婦聯盟生活消費合作社"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "安永鮮物",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "GREEN&SAFE 真食物專賣店",
+          "aliases": [
+            "Green & Safe",
+            "GREEN&SAFE"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "野菜村有機生活館",
+          "aliases": [
+            "野菜村"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "直接跟農夫買",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "鮮乳坊",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "甘樂文創",
+          "aliases": [],
+          "categoryId": "other"
+        },
+        {
+          "name": "茶籽堂",
+          "aliases": [],
+          "categoryId": "other"
+        },
+        {
+          "name": "AESOP",
+          "aliases": [
+            "伊索"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "10/10 HOPE",
+          "aliases": [
+            "1010 HOPE"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "O'right歐萊德",
+          "aliases": [
+            "歐萊德",
+            "Oright"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "綠藤生機",
+          "aliases": [
+            "Greenvines"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "臺灣野灣野生動物保育協會",
+          "aliases": [
+            "野灣"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "黑潮海洋文教基金會",
+          "aliases": [
+            "黑潮"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "台灣重新思考環境教育協會",
+          "aliases": [
+            "重新思考"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "中華民國荒野保護協會",
+          "aliases": [
+            "荒野保護協會"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "台灣千里步道協會",
+          "aliases": [
+            "千里步道"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "看見齊柏林基金會",
+          "aliases": [
+            "齊柏林"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "主婦聯盟環境保護基金會",
+          "aliases": [
+            "主婦聯盟基金會"
+          ],
+          "categoryId": "other"
+        }
+      ]
+    },
+    {
+      "id": "ubot-green-autopay-list",
+      "name": "聯邦綠卡生活代扣繳指定項目",
+      "merchants": [
+        {
+          "name": "台電公司電費",
+          "aliases": [
+            "台電",
+            "電費"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "台北自來水費",
+          "aliases": [
+            "台北自來水事業處"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "台灣省自來水費",
+          "aliases": [
+            "台水",
+            "台灣自來水公司"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "大台北瓦斯",
+          "aliases": [],
+          "categoryId": "utility"
+        },
+        {
+          "name": "欣泰油氣",
+          "aliases": [
+            "欣泰石油氣"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "欣欣天然氣",
+          "aliases": [
+            "欣欣天然"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "新海瓦斯",
+          "aliases": [
+            "新海"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "欣湖天然氣",
+          "aliases": [
+            "欣湖"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "欣中天然氣",
+          "aliases": [
+            "欣中"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "欣桃天然氣",
+          "aliases": [
+            "欣桃"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "陽明山瓦斯",
+          "aliases": [
+            "陽明山"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "欣南天然氣",
+          "aliases": [
+            "欣南"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "欣雄天然氣",
+          "aliases": [
+            "欣雄"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "欣高石油氣",
+          "aliases": [
+            "欣高"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "中華電信",
+          "aliases": [],
+          "categoryId": "utility"
+        },
+        {
+          "name": "台灣大哥大",
+          "aliases": [
+            "台哥大"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "遠傳電信",
+          "aliases": [
+            "遠傳"
+          ],
+          "categoryId": "utility"
+        },
+        {
+          "name": "公有路邊停車費",
+          "aliases": [
+            "路邊停車費",
+            "停車費"
+          ],
+          "categoryId": "transport"
+        }
+      ]
+    },
+    {
+      "id": "ubot-laidian-evenday",
+      "name": "聯邦賴點卡偶數日LINE Pay指定通路",
+      "merchants": [
+        {
+          "name": "王品集團",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "三商集團",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "輕井澤集團",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "海底撈",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "築間",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "春水堂",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "壽司郎",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "爭鮮",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "八方雲集",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "麥當勞",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "肯德基",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "摩斯漢堡",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "漢堡王",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "星巴克",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "路易莎",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "cama",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "50嵐",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "得正",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "麻古茶坊",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "可不可熟成紅茶",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "屈臣氏",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "寶雅",
+          "aliases": [
+            "POYA"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "唐吉訶德",
+          "aliases": [
+            "DON DON DONKI"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "大樹",
+          "aliases": [
+            "大樹藥局"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "杏一",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "丁丁",
+          "aliases": [
+            "丁丁藥局"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "佑全",
+          "aliases": [
+            "佑全藥妝"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "躍獅",
+          "aliases": [
+            "躍獅藥局"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "迪卡儂",
+          "aliases": [
+            "Decathlon"
+          ],
+          "categoryId": "sports"
+        },
+        {
+          "name": "鞋全家福",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "摩曼頓",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "IKEA",
+          "aliases": [
+            "宜家家居"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Hola",
+          "aliases": [
+            "特力和樂"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "小北百貨",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "汪喵星球",
+          "aliases": [],
+          "categoryId": "other"
+        },
+        {
+          "name": "東森寵物",
+          "aliases": [],
+          "categoryId": "other"
+        },
+        {
+          "name": "咕咕G",
+          "aliases": [],
+          "categoryId": "other"
+        },
+        {
+          "name": "魚中魚",
+          "aliases": [],
+          "categoryId": "other"
+        },
+        {
+          "name": "寵物公園",
+          "aliases": [],
+          "categoryId": "other"
+        }
+      ]
+    },
+    {
+      "id": "ubot-laidian-ip",
+      "name": "聯邦賴點卡指定IP商店/售票系統/影城",
+      "merchants": [
+        {
+          "name": "CHIIKAWA SHOP inTAIPEI台北常設店",
+          "aliases": [
+            "吉伊卡哇台北常設店"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "CHIIKAWA DAYS台北特展商店",
+          "aliases": [
+            "吉伊卡哇特展商店"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "OPENTIX兩廳院",
+          "aliases": [
+            "OPENTIX",
+            "兩廳院文化生活"
+          ],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "tixCraft拓元",
+          "aliases": [
+            "拓元售票",
+            "tixCraft"
+          ],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "寬宏售票",
+          "aliases": [
+            "寬宏藝術"
+          ],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "年代線上售票",
+          "aliases": [
+            "年代售票",
+            "ticket.com.tw"
+          ],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "KKTIX",
+          "aliases": [],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "威秀",
+          "aliases": [
+            "威秀影城",
+            "Vieshow"
+          ],
+          "categoryId": "entertainment"
+        },
+        {
+          "name": "秀泰",
+          "aliases": [
+            "秀泰影城",
+            "秀泰生活"
+          ],
+          "categoryId": "entertainment"
+        }
+      ]
+    },
+    {
+      "id": "ubot-laidian-kr-food",
+      "name": "聯邦賴點卡韓國吃喝補給指定店家",
+      "merchants": [
+        {
+          "name": "7-Eleven",
+          "aliases": [
+            "韓國7-Eleven"
+          ],
+          "categoryId": "convenience"
+        },
+        {
+          "name": "CU",
+          "aliases": [],
+          "categoryId": "convenience"
+        },
+        {
+          "name": "emart24",
+          "aliases": [
+            "Emart24"
+          ],
+          "categoryId": "convenience"
+        },
+        {
+          "name": "StoryWay",
+          "aliases": [],
+          "categoryId": "convenience"
+        },
+        {
+          "name": "KORAIL RETAIL",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "AREX韓國機場鐵路線上購票",
+          "aliases": [
+            "AREX"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "Chilamsagye七岩四季",
+          "aliases": [
+            "七岩四季"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "DAGIRANG DAKGALBI 春川鐵板雞",
+          "aliases": [
+            "春川鐵板雞"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "HOWEONGADEUN",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "HWAONJEONG 炭火直烤雞肉",
+          "aliases": [
+            "炭火直烤雞肉"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "K Korea Dakgalbi",
+          "aliases": [
+            "케이코리아닭갈비"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "OURHOME機場美食街",
+          "aliases": [
+            "OURHOME"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "FUZZY NAVEL",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "Space onez",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "OSULLOC茶館",
+          "aliases": [
+            "OSULLOC",
+            "悅詩風吟茶館"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "EDIYA COFFEE",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "CASA BUSANO",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "P.ARK咖啡廳",
+          "aliases": [
+            "P.ARK"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "Knotted Donuts",
+          "aliases": [
+            "Knotted"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "iPAVES Chocolate",
+          "aliases": [
+            "iPAVES"
+          ],
+          "categoryId": "dining"
+        }
+      ]
+    },
+    {
+      "id": "ubot-laidian-kr-shop",
+      "name": "聯邦賴點卡韓國旅遊購物指定店家",
+      "merchants": [
+        {
+          "name": "樂天百貨",
+          "aliases": [
+            "Lotte Department Store"
+          ],
+          "categoryId": "department"
+        },
+        {
+          "name": "新世界百貨",
+          "aliases": [
+            "Shinsegae"
+          ],
+          "categoryId": "department"
+        },
+        {
+          "name": "DOOTA Mall",
+          "aliases": [
+            "斗塔購物中心"
+          ],
+          "categoryId": "department"
+        },
+        {
+          "name": "樂天免稅店",
+          "aliases": [
+            "Lotte Duty Free"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "新羅免稅店",
+          "aliases": [
+            "Shilla Duty Free"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "新世界免稅店",
+          "aliases": [
+            "Shinsegae Duty Free"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "樂天Outlet",
+          "aliases": [
+            "Lotte Outlet"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "新世界Premium Outlet",
+          "aliases": [
+            "Shinsegae Premium Outlet"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "LOTTE Mart",
+          "aliases": [
+            "樂天超市"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "LOTTE Mall",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "LOTTE SUPER",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "I'Park Mall",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "樂天世界",
+          "aliases": [
+            "Lotte World"
+          ],
+          "categoryId": "entertainment"
+        },
+        {
+          "name": "愛寶樂園",
+          "aliases": [
+            "EVERLAND"
+          ],
+          "categoryId": "entertainment"
+        },
+        {
+          "name": "海東龍宮寺",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "南怡島",
+          "aliases": [
+            "Nami Island"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Fe01",
+          "aliases": [],
+          "categoryId": "entertainment"
+        },
+        {
+          "name": "Skyline Luge",
+          "aliases": [],
+          "categoryId": "entertainment"
+        },
+        {
+          "name": "Yacht Holic 釜山遊艇體驗",
+          "aliases": [
+            "Yacht Holic"
+          ],
+          "categoryId": "entertainment"
+        },
+        {
+          "name": "Crazysurfers",
+          "aliases": [],
+          "categoryId": "entertainment"
+        },
+        {
+          "name": "surfholic",
+          "aliases": [],
+          "categoryId": "entertainment"
+        },
+        {
+          "name": "ID Medical Piercing",
+          "aliases": [],
+          "categoryId": "other"
+        },
+        {
+          "name": "Deko Makeup Studio",
+          "aliases": [],
+          "categoryId": "other"
+        },
+        {
+          "name": "Shilla Stay",
+          "aliases": [
+            "新羅舒泰酒店"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "VISIT BUSAN PASS",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Le Méridie明洞",
+          "aliases": [
+            "Le Meridien明洞"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Hotel Moxy明洞",
+          "aliases": [
+            "Moxy明洞"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "INNISFREE",
+          "aliases": [
+            "悅詩風吟"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "雪花秀",
+          "aliases": [
+            "Sulwhasoo"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Amore Store",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "AURORABEAUTY",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "BAVIPLAN",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Branme Haeundae",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "OLENS明洞",
+          "aliases": [
+            "OLENS"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "SUNSKIN",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "BIG SAVE 藥局",
+          "aliases": [
+            "BIG SAVE"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "EIGHT 藥局",
+          "aliases": [
+            "EIGHT Pharmacy"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "弘益藥局",
+          "aliases": [
+            "HONGIK Pharmacy"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "鐘路友利藥局",
+          "aliases": [
+            "Jongno Woori Pharmacy"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "Miyu 藥局",
+          "aliases": [
+            "Miyu Pharmacy"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "READY YOUNG 藥局",
+          "aliases": [
+            "READY YOUNG"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "Saengmyeong Saem 藥局",
+          "aliases": [
+            "Saengmyeong Saem"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "ZZANG 藥局",
+          "aliases": [
+            "ZZANG"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "熊貓藥局",
+          "aliases": [
+            "Panda Pharmacy"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "ABC Mart",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Lee",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "EPT",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "FOLDER",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "MIXXO",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Mark Gonzales",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "MPLAYGROUND",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "New Balance",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "SHOOPEN",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Snow Peak",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "SPAO",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "TOPTEN",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "UNDER ARMOUR",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Wacky Willy",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "WHO.A.U",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Nice Ghost Club",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "8seconds",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Mir Eyewear",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "LINE Friends",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Wiggle Wiggle",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "MY POETRY",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "OBLESS",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "STAN by SEOUL",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "TONUE",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Palace Fox",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Busan's Top Tourist Souvenirs",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "National Souvenirs Center",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Bando Camera",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "BUSAN SUPER",
+          "aliases": [],
+          "categoryId": "supermarket"
+        }
+      ]
+    },
+    {
+      "id": "ubot-common-mlsocial",
+      "name": "聯邦美廉社加碼指定通路",
+      "merchants": [
+        {
+          "name": "美廉社",
+          "aliases": [
+            "美廉社超市",
+            "三商家購"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "心樸市集",
+          "aliases": [
+            "心樸"
+          ],
+          "categoryId": "supermarket"
+        }
+      ]
+    },
+    {
+      "id": "ubot-common-xiaobei",
+      "name": "聯邦小北百貨加碼指定通路",
+      "merchants": [
+        {
+          "name": "小北百貨",
+          "aliases": [
+            "小北"
+          ],
+          "categoryId": "other"
+        }
+      ]
+    },
+    {
+      "id": "ubot-common-watsons",
+      "name": "聯邦屈臣氏聯邦日指定通路",
+      "merchants": [
+        {
+          "name": "屈臣氏",
+          "aliases": [
+            "Watsons",
+            "屈臣氏大藥局"
+          ],
+          "categoryId": "pharmacy"
+        }
+      ]
+    },
+    {
+      "id": "ubot-common-711",
+      "name": "聯邦OPEN錢包指定通路",
+      "merchants": [
+        {
+          "name": "7-ELEVEN",
+          "aliases": [
+            "統一超商",
+            "7-11",
+            "小七"
+          ],
+          "categoryId": "convenience"
+        }
+      ]
+    },
+    {
+      "id": "ubot-common-hilife",
+      "name": "聯邦萊爾富現折指定通路",
+      "merchants": [
+        {
+          "name": "萊爾富",
+          "aliases": [
+            "Hi-Life",
+            "萊爾富超商"
+          ],
+          "categoryId": "convenience"
+        }
+      ]
+    },
+    {
+      "id": "ubot-common-pxmart",
+      "name": "聯邦全聯卡友日指定通路",
+      "merchants": [
+        {
+          "name": "全聯福利中心",
+          "aliases": [
+            "全聯",
+            "PXMart"
+          ],
+          "categoryId": "supermarket"
+        }
+      ]
+    },
+    {
+      "id": "ubot-common-wowprime",
+      "name": "聯邦王品瘋Pay指定餐廳",
+      "merchants": [
+        {
+          "name": "王品集團指定餐廳",
+          "aliases": [
+            "王品",
+            "王品瘋美食"
+          ],
+          "categoryId": "dining"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-common-pxmart",
+      "name": "全聯卡友日",
+      "merchants": [
+        {
+          "name": "全聯福利中心",
+          "aliases": [
+            "全聯",
+            "PXMart"
+          ],
+          "categoryId": "supermarket"
+        }
+      ]
     }
   ],
   "memberships": [
@@ -2866,6 +4992,146 @@
       "level": null,
       "userPrompt": "你在 2024 或 2025 年，有用永豐信用卡繳過牌照稅／房屋稅／地價稅／汽燃費(養管費)嗎？",
       "qualifyPaths": []
+    },
+    {
+      "id": "esun-ubear-newcard",
+      "name": "玉山U Bear新卡友",
+      "kind": "registration",
+      "issuer": "玉山銀行",
+      "scope": "card",
+      "level": null,
+      "userPrompt": "你是在 2026/9/1~11/30 期間第一次申辦玉山U Bear信用卡正卡並核卡的嗎？",
+      "qualifyPaths": []
+    },
+    {
+      "id": "esun-bdf-lv1",
+      "name": "紅利倍多芬 Level 1",
+      "kind": "tier",
+      "issuer": "玉山銀行",
+      "scope": "card",
+      "level": 1,
+      "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）",
+      "qualifyPaths": []
+    },
+    {
+      "id": "esun-bdf-lv2",
+      "name": "紅利倍多芬 Level 2",
+      "kind": "tier",
+      "issuer": "玉山銀行",
+      "scope": "card",
+      "level": 2,
+      "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）",
+      "qualifyPaths": [
+        [
+          {
+            "id": "esun-bdf-lv2-1",
+            "stateClass": "structural",
+            "type": "spendThreshold",
+            "targetId": null,
+            "operator": "gte",
+            "value": 16800.0,
+            "valueUnit": "TWD",
+            "valuePeriod": null,
+            "countsThisTx": false,
+            "userPrompt": "這個會員週期的 Only 卡累積消費滿 16,800 元了嗎？"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "esun-bdf-lv3",
+      "name": "紅利倍多芬 Level 3",
+      "kind": "tier",
+      "issuer": "玉山銀行",
+      "scope": "card",
+      "level": 3,
+      "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）",
+      "qualifyPaths": [
+        [
+          {
+            "id": "esun-bdf-lv3-1",
+            "stateClass": "structural",
+            "type": "spendThreshold",
+            "targetId": null,
+            "operator": "gte",
+            "value": 168000.0,
+            "valueUnit": "TWD",
+            "valuePeriod": null,
+            "countsThisTx": false,
+            "userPrompt": "這個會員週期的 Only 卡累積消費滿 168,000 元了嗎？"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "esun-bdf-lv4",
+      "name": "紅利倍多芬 Level 4",
+      "kind": "tier",
+      "issuer": "玉山銀行",
+      "scope": "card",
+      "level": 4,
+      "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）",
+      "qualifyPaths": [
+        [
+          {
+            "id": "esun-bdf-lv4-1",
+            "stateClass": "structural",
+            "type": "spendThreshold",
+            "targetId": null,
+            "operator": "gte",
+            "value": 388000.0,
+            "valueUnit": "TWD",
+            "valuePeriod": null,
+            "countsThisTx": false,
+            "userPrompt": "這個會員週期的 Only 卡累積消費滿 388,000 元了嗎？"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "esun-bdf-lv5",
+      "name": "紅利倍多芬 Level 5",
+      "kind": "tier",
+      "issuer": "玉山銀行",
+      "scope": "card",
+      "level": 5,
+      "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）",
+      "qualifyPaths": [
+        [
+          {
+            "id": "esun-bdf-lv5-1",
+            "stateClass": "structural",
+            "type": "spendThreshold",
+            "targetId": null,
+            "operator": "gte",
+            "value": 688000.0,
+            "valueUnit": "TWD",
+            "valuePeriod": null,
+            "countsThisTx": false,
+            "userPrompt": "這個會員週期的 Only 卡累積消費滿 688,000 元了嗎？"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "ubot-newnewbank-new",
+      "name": "新開立聯邦New New Bank數位帳戶",
+      "kind": "registration",
+      "issuer": "聯邦銀行",
+      "scope": "account",
+      "level": null,
+      "userPrompt": "你是在2026/7/1～2026/12/31期間才第一次申辦並成功開立聯邦 New New Bank 數位帳戶的嗎？",
+      "qualifyPaths": []
+    },
+    {
+      "id": "ubot-ins-firsttime",
+      "name": "聯邦首次刷卡繳保費",
+      "kind": "history",
+      "issuer": "聯邦銀行",
+      "scope": "account",
+      "level": null,
+      "userPrompt": "你在 2025/7/1～2026/6/30 之間，完全沒有用任何一張聯邦信用卡繳過保費嗎？",
+      "qualifyPaths": []
     }
   ],
   "cards": [
@@ -2905,6 +5171,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "esun-general",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -2946,6 +5213,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "esun-general",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -2999,6 +5267,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "esun-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3040,6 +5309,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "esun-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3081,6 +5351,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "esun-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3122,6 +5393,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "esun-newpromo",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3175,6 +5447,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "esun-newpromo",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3234,6 +5507,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3260,6 +5534,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3301,6 +5576,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3404,6 +5680,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3507,6 +5784,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3565,6 +5843,7 @@
           "validTo": null,
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3591,6 +5870,7 @@
           "validTo": null,
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3617,6 +5897,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "dawho-tier-bonus",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3682,6 +5963,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "dawho-tier-bonus",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3747,6 +6029,7 @@
           "validTo": null,
           "stackMode": "replace",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3812,6 +6095,7 @@
           "validTo": null,
           "stackMode": "replace",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3877,6 +6161,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3935,6 +6220,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3963,6 +6249,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -3989,6 +6276,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4015,6 +6303,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4073,6 +6362,7 @@
           "validTo": "2027-07-31",
           "stackMode": "exclusive",
           "stackGroup": "ubot-line-base",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4099,6 +6389,7 @@
           "validTo": "2027-07-31",
           "stackMode": "exclusive",
           "stackGroup": "ubot-line-base",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4125,6 +6416,7 @@
           "validTo": "2027-07-31",
           "stackMode": "exclusive",
           "stackGroup": "ubot-line-base",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4154,6 +6446,7 @@
           "validTo": "2027-07-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4180,6 +6473,7 @@
           "validTo": "2027-07-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4250,6 +6544,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4277,6 +6572,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4331,6 +6627,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4385,6 +6682,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4441,6 +6739,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4497,6 +6796,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4553,6 +6853,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4608,6 +6909,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4663,6 +6965,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4718,6 +7021,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4773,6 +7077,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4816,6 +7121,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4858,6 +7164,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4911,6 +7218,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -4952,6 +7260,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5011,6 +7320,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5064,6 +7374,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5117,6 +7428,7 @@
           "validTo": "2026-12-31",
           "stackMode": "replace",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5170,6 +7482,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5311,6 +7624,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5376,6 +7690,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5435,6 +7750,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5461,6 +7777,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5487,6 +7804,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": "sinopac-green-cap300",
           "replaceGroup": null,
           "validDays": null,
@@ -5540,6 +7858,7 @@
           "validTo": "2026-12-31",
           "stackMode": "replace",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": "sinopac-green-cap300",
           "replaceGroup": null,
           "validDays": null,
@@ -5605,6 +7924,7 @@
           "validTo": "2026-12-31",
           "stackMode": "replace",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5650,6 +7970,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "mop-fengpoint",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5676,6 +7997,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "mop-fengpoint",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5717,6 +8039,7 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "mop-fengpoint",
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5744,6 +8067,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5809,6 +8133,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5874,6 +8199,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5958,6 +8284,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5984,6 +8311,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": "sinopac-55688-appbind",
           "validDays": null,
@@ -6030,13 +8358,14 @@
           "cap": {
             "type": "amount",
             "value": 100.0,
-            "period": "calendarMonth",
+            "period": "statementCycle",
             "anchorDays": null
           },
           "validFrom": "2026-07-01",
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": "sinopac-55688-appbind",
           "validDays": null,
@@ -6102,6 +8431,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6161,6 +8491,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6202,6 +8533,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6243,6 +8575,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6308,6 +8641,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6385,6 +8719,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6438,6 +8773,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6491,6 +8827,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6556,6 +8893,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6609,6 +8947,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6675,6 +9014,7 @@
           "validTo": "2026-09-05",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6741,6 +9081,7 @@
           "validTo": "2026-09-05",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6795,6 +9136,7 @@
           "validTo": "2026-09-05",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6861,6 +9203,7 @@
           "validTo": "2026-09-05",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6914,6 +9257,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6979,6 +9323,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "wed",
@@ -7044,6 +9389,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "mon-fri",
@@ -7097,6 +9443,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "mon-fri",
@@ -7162,6 +9509,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "sat-sun",
@@ -7215,6 +9563,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "sat-sun",
@@ -7280,6 +9629,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "mon",
@@ -7333,6 +9683,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "wed",
@@ -7398,6 +9749,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "wed|thu",
@@ -7463,6 +9815,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "thu|fri",
@@ -7528,6 +9881,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "sat-sun",
@@ -7610,6 +9964,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7663,6 +10018,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7716,6 +10072,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": "sinopac-common-tax",
           "validDays": null,
@@ -7769,6 +10126,7 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": "sinopac-common-tax",
           "validDays": null,
@@ -7834,6 +10192,7 @@
           "validTo": "2026-12-31",
           "stackMode": "replace",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7887,6 +10246,7 @@
           "validTo": "2026-10-31",
           "stackMode": "replace",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7952,6 +10312,7 @@
           "validTo": "2026-09-30",
           "stackMode": "replace",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8005,6 +10366,7 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "minSpend": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "mon",
@@ -8021,6 +10383,3282 @@
                 "valuePeriod": null,
                 "countsThisTx": null,
                 "userPrompt": "結帳時是用王品瘋美食 App 的「瘋Pay」電子錢包綁永豐卡付款嗎？直接刷卡沒有永豐加碼的 3%。"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-common-c12",
+          "label": "全聯卡友日週末PX Pay滿1200贈360福利點",
+          "archetype": "channel",
+          "categoryIds": [
+            "supermarket"
+          ],
+          "merchantListId": "sinopac-common-pxmart",
+          "rate": 30.0,
+          "unit": "point",
+          "pointCurrencyId": "pxmart-point",
+          "cap": {
+            "type": "amount",
+            "value": 360.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-04",
+          "validTo": "2026-10-01",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "sat-sun",
+          "conditionPaths": [
+            [
+              {
+                "id": "common-c12-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "pxpay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "結帳時是用 PX Pay 或 PX Pay Plus 綁永豐卡付款嗎？直接刷實體卡不算。"
+              },
+              {
+                "id": "common-c12-2",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 1200.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆全聯要滿 1,200 元才有 360 福利點，不含儲值、菸品、嬰兒奶粉。"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esun-pi",
+      "name": "玉山 Pi 拍錢包信用卡",
+      "aliases": [
+        "Pi卡",
+        "玉山Pi卡",
+        "拍錢包卡",
+        "Pi 拍錢包信用卡",
+        "PChome Pi卡"
+      ],
+      "issuer": "玉山銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://www.esunbank.com/zh-tw/personal/credit-card/intro/co-branded-card/pi-card",
+      "applyUrl": "https://www.esunbank.com.tw/event/credit/card_pi/index.html",
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "esun-pi-c1",
+          "label": "一般消費基本回饋（未申辦帳單e化）",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 0.3,
+          "unit": "point",
+          "pointCurrencyId": "pi-pcoin",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2027-02-28",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-pi-general",
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-pi-c1-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "pi-wallet",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-pi-c2",
+          "label": "一般消費基本回饋（已申辦帳單e化）",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "pi-pcoin",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2027-02-28",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-pi-general",
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-pi-c2-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "pi-wallet",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？"
+              },
+              {
+                "id": "esun-pi-c2-2",
+                "stateClass": "structural",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-pi-c3",
+          "label": "一般消費加碼－每月累積滿10,000~29,999元",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 0.8,
+          "unit": "point",
+          "pointCurrencyId": "pi-pcoin",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2027-02-28",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-pi-tier",
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-pi-c3-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "pi-wallet",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？"
+              },
+              {
+                "id": "esun-pi-c3-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你登錄過玉山 Pi 卡『一般消費加碼回饋』活動了嗎？（整個活動期間只要登錄1次）"
+              },
+              {
+                "id": "esun-pi-c3-3",
+                "stateClass": "recoverable",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 10000.0,
+                "valueUnit": "TWD",
+                "valuePeriod": "thisMonth",
+                "countsThisTx": true,
+                "userPrompt": "這個月國內外一般消費累積滿 10,000 元了嗎？（不含保險消費）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-pi-c4",
+          "label": "一般消費加碼－每月累積滿30,000元以上",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "pi-pcoin",
+          "cap": {
+            "type": "amount",
+            "value": 3000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2027-02-28",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-pi-tier",
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-pi-c4-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "pi-wallet",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？"
+              },
+              {
+                "id": "esun-pi-c4-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你登錄過玉山 Pi 卡『一般消費加碼回饋』活動了嗎？（整個活動期間只要登錄1次）"
+              },
+              {
+                "id": "esun-pi-c4-3",
+                "stateClass": "recoverable",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 30000.0,
+                "valueUnit": "TWD",
+                "valuePeriod": "thisMonth",
+                "countsThisTx": true,
+                "userPrompt": "這個月國內外一般消費累積滿 30,000 元了嗎？（不含保險消費）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-pi-c5",
+          "label": "Pi 拍錢包通路加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 4.0,
+          "unit": "point",
+          "pointCurrencyId": "pi-pcoin",
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2027-02-28",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-pi-c5-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "pi-wallet",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？"
+              },
+              {
+                "id": "esun-pi-c5-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "pi-wallet",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這一筆是用 Pi 拍錢包 App 出示／掃描付款碼結帳的嗎？"
+              },
+              {
+                "id": "esun-pi-c5-3",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你登錄過玉山 Pi 卡『拍錢包加碼』活動了嗎？（整個活動期間只要登錄1次）"
+              },
+              {
+                "id": "esun-pi-c5-4",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦玉山銀行台幣帳戶自動扣款（自動扣繳信用卡費）嗎？"
+              },
+              {
+                "id": "esun-pi-c5-5",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 499.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆有滿 499 元嗎？（未滿 499 就沒有拍錢包加碼）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-pi-c6",
+          "label": "新戶加碼（一般消費）",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 5.0,
+          "unit": "point",
+          "pointCurrencyId": "pi-pcoin",
+          "cap": {
+            "type": "amount",
+            "value": 150.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-10-01",
+          "validTo": "2027-02-28",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-pi-c6-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "esun-newuser",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是玉山信用卡新戶嗎？（核卡日前六個月內未持有玉山任一張流通正卡）"
+              },
+              {
+                "id": "esun-pi-c6-2",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "pi-wallet",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？"
+              },
+              {
+                "id": "esun-pi-c6-3",
+                "stateClass": "structural",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-pi-c7",
+          "label": "保費一次付清",
+          "archetype": "base",
+          "categoryIds": [
+            "insurance"
+          ],
+          "merchantListId": null,
+          "rate": 1.2,
+          "unit": "point",
+          "pointCurrencyId": "pi-pcoin",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-03-01",
+          "validTo": "2026-12-31",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-pi-c7-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "pi-wallet",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esun-ubear",
+      "name": "玉山U Bear信用卡",
+      "aliases": [
+        "UBear卡",
+        "U Bear卡",
+        "玉山UBear",
+        "玉山U Bear",
+        "UBear",
+        "熊卡"
+      ],
+      "issuer": "玉山銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://www.esunbank.com/zh-tw/personal/credit-card/intro/bank-card/u-bear",
+      "applyUrl": "https://esun.co/hGCrV",
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "esun-ubear-c1",
+          "label": "國內外一般消費（帳單e化或自動扣繳擇一）",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 0.5,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2027-02-28",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-ubear-general",
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubear-c1-1",
+                "stateClass": "structural",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）"
+              }
+            ],
+            [
+              {
+                "id": "ubear-c1-2",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定玉山銀行臺幣帳戶自動扣繳卡費嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-ubear-c2",
+          "label": "國內外一般消費（帳單e化＋自動扣繳皆有）",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2027-02-28",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-ubear-general",
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubear-c2-1",
+                "stateClass": "structural",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）"
+              },
+              {
+                "id": "ubear-c2-2",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定玉山銀行臺幣帳戶自動扣繳卡費嗎？（且已成功扣繳）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-ubear-c3",
+          "label": "行動支付／網路消費加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": "esun-ubear-eclist",
+          "rate": 2.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 150.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2027-02-28",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubear-c3-1",
+                "stateClass": "structural",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-ubear-c4",
+          "label": "指定數位訂閱平台",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "streaming",
+            "gaming"
+          ],
+          "merchantListId": "esun-ubear-subs",
+          "rate": 10.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 100.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2027-02-28",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "esun-ubear-c5",
+          "label": "新戶首刷禮－不限通路加碼",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 10.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-10-01",
+          "validTo": "2027-01-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubear-c5-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "esun-newuser",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是玉山信用卡新戶嗎？（核卡日前六個月內未持有玉山任一張流通正卡）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-ubear-c6",
+          "label": "新卡友首刷禮－指定三大通路加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "ecommerce",
+            "streaming",
+            "gaming",
+            "ticketing"
+          ],
+          "merchantListId": "esun-ubear-3ch",
+          "rate": 10.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 1200.0,
+            "period": "cardAnchor",
+            "anchorDays": 60
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2027-01-29",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubear-c6-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "esun-ubear-newcard",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是在 2026/9/1~11/30 期間第一次申辦玉山U Bear信用卡正卡並核卡的嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-ubear-c7",
+          "label": "LINE Pay 單筆滿500元加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "mobilepay"
+          ],
+          "merchantListId": null,
+          "rate": 5.0,
+          "unit": "point",
+          "pointCurrencyId": "esun-epoint",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2026-11-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubear-c7-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisMonth",
+                "countsThisTx": null,
+                "userPrompt": "這個月你有登錄「LINE Pay單筆滿500享5%」活動嗎？"
+              },
+              {
+                "id": "ubear-c7-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆有用綁定玉山U Bear卡的 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "ubear-c7-3",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 500.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆有滿 500 元嗎？"
+              },
+              {
+                "id": "ubear-c7-4",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "esun-line-notify",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是在 2026/9/1~11/30 期間第一次綁定玉山 LINE 個人化通知的嗎？"
+              }
+            ],
+            [
+              {
+                "id": "ubear-c7-5",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisMonth",
+                "countsThisTx": null,
+                "userPrompt": "這個月你有登錄「LINE Pay單筆滿500享5%」活動嗎？"
+              },
+              {
+                "id": "ubear-c7-6",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆有用綁定玉山U Bear卡的 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "ubear-c7-7",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 500.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆有滿 500 元嗎？"
+              },
+              {
+                "id": "ubear-c7-8",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是在 2026/9/1~11/30 期間第一次用玉山信用卡綁 LINE Pay 並完成消費的嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-ubear-c8",
+          "label": "icash Pay 綁卡於7-ELEVEN實體門市",
+          "archetype": "channel",
+          "categoryIds": [
+            "convenience"
+          ],
+          "merchantListId": "esun-ubear-711",
+          "rate": 6.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 200.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubear-c8-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": "thisMonth",
+                "countsThisTx": null,
+                "userPrompt": "這個月你有登錄「icash Pay 7-ELEVEN 6%」活動嗎？"
+              },
+              {
+                "id": "ubear-c8-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "icashpay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆有用綁定玉山U Bear卡的 icash Pay 結帳嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-ubear-c9",
+          "label": "icash Pay 綁卡於新東陽指定門市",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "other"
+          ],
+          "merchantListId": "esun-ubear-sty",
+          "rate": 10.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 150.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubear-c9-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "icashpay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆有用綁定玉山U Bear卡的 icash Pay 結帳嗎？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esun-only",
+      "name": "玉山Only卡",
+      "aliases": [
+        "Only卡",
+        "ONLY卡",
+        "玉山ONLY卡",
+        "玉山Only",
+        "紅利倍多芬卡"
+      ],
+      "issuer": "玉山銀行",
+      "status": "discontinued",
+      "variantOf": null,
+      "officialUrl": "https://www.esunbank.com/zh-tw/personal/credit-card/intro/bank-card/only-card",
+      "applyUrl": null,
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "esun-only-c1",
+          "label": "一般消費基本回饋0.4%",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 0.4,
+          "unit": "point",
+          "pointCurrencyId": "esun-epoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "esun-only-c2",
+          "label": "紅利倍多芬Level2加贈0.4%（+1倍）",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 0.4,
+          "unit": "point",
+          "pointCurrencyId": "esun-epoint",
+          "cap": {
+            "type": "amount",
+            "value": 1500.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-only-bdf",
+          "minSpend": null,
+          "capGroup": "esun-only-bdf-cap",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-only-c2-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "esun-bdf-lv2",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-only-c3",
+          "label": "紅利倍多芬Level3加贈1.2%（+3倍）",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.2,
+          "unit": "point",
+          "pointCurrencyId": "esun-epoint",
+          "cap": {
+            "type": "amount",
+            "value": 1500.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-only-bdf",
+          "minSpend": null,
+          "capGroup": "esun-only-bdf-cap",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-only-c3-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "esun-bdf-lv3",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-only-c4",
+          "label": "紅利倍多芬Level4加贈2%（+5倍）",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "esun-epoint",
+          "cap": {
+            "type": "amount",
+            "value": 1500.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-only-bdf",
+          "minSpend": null,
+          "capGroup": "esun-only-bdf-cap",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-only-c4-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "esun-bdf-lv4",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "esun-only-c5",
+          "label": "紅利倍多芬Level5加贈2.8%（+7倍）",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 2.8,
+          "unit": "point",
+          "pointCurrencyId": "esun-epoint",
+          "cap": {
+            "type": "amount",
+            "value": 1500.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "esun-only-bdf",
+          "minSpend": null,
+          "capGroup": "esun-only-bdf-cap",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "esun-only-c5-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "esun-bdf-lv5",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubot-mcard",
+      "name": "聯邦M卡",
+      "aliases": [
+        "M卡",
+        "聯邦Mcard",
+        "Mcard",
+        "聯邦幸福M卡",
+        "聯邦幸福Ｍ卡"
+      ],
+      "issuer": "聯邦銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://activity.ubot.com.tw/2026Mcard/index.htm",
+      "applyUrl": "https://card.ubot.com.tw/card_apply/?GID=39&IDE=C",
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "ubot-mcard-c1",
+          "label": "國內一般消費",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubot-m-c1-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？（電子帳單-Email／行動帳單-簡訊／LINE帳單）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-mcard-c2",
+          "label": "國外一般消費（外幣請款）",
+          "archetype": "base",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "rate": 3.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-02-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubot-m-c2-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？（電子帳單-Email／行動帳單-簡訊／LINE帳單）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-mcard-c3",
+          "label": "指定五大場景（航空／旅遊平台／訂房網／交通／旅行社）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "travel",
+            "transport"
+          ],
+          "merchantListId": "ubot-mcard-scene",
+          "rate": 6.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubot-m-c3-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？（電子帳單-Email／行動帳單-簡訊／LINE帳單）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-mcard-c4",
+          "label": "國內保險（保費）",
+          "archetype": "base",
+          "categoryIds": [
+            "insurance"
+          ],
+          "merchantListId": null,
+          "rate": 1.2,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 10000.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubot-m-c4-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？（電子帳單-Email／行動帳單-簡訊／LINE帳單）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-mcard-c5",
+          "label": "指定國家海外實體店家加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "rate": 3.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 1000.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": 15000.0,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubot-m-c5-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這個月登錄過聯邦『指定卡別海外加碼』活動了嗎？"
+              },
+              {
+                "id": "ubot-m-c5-2",
+                "stateClass": "recoverable",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 15000.0,
+                "valueUnit": "TWD",
+                "valuePeriod": "thisMonth",
+                "countsThisTx": true,
+                "userPrompt": "這個月在日/韓/泰/美/加/墨的海外實體店家刷滿 15,000 元了嗎？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubot-green",
+      "name": "聯邦綠卡",
+      "aliases": [
+        "綠卡",
+        "聯邦銀行綠卡",
+        "聯邦綠卡一卡通御璽卡",
+        "聯邦綠卡虛擬御璽卡",
+        "UBOT綠卡"
+      ],
+      "issuer": "聯邦銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://card.ubot.com.tw/CardDetail/cardDetail204",
+      "applyUrl": "https://card.ubot.com.tw/eCard/dspCardOnLineApply.aspx?GID=64&IDE=A&strID=2008060014",
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "ubot-green-c1",
+          "label": "國內一般消費",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "ubot-green-base",
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubot-green-c1-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的聯邦綠卡有申辦電子化帳單（電子／行動／LINE帳單）嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-green-c2",
+          "label": "國外一般消費",
+          "archetype": "base",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "rate": 2.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "ubot-green-base",
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubot-green-c2-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的聯邦綠卡有申辦電子化帳單（電子／行動／LINE帳單）嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-green-c3",
+          "label": "綠色消費加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "dining",
+            "transport",
+            "supermarket",
+            "other"
+          ],
+          "merchantListId": "ubot-green-list",
+          "rate": 5.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubot-green-c3-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的聯邦綠卡有申辦電子化帳單（電子／行動／LINE帳單）嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-green-c4",
+          "label": "生活代扣繳",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "utility",
+            "transport"
+          ],
+          "merchantListId": "ubot-green-autopay-list",
+          "rate": 1.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 100.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubot-green-c4-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的聯邦綠卡有申辦電子化帳單（電子／行動／LINE帳單）嗎？"
+              },
+              {
+                "id": "ubot-green-c4-2",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有用聯邦綠卡設定水電瓦斯／電信／公有路邊停車費的自動代扣繳嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-green-c5",
+          "label": "新開立New New Bank自動扣繳加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 10.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "count",
+            "value": 3.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubot-green-c5-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "ubot-newnewbank-new",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是在2026/7/1～2026/12/31期間才第一次申辦並成功開立聯邦 New New Bank 數位帳戶的嗎？"
+              },
+              {
+                "id": "ubot-green-c5-2",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有把這張聯邦綠卡的帳單設定由 New New Bank 帳戶自動扣繳嗎？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubot-laidian",
+      "name": "聯邦賴點卡",
+      "aliases": [
+        "賴點卡",
+        "聯邦賴點Visa卡",
+        "賴點Visa卡",
+        "聯邦LINE Points卡",
+        "LINE Points回饋卡",
+        "聯邦賴點卡吉伊卡哇劇場版",
+        "賴點一卡通御璽卡"
+      ],
+      "issuer": "聯邦銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://card.ubot.com.tw/CardDetail/cardDetail201",
+      "applyUrl": "https://card.ubot.com.tw/eCard/dspCardOnLineApply.aspx?GID=99&IDE=A&strID=2008060014",
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "ubot-laidian-c1",
+          "label": "國內一般消費基本回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "ubot-laidian-base",
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "laidian-c1-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？（Email帳單／簡訊帳單／LINE帳單三選一）"
+              },
+              {
+                "id": "laidian-c1-2",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-laidian-c2",
+          "label": "國外一般消費基本回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "ubot-laidian-base",
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "laidian-c2-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+              },
+              {
+                "id": "laidian-c2-2",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-laidian-c3",
+          "label": "歐洲指定國家實體商店期間限定回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "ubot-laidian-base",
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "laidian-c3-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+              },
+              {
+                "id": "laidian-c3-2",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-laidian-c4",
+          "label": "國內LINE Pay加碼1%",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 200.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "laidian-c4-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+              },
+              {
+                "id": "laidian-c4-2",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+              },
+              {
+                "id": "laidian-c4-3",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡沒有這個加碼）"
+              },
+              {
+                "id": "laidian-c4-4",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 100.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆有滿 100 元嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-laidian-c5",
+          "label": "新戶LINE Pay加碼4%",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 4.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "laidian-c5-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+              },
+              {
+                "id": "laidian-c5-2",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+              },
+              {
+                "id": "laidian-c5-3",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "ubot-newuser",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是聯邦信用卡新戶嗎？（核卡前六個月內未曾持有任何一張聯邦信用卡）"
+              },
+              {
+                "id": "laidian-c5-4",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-laidian-c6",
+          "label": "偶數日LINE Pay指定通路加碼5%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "dining",
+            "pharmacy",
+            "shopping",
+            "sports"
+          ],
+          "merchantListId": "ubot-laidian-evenday",
+          "rate": 5.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 150.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "even",
+          "conditionPaths": [
+            [
+              {
+                "id": "laidian-c6-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+              },
+              {
+                "id": "laidian-c6-2",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+              },
+              {
+                "id": "laidian-c6-3",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（實體卡與其他支付方式都不算）"
+              },
+              {
+                "id": "laidian-c6-4",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 100.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆有滿 100 元嗎？"
+              },
+              {
+                "id": "laidian-c6-5",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-laidian-c7",
+          "label": "指定IP商店/票券/影城加碼5%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "ticketing",
+            "entertainment",
+            "shopping"
+          ],
+          "merchantListId": "ubot-laidian-ip",
+          "rate": 5.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 200.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "laidian-c7-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+              },
+              {
+                "id": "laidian-c7-2",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-laidian-c8",
+          "label": "新戶保費加碼1%刷卡金",
+          "archetype": "channel",
+          "categoryIds": [
+            "insurance"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 1000.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "laidian-c8-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "ubot-newuser",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是聯邦信用卡新戶嗎？（核卡前六個月內未曾持有任何一張聯邦信用卡）"
+              },
+              {
+                "id": "laidian-c8-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有到聯邦「一般活動登錄專區」登錄 115 年保費一次付清加碼活動嗎？（限量2500戶，額滿提前關閉）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-laidian-c9",
+          "label": "韓國吃喝補給指定店家－LINE Pay通用加碼5%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": "ubot-laidian-kr-food",
+          "rate": 5.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 100.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "laidian-c9-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+              },
+              {
+                "id": "laidian-c9-2",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+              },
+              {
+                "id": "laidian-c9-3",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？（刷實體卡不算）"
+              },
+              {
+                "id": "laidian-c9-4",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-laidian-c10",
+          "label": "韓國吃喝補給指定店家－Visa卡加碼10%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": "ubot-laidian-kr-food",
+          "rate": 10.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 200.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "laidian-c10-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+              },
+              {
+                "id": "laidian-c10-2",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+              },
+              {
+                "id": "laidian-c10-3",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？"
+              },
+              {
+                "id": "laidian-c10-4",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-laidian-c11",
+          "label": "韓國吃喝補給指定店家－賴點卡加碼7%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": "ubot-laidian-kr-food",
+          "rate": 7.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 140.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "laidian-c11-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+              },
+              {
+                "id": "laidian-c11-2",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+              },
+              {
+                "id": "laidian-c11-3",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？"
+              },
+              {
+                "id": "laidian-c11-4",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-laidian-c12",
+          "label": "韓國旅遊購物指定店家－Visa卡加碼3%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": "ubot-laidian-kr-shop",
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 150.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "laidian-c12-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+              },
+              {
+                "id": "laidian-c12-2",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+              },
+              {
+                "id": "laidian-c12-3",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？"
+              },
+              {
+                "id": "laidian-c12-4",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-laidian-c13",
+          "label": "韓國旅遊購物指定店家－賴點卡加碼2%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": "ubot-laidian-kr-shop",
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 100.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "laidian-c13-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+              },
+              {
+                "id": "laidian-c13-2",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+              },
+              {
+                "id": "laidian-c13-3",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？"
+              },
+              {
+                "id": "laidian-c13-4",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubot-common",
+      "name": "聯邦全行共通活動",
+      "aliases": [
+        "聯邦共通活動",
+        "聯邦全行活動",
+        "聯邦信用卡全行加碼",
+        "UBOT共通"
+      ],
+      "issuer": "聯邦銀行",
+      "status": "virtual",
+      "variantOf": null,
+      "officialUrl": "https://card.ubot.com.tw/CardActivity",
+      "applyUrl": null,
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "ubot-common-c1",
+          "label": "New New Bank新戶自動扣繳卡費10%",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 10.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "count",
+            "value": 3.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubotc-c1-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "ubot-newnewbank-new",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是在 2026/7/1～12/31 期間才第一次申辦並成功開立聯邦 New New Bank 數位帳戶的嗎？"
+              },
+              {
+                "id": "ubotc-c1-2",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有把聯邦信用卡的帳單設定成由 New New Bank 帳戶自動扣繳嗎？（★注意：設了這個，LINE Bank 自扣禮 5% 就永遠拿不到了）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-common-c2",
+          "label": "iPASS MONEY繳卡費1%綠點",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "ipass-greenpoint",
+          "cap": {
+            "type": "amount",
+            "value": 200.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-06-17",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubotc-c2-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "ipassmoney",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 iPASS MONEY App 裡完成「同意加入一卡通綠點」，並綁定了任一張聯邦信用卡嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-common-c3",
+          "label": "iPASS MONEY APP綁卡消費10%綠點",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 10.0,
+          "unit": "point",
+          "pointCurrencyId": "ipass-greenpoint",
+          "cap": {
+            "type": "amount",
+            "value": 50.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubotc-c3-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "ipassmoney",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 iPASS MONEY App 裡完成「同意加入一卡通綠點」並綁定聯邦卡了嗎？（★7、8、9 月名額都已額滿，最快 10 月才有）"
+              },
+              {
+                "id": "ubotc-c3-2",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 200.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆用 iPASS MONEY 綁聯邦卡要滿 200 元才有 10% 綠點，湊得到嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-common-c4",
+          "label": "全支付綁聯邦卡消費禮3%全點",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "pluspay-point",
+          "cap": {
+            "type": "amount",
+            "value": 20.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-06-29",
+          "validTo": "2027-01-03",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubotc-c4-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "pluspay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "結帳時是用全支付的「付款碼」或掃「全支付 QR Code／TWQR 立牌」付款嗎？（在全聯／大全聯刷不算）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-common-c5",
+          "label": "美廉社5%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "supermarket"
+          ],
+          "merchantListId": "ubot-common-mlsocial",
+          "rate": 5.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 150.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": "ubot-common-drugsuper",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubotc-c5-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這個月登錄「美廉社／小北百貨」活動了嗎？每月 20 日上午 11 點開放，限量 5,000 名，沒登錄這個月刷的就白刷了。"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-common-c6",
+          "label": "小北百貨8%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "other"
+          ],
+          "merchantListId": "ubot-common-xiaobei",
+          "rate": 8.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 150.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": "ubot-common-drugsuper",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubotc-c6-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這個月登錄「美廉社／小北百貨」活動了嗎？每月 20 日上午 11 點開放，限量 5,000 名。"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-common-c7",
+          "label": "屈臣氏聯邦日平日5%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "pharmacy"
+          ],
+          "merchantListId": "ubot-common-watsons",
+          "rate": 5.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 120.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": "ubot-common-watsons-cap",
+          "replaceGroup": null,
+          "validDays": "sun|mon|tue|wed|thu|fri",
+          "conditionPaths": [
+            [
+              {
+                "id": "ubotc-c7-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這個月登錄「屈臣氏聯邦日」了嗎？每月 5 日下午 2 點開放，限量 6,000 名，補登錄救不回上個月。"
+              },
+              {
+                "id": "ubotc-c7-2",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 888.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆屈臣氏要滿 888 元才有 5%（週六是 10%），湊得到嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-common-c8",
+          "label": "屈臣氏聯邦日週六10%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "pharmacy"
+          ],
+          "merchantListId": "ubot-common-watsons",
+          "rate": 10.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 120.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": "ubot-common-watsons-cap",
+          "replaceGroup": null,
+          "validDays": "sat",
+          "conditionPaths": [
+            [
+              {
+                "id": "ubotc-c8-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這個月登錄「屈臣氏聯邦日」了嗎？每月 5 日下午 2 點開放，限量 6,000 名。"
+              },
+              {
+                "id": "ubotc-c8-2",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 888.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "今天週六，這一筆屈臣氏滿 888 元就有 10%，湊得到嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-common-c9",
+          "label": "OPEN錢包7-ELEVEN10%OPENPOINT",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "convenience"
+          ],
+          "merchantListId": "ubot-common-711",
+          "rate": 10.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 100.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubotc-c9-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "openwallet",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 OPEN錢包（OPENPOINT App）裡綁定聯邦信用卡了嗎？"
+              },
+              {
+                "id": "ubotc-c9-2",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 100.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆 7-ELEVEN 要滿 100 元才有 10% OPENPOINT，湊得到嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-common-c10",
+          "label": "萊爾富5%現折",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "convenience"
+          ],
+          "merchantListId": "ubot-common-hilife",
+          "rate": 5.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "ubot-common-c11",
+          "label": "王品瘋Pay週六聯邦加碼3%瘋點數",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "dining"
+          ],
+          "merchantListId": "ubot-common-wowprime",
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "wowprime-point",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "sat",
+          "conditionPaths": [
+            [
+              {
+                "id": "ubotc-c11-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "wowprime-pay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "今天週六，結帳時是用王品瘋美食 App 的「瘋Pay」綁聯邦卡付款、並出示會員卡嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-common-c12",
+          "label": "全聯卡友日週六日滿1200贈360福利點",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "supermarket"
+          ],
+          "merchantListId": "ubot-common-pxmart",
+          "rate": 30.0,
+          "unit": "point",
+          "pointCurrencyId": "pxmart-point",
+          "cap": {
+            "type": "amount",
+            "value": 360.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-04",
+          "validTo": "2026-10-01",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "sat-sun",
+          "conditionPaths": [
+            [
+              {
+                "id": "ubotc-c12-1",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 1200.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "今天週六/日，這一筆全聯要滿 1,200 元才有 360 福利點（約值 36 元），湊得到嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ubot-common-c13",
+          "label": "首次刷聯邦Visa卡繳保費加碼1%",
+          "archetype": "channel",
+          "categoryIds": [
+            "insurance"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 1000.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "ubotc-c13-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "ubot-ins-firsttime",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 2025/7/1～2026/6/30 之間，完全沒有用任何一張聯邦信用卡繳過保費嗎？"
+              },
+              {
+                "id": "ubotc-c13-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你登錄「保費一次付清加碼」活動了嗎？限量 10,000 名，而且回饋只從登錄當月起算，之前刷的救不回來。"
               }
             ]
           ]
