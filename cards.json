@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "dataVersion": "2026-09-03",
-  "generatedAt": "2026-09-02T23:08:30Z",
+  "dataVersion": "2026-09-05",
+  "generatedAt": "2026-09-04T16:23:14Z",
   "enums": {
     "cards.status": {
       "active": "發行中",
@@ -102,7 +102,8 @@
       "cube-plan-fpg": "台塑家",
       "cube-plan-pluspay": "全支付",
       "cube-plan-fixed": "固定回饋",
-      "pluspay": "全支付"
+      "pluspay": "全支付",
+      "cube-app": "CUBE App"
     },
     "components.stackMode": {
       "add": "相加",
