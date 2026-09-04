@@ -1,12 +1,13 @@
 {
   "schemaVersion": 2,
   "dataVersion": "2026-09-05",
-  "generatedAt": "2026-09-04T16:23:14Z",
+  "generatedAt": "2026-09-04T18:08:31Z",
   "enums": {
     "cards.status": {
       "active": "發行中",
       "discontinued": "已停辦",
-      "soldout": "已停售"
+      "soldout": "已停售",
+      "virtual": "虛擬集合卡"
     },
     "components.archetype": {
       "base": "無腦型",
@@ -55,7 +56,9 @@
       "ebill": "電子帳單設定",
       "appBinding": "綁定指定App",
       "fxExchange": "換匯",
-      "securityTrade": "證券交易"
+      "securityTrade": "證券交易",
+      "installment": "分期交易",
+      "investProfile": "投資屬性問卷"
     },
     "conditions.operator": {
       "gte": "大於等於",
@@ -84,7 +87,8 @@
     "memberships.kind": {
       "tier": "等級",
       "subscription": "訂閱方案",
-      "registration": "活動登錄"
+      "registration": "活動登錄",
+      "history": "歷史行為資格"
     },
     "memberships.scope": {
       "account": "帳戶層級",
@@ -103,7 +107,12 @@
       "cube-plan-pluspay": "全支付",
       "cube-plan-fixed": "固定回饋",
       "pluspay": "全支付",
-      "cube-app": "CUBE App"
+      "cube-app": "CUBE App",
+      "app55688": "55688 APP（台灣大車隊）",
+      "linepay": "LINE Pay",
+      "linepay-marketing-consent": "LINE Pay 行銷資訊提供政策同意",
+      "wowprime-pay": "王品瘋Pay",
+      "applepay": "Apple Pay"
     },
     "components.stackMode": {
       "add": "相加",
@@ -363,6 +372,18 @@
         "保險",
         "保費"
       ]
+    },
+    {
+      "id": "tuition",
+      "name": "學費",
+      "parentId": "utility",
+      "keywords": [
+        "學費",
+        "i繳費",
+        "學費通",
+        "註冊費",
+        "學雜費"
+      ]
     }
   ],
   "pointCurrencies": [
@@ -393,6 +414,27 @@
       "issuer": "滙豐銀行",
       "cashValue": 1.0,
       "expiryMonths": 24
+    },
+    {
+      "id": "taiwantaxi-tpoints",
+      "name": "T Points",
+      "issuer": "台灣大車隊",
+      "cashValue": 1.0,
+      "expiryMonths": 6
+    },
+    {
+      "id": "linepoints",
+      "name": "LINE POINTS",
+      "issuer": "LINE Pay",
+      "cashValue": 1.0,
+      "expiryMonths": 6
+    },
+    {
+      "id": "wowprime-point",
+      "name": "瘋點數",
+      "issuer": "王品集團",
+      "cashValue": 1.0,
+      "expiryMonths": 12
     }
   ],
   "merchantLists": [
@@ -980,6 +1022,1484 @@
           "categoryId": "convenience"
         }
       ]
+    },
+    {
+      "id": "sinopac-bibei-selected",
+      "name": "幣倍卡精選通路",
+      "merchants": [
+        {
+          "name": "國外實體商店",
+          "aliases": [
+            "交易地區非臺灣且非新臺幣之實體商店一般消費"
+          ],
+          "categoryId": "overseas"
+        },
+        {
+          "name": "SUICA",
+          "aliases": [
+            "西瓜卡",
+            "日本交通卡"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "PASMO",
+          "aliases": [
+            "日本交通卡"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "ICOCA",
+          "aliases": [
+            "日本交通卡"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "大國藥妝",
+          "aliases": [
+            "Daikoku Drug"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "Sugi藥妝",
+          "aliases": [
+            "スギ薬局",
+            "Sugi Drug"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "Rakuten",
+          "aliases": [
+            "樂天"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Mercari",
+          "aliases": [
+            "煤爐"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Amazon",
+          "aliases": [
+            "亞馬遜"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "iHerb",
+          "aliases": [],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Selfridges",
+          "aliases": [],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "eBay",
+          "aliases": [],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "淘寶",
+          "aliases": [
+            "Taobao"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Gmarket",
+          "aliases": [],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Olive Young",
+          "aliases": [
+            "올리브영"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "航空公司",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "旅行社",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Booking.com",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Agoda",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Hotels",
+          "aliases": [
+            "Hotels.com"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Expedia",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Trip.com",
+          "aliases": [
+            "攜程"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Airbnb",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Klook",
+          "aliases": [
+            "客路"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "KKDAY",
+          "aliases": [
+            "KKday"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "Trivago",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "AsiaYo",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "歐特儀松山機場停車",
+          "aliases": [
+            "松山機場停車"
+          ],
+          "categoryId": "transport"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-bibei-newapplypay",
+      "name": "幣倍卡新申辦指定行動支付",
+      "merchants": [
+        {
+          "name": "Apple Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Google Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-bibei-newpay",
+      "name": "幣倍卡新戶指定行動支付",
+      "merchants": [
+        {
+          "name": "LINE Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Apple Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Google Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Samsung Pay",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "全支付",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "55688 APP",
+          "aliases": [],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "Mitsui Shopping Park Pay",
+          "aliases": [
+            "三井"
+          ],
+          "categoryId": "mobilepay"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-green-list",
+      "name": "現金回饋Green卡精選國內綠色通路",
+      "merchants": [
+        {
+          "name": "星巴克",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "路易莎咖啡",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "藏壽司",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "摩斯漢堡",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "築間幸福鍋物",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "義美食品",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "馬可先生麵包坊",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "miacucina",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "小小樹食",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "陽明春天",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "屋馬餐廳",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "熱浪島南洋蔬食茶堂",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "草蔬宴義式蔬食",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "原素食府",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "三個傻瓜印度蔬食餐廳",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "東風新意餐廳",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "養心茶樓",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "山海樓",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "農人餐桌",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "Q burger",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "麥味登",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "一之軒",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "捷絲旅",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "台北晶華酒店",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "晶泉丰旅",
+          "aliases": [
+            "北投晶泉丰旅",
+            "礁溪晶泉丰旅"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "晶英酒店",
+          "aliases": [
+            "蘭城晶英酒店",
+            "台南晶英酒店",
+            "太魯閣晶英酒店"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "承億酒店",
+          "aliases": [
+            "承億文旅"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "煙波大飯店",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "翰品酒店",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "希爾頓酒店",
+          "aliases": [
+            "Hilton"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "國賓大飯店",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "福容大飯店",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "新驛旅店",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "兆品酒店",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "圓山大飯店",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "城市商旅",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "遠雄悅來大飯店",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "凱撒大飯店",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "老爺酒店",
+          "aliases": [],
+          "categoryId": "travel"
+        },
+        {
+          "name": "威秀影城",
+          "aliases": [],
+          "categoryId": "entertainment"
+        },
+        {
+          "name": "新光影城",
+          "aliases": [],
+          "categoryId": "entertainment"
+        },
+        {
+          "name": "喜樂時代影城",
+          "aliases": [],
+          "categoryId": "entertainment"
+        },
+        {
+          "name": "寬宏售票",
+          "aliases": [],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "KKTIX",
+          "aliases": [],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "拓元售票",
+          "aliases": [
+            "tixCraft"
+          ],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "年代售票",
+          "aliases": [],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "ChargeSPOT",
+          "aliases": [],
+          "categoryId": "other"
+        },
+        {
+          "name": "World Gym",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "健身工廠",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "Curves",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "喬山健康科技",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "Welltivity數位大健康生活平台",
+          "aliases": [
+            "Welltivity"
+          ],
+          "categoryId": "sports"
+        },
+        {
+          "name": "Nuli女力APP",
+          "aliases": [
+            "Nuli"
+          ],
+          "categoryId": "sports"
+        },
+        {
+          "name": "摩曼頓",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "Anytime Fitness",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "超核心健身中心",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "DAZN",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "台北市運動中心",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "新北市運動中心",
+          "aliases": [],
+          "categoryId": "sports"
+        },
+        {
+          "name": "App Store",
+          "aliases": [],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Google Play商店應用程式",
+          "aliases": [
+            "Google Play"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Nintendo",
+          "aliases": [
+            "任天堂"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "PlayStation",
+          "aliases": [
+            "PS Store"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Steam",
+          "aliases": [],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "暴雪娛樂",
+          "aliases": [
+            "Blizzard Entertainment",
+            "Blizzard"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "全國電子",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "STUDIO A",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Straight A",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "家樂福",
+          "aliases": [
+            "萬家福",
+            "樂家康"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "愛買",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "UNIQLO",
+          "aliases": [
+            "優衣庫"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "H&M",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "ZARA",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "GU",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "GAP",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "NET",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "O'right歐萊德",
+          "aliases": [
+            "歐萊德",
+            "Oright"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "AESOP",
+          "aliases": [
+            "伊索"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "10/10 hope",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "Green & Safe",
+          "aliases": [
+            "真食物專賣店"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "台灣主婦聯盟",
+          "aliases": [
+            "主婦聯盟"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "里仁",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "棉花田生機園地",
+          "aliases": [
+            "棉花田"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "聖德科斯",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "義美生機",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "統一生機",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "綠藤生機",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "茶籽堂",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "艾瑪絲AROMASE",
+          "aliases": [
+            "AROMASE",
+            "艾瑪絲"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "長庚生技",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "大研生醫",
+          "aliases": [],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "營養師輕食",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "安永鮮物",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "野菜村有機生活館",
+          "aliases": [
+            "野菜村"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "無毒的家",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "無毒農",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "健康食彩",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "直接跟農夫買",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "iRent",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "GoSmart",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "GoShare",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "Gogoro Network",
+          "aliases": [
+            "Gogoro"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "Wemo Scooter",
+          "aliases": [
+            "WeMo"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "LINE GO",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "TESLA充電費",
+          "aliases": [
+            "特斯拉",
+            "Tesla"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "宏碁智通",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "裕電俥電",
+          "aliases": [
+            "YES!來電",
+            "俥電"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "全國特急電",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "特爾電力",
+          "aliases": [
+            "TAIL"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "華城EVALUE",
+          "aliases": [
+            "EVALUE"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "SharkParking蝦趴",
+          "aliases": [
+            "蝦趴",
+            "SharkParking"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "ZOCHA",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "BEGIN",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "EVOASIS充電費用",
+          "aliases": [
+            "EVOASIS"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "eMoving",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "eMoving電池資費",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "臺北捷運",
+          "aliases": [
+            "台北捷運",
+            "北捷"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "新北捷運",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "桃園捷運",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "臺中捷運",
+          "aliases": [
+            "台中捷運"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "高雄捷運",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "悠遊付",
+          "aliases": [
+            "EasyWallet"
+          ],
+          "categoryId": "mobilepay"
+        },
+        {
+          "name": "荒野保護協會",
+          "aliases": [],
+          "categoryId": "other"
+        },
+        {
+          "name": "社團法人臺灣寶島淨鄉團",
+          "aliases": [
+            "寶島淨鄉團"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "財團法人臺灣海洋保育與漁業永續基金會",
+          "aliases": [
+            "海漁基金會"
+          ],
+          "categoryId": "other"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-mop-inhouse",
+      "name": "永豐MOP聯名卡館內消費",
+      "merchants": [
+        {
+          "name": "MITSUI OUTLET PARK 林口I館",
+          "aliases": [
+            "三新奧特萊斯股份有限公司",
+            "三新奧特萊斯 林口Ｉ館－百貨/餐飲",
+            "ＰＡＹ三新奧特萊斯 林口Ｉ館－百貨/餐飲"
+          ],
+          "categoryId": "department"
+        },
+        {
+          "name": "MITSUI OUTLET PARK 林口II館",
+          "aliases": [
+            "三新二奧特萊斯股份有限公司",
+            "三新奧特萊斯 林口Ⅱ館－百貨/餐飲",
+            "ＰＡＹ三新二奧特萊斯 林口Ⅱ館"
+          ],
+          "categoryId": "department"
+        },
+        {
+          "name": "MITSUI OUTLET PARK 台中港",
+          "aliases": [
+            "三中港奧特萊斯股份有限公司",
+            "ＡＰＰ三中港－百貨",
+            "ＭＩＴＳＵＩ－台中港",
+            "ＡＰＰＭＩＴＳＵＩ－台中港"
+          ],
+          "categoryId": "department"
+        },
+        {
+          "name": "MITSUI OUTLET PARK 台南",
+          "aliases": [
+            "三南奧特萊斯股份有限公司",
+            "ＡＰＰ三南－百貨",
+            "ＡＰＰ三南奧特萊斯",
+            "三南奧特萊斯"
+          ],
+          "categoryId": "department"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-mop-7pct",
+      "name": "永豐MOP聯名卡特選通路7%",
+      "merchants": [
+        {
+          "name": "館外實體餐飲（MCC 5811/5812/5813/5814）",
+          "aliases": [
+            "王品集團",
+            "TASTY",
+            "和牛涮",
+            "雲雀國際餐飲",
+            "武藏野森咖啡",
+            "涮乃葉",
+            "橫濱牛排",
+            "CoCo都可",
+            "一沐日"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "全盈+PAY",
+          "aliases": [
+            "全家便利商店",
+            "PChome",
+            "q CHICKEN",
+            "你訂",
+            "佛教慈濟慈善事業基金會",
+            "屈臣氏",
+            "寧夏商圈"
+          ],
+          "categoryId": "mobilepay"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-55688-app",
+      "name": "永豐55688聯名卡 55688 APP綁卡交易",
+      "merchants": [
+        {
+          "name": "55688 APP",
+          "aliases": [
+            "台灣大車隊APP",
+            "55688APP",
+            "５５６８８ＡＰＰ"
+          ],
+          "categoryId": "transport"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-55688-select",
+      "name": "永豐55688聯名卡精選通路",
+      "merchants": [
+        {
+          "name": "高鐵",
+          "aliases": [
+            "台灣高鐵",
+            "THSR"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "台鐵",
+          "aliases": [
+            "臺鐵",
+            "台灣鐵路"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "中油",
+          "aliases": [
+            "台灣中油",
+            "中國石油"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "全國加油站",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "台亞加油站",
+          "aliases": [
+            "台亞石油"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "TESLA充電費用",
+          "aliases": [
+            "特斯拉充電",
+            "Tesla Supercharger"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "裕電俥電",
+          "aliases": [
+            "YES!來電",
+            "裕電能源"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "全國特急電",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "特爾電力",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "華城EVALUE",
+          "aliases": [
+            "EVALUE",
+            "華城電機"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "SharkParking蝦趴",
+          "aliases": [
+            "蝦趴充電",
+            "SharkParking"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "BEGIN",
+          "aliases": [],
+          "categoryId": "transport"
+        },
+        {
+          "name": "Foodpanda",
+          "aliases": [
+            "foodpanda",
+            "空腹熊貓"
+          ],
+          "categoryId": "delivery"
+        },
+        {
+          "name": "國內餐廳",
+          "aliases": [
+            "台灣餐廳"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "55688機場接送",
+          "aliases": [
+            "台灣大車隊機場接送",
+            "callcar"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "55688生活大管家",
+          "aliases": [
+            "生活大管家",
+            "台灣大車隊生活大管家"
+          ],
+          "categoryId": "other"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-daway-kr-food",
+      "name": "DAWAY卡韓國吃喝補給指定店家",
+      "merchants": [
+        {
+          "name": "韓國吃喝補給指定店家",
+          "aliases": [],
+          "categoryId": "dining"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-daway-kr-shop",
+      "name": "DAWAY卡韓國旅遊購物指定店家",
+      "merchants": [
+        {
+          "name": "韓國旅遊購物指定店家",
+          "aliases": [],
+          "categoryId": "shopping"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-daway-kr-oliveyoung-online",
+      "name": "DAWAY卡韓國Olive Young Global線上購物",
+      "merchants": [
+        {
+          "name": "Olive Young Global",
+          "aliases": [
+            "올리브영",
+            "OliveYoung"
+          ],
+          "categoryId": "ecommerce"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-daway-kr-oliveyoung-store",
+      "name": "DAWAY卡韓國Olive Young全門市",
+      "merchants": [
+        {
+          "name": "Olive Young",
+          "aliases": [
+            "올리브영",
+            "OliveYoung"
+          ],
+          "categoryId": "shopping"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-daway-louisa",
+      "name": "DAWAY卡路易莎咖啡加碼",
+      "merchants": [
+        {
+          "name": "路易莎咖啡",
+          "aliases": [
+            "Louisa",
+            "Louisa Coffee"
+          ],
+          "categoryId": "dining"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-daway-coupang",
+      "name": "DAWAY卡酷澎COUPANG加碼",
+      "merchants": [
+        {
+          "name": "酷澎COUPANG",
+          "aliases": [
+            "Coupang",
+            "酷澎"
+          ],
+          "categoryId": "ecommerce"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-daway-linepay-exp",
+      "name": "DAWAY卡LINE Pay找體驗APP加碼",
+      "merchants": [
+        {
+          "name": "LINE Pay找體驗",
+          "aliases": [
+            "找體驗",
+            "LINE Pay找體驗APP"
+          ],
+          "categoryId": "entertainment"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-daway-agoda",
+      "name": "DAWAY卡天天好賺點-Agoda",
+      "merchants": [
+        {
+          "name": "Agoda",
+          "aliases": [
+            "雅高達"
+          ],
+          "categoryId": "travel"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-daway-poya",
+      "name": "DAWAY卡天天好賺點-寶雅",
+      "merchants": [
+        {
+          "name": "寶雅",
+          "aliases": [
+            "POYA"
+          ],
+          "categoryId": "pharmacy"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-daway-lopia",
+      "name": "DAWAY卡天天好賺點-LOPIA",
+      "merchants": [
+        {
+          "name": "LOPIA",
+          "aliases": [],
+          "categoryId": "supermarket"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-daway-decathlon",
+      "name": "DAWAY卡天天好賺點-迪卡儂",
+      "merchants": [
+        {
+          "name": "迪卡儂",
+          "aliases": [
+            "Decathlon"
+          ],
+          "categoryId": "sports"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-daway-ikea",
+      "name": "DAWAY卡天天好賺點-IKEA",
+      "merchants": [
+        {
+          "name": "IKEA",
+          "aliases": [
+            "宜家家居"
+          ],
+          "categoryId": "shopping"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-common-organic",
+      "name": "有機商品滿額指定通路",
+      "merchants": [
+        {
+          "name": "GREEN & SAFE",
+          "aliases": [
+            "真食物專賣店",
+            "Green & Safe"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "里仁",
+          "aliases": [],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "棉花田",
+          "aliases": [
+            "棉花田生機園地"
+          ],
+          "categoryId": "supermarket"
+        }
+      ]
+    },
+    {
+      "id": "sinopac-common-wowprime",
+      "name": "王品瘋Pay適用餐廳",
+      "merchants": [
+        {
+          "name": "王品牛排",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "原燒",
+          "aliases": [
+            "原燒 日式燒肉"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "聚",
+          "aliases": [
+            "聚 日式鍋物"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "藝奇",
+          "aliases": [
+            "藝奇日式料理",
+            "藝奇新日本料理"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "夏慕尼",
+          "aliases": [
+            "夏慕尼新香榭鉄板燒"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "TASTy西堤牛排",
+          "aliases": [
+            "西堤",
+            "TASTY"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "陶板屋",
+          "aliases": [
+            "陶板屋和風洋食"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "品田牧場",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "PUTIEN 莆田",
+          "aliases": [
+            "莆田",
+            "PUTIEN"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "青花驕",
+          "aliases": [
+            "青花驕 麻辣鍋"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "XIANG DUCK 享鴨",
+          "aliases": [
+            "享鴨"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "丰禾",
+          "aliases": [
+            "丰禾 台味風格料理"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "和牛涮",
+          "aliases": [
+            "和牛涮日式鍋物放題"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "肉次方",
+          "aliases": [
+            "肉次方燒肉放題"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "尬鍋",
+          "aliases": [
+            "尬鍋台式潮鍋"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "石二鍋",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "12mini",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "阪前鐵板燒",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "就饗鐵板燒",
+          "aliases": [],
+          "categoryId": "dining"
+        },
+        {
+          "name": "金咕",
+          "aliases": [
+            "金咕 韓式原塊烤肉"
+          ],
+          "categoryId": "dining"
+        }
+      ]
     }
   ],
   "memberships": [
@@ -1277,6 +2797,75 @@
           }
         ]
       ]
+    },
+    {
+      "id": "sinopac-bibei-newapply",
+      "name": "幣倍卡新申辦",
+      "kind": "registration",
+      "issuer": "永豐銀行",
+      "scope": "card",
+      "level": null,
+      "userPrompt": "你的幣倍卡是2026/7/1~2026/12/31期間申辦的嗎？（含永豐信用卡新戶、既有卡友、既有幣倍卡友加辦不同幣別）",
+      "qualifyPaths": []
+    },
+    {
+      "id": "sinopac-daway-go",
+      "name": "DAWAY GO 等級",
+      "kind": "tier",
+      "issuer": "永豐銀行",
+      "scope": "card",
+      "level": 1,
+      "userPrompt": "你符合 DAWAY GO 等級嗎？（自動扣繳＋電子/行動帳單＋網銀會員含投資屬性問卷，三項要同時成立）",
+      "qualifyPaths": [
+        [
+          {
+            "id": "daway-go-1",
+            "stateClass": "structural",
+            "type": "autopay",
+            "targetId": null,
+            "operator": null,
+            "value": null,
+            "valueUnit": null,
+            "valuePeriod": null,
+            "countsThisTx": null,
+            "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐信用卡帳款嗎？"
+          },
+          {
+            "id": "daway-go-2",
+            "stateClass": "structural",
+            "type": "ebill",
+            "targetId": null,
+            "operator": null,
+            "value": null,
+            "valueUnit": null,
+            "valuePeriod": null,
+            "countsThisTx": null,
+            "userPrompt": "你有把信用卡帳單設定成電子或行動帳單嗎？"
+          },
+          {
+            "id": "daway-go-3",
+            "stateClass": "structural",
+            "type": "investProfile",
+            "targetId": null,
+            "operator": null,
+            "value": null,
+            "valueUnit": null,
+            "valuePeriod": null,
+            "countsThisTx": null,
+            "userPrompt": "你是永豐網路銀行會員，而且完成投資屬性問卷了嗎？"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "sinopac-tax-oldfriend",
+      "name": "永豐繳稅老朋友",
+      "kind": "registration",
+      "issuer": "永豐銀行",
+      "scope": "account",
+      "level": null,
+      "userPrompt": "你在 2024 或 2025 年，有用永豐信用卡繳過牌照稅／房屋稅／地價稅／汽燃費(養管費)嗎？",
+      "qualifyPaths": []
     }
   ],
   "cards": [
@@ -1316,6 +2905,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "esun-general",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -1354,6 +2946,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "esun-general",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -1404,6 +2999,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "esun-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -1442,6 +3040,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "esun-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -1480,6 +3081,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "esun-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -1518,6 +3122,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "esun-newpromo",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -1568,6 +3175,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "esun-newpromo",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -1624,6 +3234,9 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": []
         },
         {
@@ -1647,6 +3260,9 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -1685,6 +3301,9 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -1785,6 +3404,9 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -1885,6 +3507,9 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -1940,6 +3565,9 @@
           "validTo": null,
           "stackMode": "add",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": []
         },
         {
@@ -1963,6 +3591,9 @@
           "validTo": null,
           "stackMode": "add",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": []
         },
         {
@@ -1986,6 +3617,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "dawho-tier-bonus",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -2048,6 +3682,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "dawho-tier-bonus",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -2110,6 +3747,9 @@
           "validTo": null,
           "stackMode": "replace",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -2172,6 +3812,9 @@
           "validTo": null,
           "stackMode": "replace",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -2234,6 +3877,9 @@
           "validTo": "2026-12-31",
           "stackMode": "add",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -2289,6 +3935,9 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": []
         },
         {
@@ -2314,6 +3963,9 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": []
         },
         {
@@ -2337,6 +3989,9 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": []
         },
         {
@@ -2360,6 +4015,9 @@
           "validTo": "2026-09-30",
           "stackMode": "add",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -2415,6 +4073,9 @@
           "validTo": "2027-07-31",
           "stackMode": "exclusive",
           "stackGroup": "ubot-line-base",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": []
         },
         {
@@ -2438,6 +4099,9 @@
           "validTo": "2027-07-31",
           "stackMode": "exclusive",
           "stackGroup": "ubot-line-base",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": []
         },
         {
@@ -2461,6 +4125,9 @@
           "validTo": "2027-07-31",
           "stackMode": "exclusive",
           "stackGroup": "ubot-line-base",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": []
         },
         {
@@ -2487,6 +4154,9 @@
           "validTo": "2027-07-31",
           "stackMode": "add",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": []
         },
         {
@@ -2510,6 +4180,9 @@
           "validTo": "2027-07-31",
           "stackMode": "add",
           "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -2577,6 +4250,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": []
         },
         {
@@ -2601,6 +4277,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -2652,6 +4331,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -2703,6 +4385,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -2756,6 +4441,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -2809,6 +4497,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -2862,6 +4553,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -2914,6 +4608,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -2966,6 +4663,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -3018,6 +4718,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -3070,6 +4773,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -3110,6 +4816,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -3149,6 +4858,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -3199,6 +4911,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -3237,6 +4952,9 @@
           "validTo": "2026-12-31",
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
           "conditionPaths": [
             [
               {
@@ -3250,6 +4968,3059 @@
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
                 "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sinopac-bibei",
+      "name": "幣倍卡",
+      "aliases": [
+        "永豐幣倍卡",
+        "雙幣卡",
+        "幣倍",
+        "幣倍現金回饋卡"
+      ],
+      "issuer": "永豐銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/dual-currency-card.html",
+      "applyUrl": "https://mma.sinopac.com/SinoCard/Application/ApplyCard?prodtype=6",
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "sinopac-bibei-c1",
+          "label": "基本回饋－國內",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "bibei-c1-1",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有把永豐新臺幣＋外幣帳戶設為這張卡的自動扣繳帳戶嗎？"
+              },
+              {
+                "id": "bibei-c1-2",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐電子或行動帳單並取消實體帳單嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-bibei-c2",
+          "label": "基本回饋－國外",
+          "archetype": "base",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "rate": 2.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "bibei-c2-1",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有把永豐新臺幣＋外幣帳戶設為這張卡的自動扣繳帳戶嗎？"
+              },
+              {
+                "id": "bibei-c2-2",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐電子或行動帳單並取消實體帳單嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-bibei-c3",
+          "label": "保費代繳回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "insurance"
+          ],
+          "merchantListId": null,
+          "rate": 1.2,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "bibei-c3-1",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有把永豐新臺幣＋外幣帳戶設為這張卡的自動扣繳帳戶嗎？"
+              },
+              {
+                "id": "bibei-c3-2",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐電子或行動帳單並取消實體帳單嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-bibei-c4",
+          "label": "精選通路加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": "sinopac-bibei-selected",
+          "rate": 4.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 800.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "bibei-c4-1",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有把永豐新臺幣＋外幣帳戶都設為自動扣繳帳戶，而且已經成功扣款過嗎？"
+              },
+              {
+                "id": "bibei-c4-2",
+                "stateClass": "structural",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定電子或行動帳單並取消實體帳單寄送嗎？"
+              },
+              {
+                "id": "bibei-c4-3",
+                "stateClass": "structural",
+                "type": "assetThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 100000.0,
+                "valueUnit": "TWD",
+                "valuePeriod": "lastMonth",
+                "countsThisTx": null,
+                "userPrompt": "你上個月在永豐的往來資產月平均餘額有到新臺幣10萬元嗎？"
+              }
+            ],
+            [
+              {
+                "id": "bibei-c4-4",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有把永豐新臺幣＋外幣帳戶都設為自動扣繳帳戶，而且已經成功扣款過嗎？"
+              },
+              {
+                "id": "bibei-c4-5",
+                "stateClass": "structural",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定電子或行動帳單並取消實體帳單寄送嗎？"
+              },
+              {
+                "id": "bibei-c4-6",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "sinopac-dawho-tier1",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？"
+              }
+            ],
+            [
+              {
+                "id": "bibei-c4-7",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有把永豐新臺幣＋外幣帳戶都設為自動扣繳帳戶，而且已經成功扣款過嗎？"
+              },
+              {
+                "id": "bibei-c4-8",
+                "stateClass": "structural",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定電子或行動帳單並取消實體帳單寄送嗎？"
+              },
+              {
+                "id": "bibei-c4-9",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "sinopac-dawho-tier2",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-bibei-c5",
+          "label": "新申辦指定行動支付加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": "sinopac-bibei-newapplypay",
+          "rate": 2.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 200.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "bibei-c5-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "sinopac-bibei-newapply",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的幣倍卡是2026/7/1~12/31期間申辦的嗎？"
+              },
+              {
+                "id": "bibei-c5-2",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有把永豐新臺幣＋外幣帳戶設為這張卡的自動扣繳帳戶嗎？"
+              },
+              {
+                "id": "bibei-c5-3",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐電子或行動帳單並取消實體帳單嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-bibei-c6",
+          "label": "新戶指定行動支付",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": "sinopac-bibei-newpay",
+          "rate": 20.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "bibei-c6-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "sinopac-newuser",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是永豐信用卡新戶嗎？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sinopac-green",
+      "name": "現金回饋Green卡",
+      "aliases": [
+        "永豐現金回饋Green卡",
+        "永豐Green卡",
+        "Green卡",
+        "綠卡"
+      ],
+      "issuer": "永豐銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/cashcard.html",
+      "applyUrl": "https://mma.sinopac.com/SinoCard/Application/ApplyCard?CardFace=278178&Branch=official&Flag=01&mode=1",
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "sinopac-green-c1",
+          "label": "基本回饋－國內",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "sinopac-green-c2",
+          "label": "基本回饋－國外",
+          "archetype": "base",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "rate": 2.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "sinopac-green-c3",
+          "label": "精選國內綠色通路加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": "sinopac-green-list",
+          "rate": 4.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": "sinopac-green-cap300",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "green-c3-1",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的永豐信用卡帳單是電子或行動帳單嗎？"
+              },
+              {
+                "id": "green-c3-2",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐信用卡帳款嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-green-c4",
+          "label": "悠遊卡自動加值加碼－新戶",
+          "archetype": "channel",
+          "categoryIds": [
+            "transitcard"
+          ],
+          "merchantListId": null,
+          "rate": 4.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "capGroup": "sinopac-green-cap300",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "green-c4-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "sinopac-newuser",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是永豐信用卡新戶嗎？"
+              },
+              {
+                "id": "green-c4-2",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你的永豐信用卡帳單是電子或行動帳單嗎？"
+              },
+              {
+                "id": "green-c4-3",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐信用卡帳款嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-green-c5",
+          "label": "保費代扣繳",
+          "archetype": "base",
+          "categoryIds": [
+            "insurance"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        }
+      ]
+    },
+    {
+      "id": "sinopac-mop",
+      "name": "MITSUI OUTLET PARK聯名卡",
+      "aliases": [
+        "永豐三井聯名卡",
+        "三井OUTLET卡",
+        "MOP卡",
+        "MITSUI OUTLET PARK卡",
+        "三井outlet卡"
+      ],
+      "issuer": "永豐銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/co-brand/mitsui-outlet-park-card.html",
+      "applyUrl": null,
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "sinopac-mop-c1",
+          "label": "館內豐點0.5%（館內累積未達30,000）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "department"
+          ],
+          "merchantListId": "sinopac-mop-inhouse",
+          "rate": 0.5,
+          "unit": "point",
+          "pointCurrencyId": "sinopac-fengpoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "mop-fengpoint",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "sinopac-mop-c2",
+          "label": "館內豐點1%（館內累積滿30,000）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "department"
+          ],
+          "merchantListId": "sinopac-mop-inhouse",
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "sinopac-fengpoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "mop-fengpoint",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "mop-c2-1",
+                "stateClass": "recoverable",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 30000.0,
+                "valueUnit": "TWD",
+                "valuePeriod": "statementCycle",
+                "countsThisTx": true,
+                "userPrompt": "這期帳單在三井OUTLET館內累積刷滿 30,000 元了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-mop-c3",
+          "label": "館外一般消費豐點0.3%",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 0.3,
+          "unit": "point",
+          "pointCurrencyId": "sinopac-fengpoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "mop-fengpoint",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "sinopac-mop-c4",
+          "label": "特選通路7%刷卡金（館外餐飲／全盈+PAY）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "dining",
+            "mobilepay"
+          ],
+          "merchantListId": "sinopac-mop-7pct",
+          "rate": 7.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 100.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "mop-c4-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你登錄過永豐 MOP 卡『特選通路7%』活動了嗎？"
+              },
+              {
+                "id": "mop-c4-2",
+                "stateClass": "recoverable",
+                "type": "ebill",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐電子或行動帳單嗎？"
+              },
+              {
+                "id": "mop-c4-3",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐卡費嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-mop-c5",
+          "label": "JCB卡日韓泰實體消費2%加碼－2026Q3",
+          "archetype": "base",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "rate": 2.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 1000.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "mop-c5-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你登錄過 MOP JCB 卡『日韓泰2%』第三季活動了嗎？"
+              },
+              {
+                "id": "mop-c5-2",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐卡費嗎？"
+              },
+              {
+                "id": "mop-c5-3",
+                "stateClass": "recoverable",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 30000.0,
+                "valueUnit": "TWD",
+                "valuePeriod": "campaign",
+                "countsThisTx": true,
+                "userPrompt": "這一季在日本／韓國／泰國實體店面刷滿 30,000 元了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-mop-c6",
+          "label": "JCB卡日韓泰實體消費2%加碼－2026Q4",
+          "archetype": "base",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "rate": 2.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 1000.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-10-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "mop-c6-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你登錄過 MOP JCB 卡『日韓泰2%』第四季活動了嗎？"
+              },
+              {
+                "id": "mop-c6-2",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐卡費嗎？"
+              },
+              {
+                "id": "mop-c6-3",
+                "stateClass": "recoverable",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 30000.0,
+                "valueUnit": "TWD",
+                "valuePeriod": "campaign",
+                "countsThisTx": true,
+                "userPrompt": "這一季在日本／韓國／泰國實體店面刷滿 30,000 元了嗎？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sinopac-55688",
+      "name": "永豐55688聯名卡",
+      "aliases": [
+        "55688聯名卡",
+        "台灣大車隊聯名卡",
+        "55688卡",
+        "台灣大車隊信用卡",
+        "大車隊卡"
+      ],
+      "issuer": "永豐銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/co-brand/taxicard.html",
+      "applyUrl": "https://app-api.taiwantaxi.com.tw/SinoPacCard/Apply",
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "sinopac-55688-c1",
+          "label": "一般消費基本回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "taiwantaxi-tpoints",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "sinopac-55688-c2",
+          "label": "55688 APP綁卡交易回饋",
+          "archetype": "channel",
+          "categoryIds": [
+            "transport"
+          ],
+          "merchantListId": "sinopac-55688-app",
+          "rate": 8.0,
+          "unit": "point",
+          "pointCurrencyId": "taiwantaxi-tpoints",
+          "cap": {
+            "type": "amount",
+            "value": 200.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": "sinopac-55688-appbind",
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "55688-c2-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "app55688",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有用 55688 APP 的「即時綁卡」功能，把這張卡綁到你本人的 55688 會員帳號嗎？"
+              },
+              {
+                "id": "55688-c2-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "app55688",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "結帳請直接用 55688 APP 裡綁定的這張卡付款（用實體卡刷、或用 Apple Pay／LINE Pay 付 55688 都拿不到 8%）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-55688-c3",
+          "label": "新戶55688 APP綁卡交易加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "transport"
+          ],
+          "merchantListId": "sinopac-55688-app",
+          "rate": 10.0,
+          "unit": "point",
+          "pointCurrencyId": "taiwantaxi-tpoints",
+          "cap": {
+            "type": "amount",
+            "value": 100.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": "sinopac-55688-appbind",
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "55688-c3-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "sinopac-newuser",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是永豐信用卡新戶嗎？"
+              },
+              {
+                "id": "55688-c3-2",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "app55688",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有用 55688 APP 的「即時綁卡」功能，把這張卡綁到你本人的 55688 會員帳號嗎？"
+              },
+              {
+                "id": "55688-c3-3",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "app55688",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "結帳請直接用 55688 APP 裡綁定的這張卡付款（用實體卡刷、或用行動支付付 55688 都不算）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-55688-c4",
+          "label": "精選通路加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": "sinopac-55688-select",
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "taiwantaxi-tpoints",
+          "cap": {
+            "type": "amount",
+            "value": 200.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "55688-c4-1",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有設定永豐銀行或京城銀行帳戶自動扣繳永豐信用卡帳款嗎？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sinopac-daway",
+      "name": "DAWAY卡",
+      "aliases": [
+        "永豐DAWAY卡",
+        "大威卡",
+        "DAWAY御璽卡",
+        "DAWAY悠遊御璽卡"
+      ],
+      "issuer": "永豐銀行",
+      "status": "active",
+      "variantOf": null,
+      "officialUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/DAWAY.html",
+      "applyUrl": "https://mma.sinopac.com/SinoCard/Application/ApplyCard?prodtype=11&Branch=official",
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "sinopac-daway-c1",
+          "label": "基礎回饋－國內一般消費",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 0.5,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c1-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c2",
+          "label": "基礎回饋－國外一般消費",
+          "archetype": "base",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "rate": 2.5,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c2-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c3",
+          "label": "LINE Pay加碼－DAWAY GO等級",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 1.5,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c3-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+              },
+              {
+                "id": "daway-c3-2",
+                "stateClass": "recoverable",
+                "type": "membership",
+                "targetId": "sinopac-daway-go",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你符合 DAWAY GO 等級嗎？（自動扣繳＋電子帳單＋網銀會員含投資屬性問卷，三項都要）"
+              },
+              {
+                "id": "daway-c3-3",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡沒有這個加碼）"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c4",
+          "label": "LINE Pay新戶再加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 6.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c4-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+              },
+              {
+                "id": "daway-c4-2",
+                "stateClass": "recoverable",
+                "type": "membership",
+                "targetId": "sinopac-daway-go",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你符合 DAWAY GO 等級嗎？"
+              },
+              {
+                "id": "daway-c4-3",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "sinopac-newuser",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是永豐信用卡新戶嗎？"
+              },
+              {
+                "id": "daway-c4-4",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c5",
+          "label": "韓國吃喝補給指定店家－LINE Pay通用加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": "sinopac-daway-kr-food",
+          "rate": 5.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 100.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c5-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "daway-c5-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c6",
+          "label": "韓國吃喝補給指定店家－Visa卡加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": "sinopac-daway-kr-food",
+          "rate": 10.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 200.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c6-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "daway-c6-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c7",
+          "label": "韓國吃喝補給指定店家－DAWAY卡加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": "sinopac-daway-kr-food",
+          "rate": 7.5,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 150.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c7-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+              },
+              {
+                "id": "daway-c7-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "daway-c7-3",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c8",
+          "label": "韓國旅遊購物指定店家－Visa卡加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": "sinopac-daway-kr-shop",
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 150.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c8-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "daway-c8-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c9",
+          "label": "韓國旅遊購物指定店家－DAWAY卡加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": "sinopac-daway-kr-shop",
+          "rate": 2.5,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 125.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c9-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+              },
+              {
+                "id": "daway-c9-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "daway-c9-3",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c10",
+          "label": "韓國Olive Young Global線上－DAWAY卡加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas",
+            "ecommerce"
+          ],
+          "merchantListId": "sinopac-daway-kr-oliveyoung-online",
+          "rate": 7.5,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 225.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-08-30",
+          "validTo": "2026-09-05",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c10-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+              },
+              {
+                "id": "daway-c10-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "daway-c10-3",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c11",
+          "label": "韓國Olive Young Global線上－Visa卡加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas",
+            "ecommerce"
+          ],
+          "merchantListId": "sinopac-daway-kr-oliveyoung-online",
+          "rate": 10.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-08-30",
+          "validTo": "2026-09-05",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c11-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "daway-c11-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c12",
+          "label": "韓國Olive Young全門市－DAWAY卡加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas",
+            "shopping"
+          ],
+          "merchantListId": "sinopac-daway-kr-oliveyoung-store",
+          "rate": 7.5,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 225.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-08-30",
+          "validTo": "2026-09-05",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c12-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+              },
+              {
+                "id": "daway-c12-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（須在韓國當地，並開啟 LINE Pay 定位服務切換韓國版付款條碼）"
+              },
+              {
+                "id": "daway-c12-3",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c13",
+          "label": "韓國Olive Young全門市－Visa卡加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas",
+            "shopping"
+          ],
+          "merchantListId": "sinopac-daway-kr-oliveyoung-store",
+          "rate": 10.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-08-30",
+          "validTo": "2026-09-05",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c13-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（須在韓國當地）"
+              },
+              {
+                "id": "daway-c13-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c14",
+          "label": "路易莎咖啡加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "dining"
+          ],
+          "merchantListId": "sinopac-daway-louisa",
+          "rate": 5.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 50.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c14-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+              },
+              {
+                "id": "daway-c14-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡不算）"
+              },
+              {
+                "id": "daway-c14-3",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c15",
+          "label": "酷澎COUPANG每週三加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "ecommerce"
+          ],
+          "merchantListId": "sinopac-daway-coupang",
+          "rate": 5.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 75.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "wed",
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c15-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+              },
+              {
+                "id": "daway-c15-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡不算）"
+              },
+              {
+                "id": "daway-c15-3",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c16",
+          "label": "LINE Pay找體驗APP加碼－週一至五",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "entertainment"
+          ],
+          "merchantListId": "sinopac-daway-linepay-exp",
+          "rate": 8.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 240.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "mon-fri",
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c16-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "daway-c16-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c17",
+          "label": "DAWAY卡LINE Pay找體驗APP加碼－週一至五",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "entertainment"
+          ],
+          "merchantListId": "sinopac-daway-linepay-exp",
+          "rate": 8.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "mon-fri",
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c17-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+              },
+              {
+                "id": "daway-c17-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡不算）"
+              },
+              {
+                "id": "daway-c17-3",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c18",
+          "label": "LINE Pay找體驗APP加碼－週六日",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "entertainment"
+          ],
+          "merchantListId": "sinopac-daway-linepay-exp",
+          "rate": 14.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 420.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "sat-sun",
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c18-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "daway-c18-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c19",
+          "label": "DAWAY卡LINE Pay找體驗APP加碼－週六日",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "entertainment"
+          ],
+          "merchantListId": "sinopac-daway-linepay-exp",
+          "rate": 8.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "sat-sun",
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c19-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+              },
+              {
+                "id": "daway-c19-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡不算）"
+              },
+              {
+                "id": "daway-c19-3",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c20",
+          "label": "天天好賺點－每週一Agoda",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "travel"
+          ],
+          "merchantListId": "sinopac-daway-agoda",
+          "rate": 12.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "mon",
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c20-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "daway-c20-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c21",
+          "label": "天天好賺點－每週三寶雅",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "pharmacy"
+          ],
+          "merchantListId": "sinopac-daway-poya",
+          "rate": 5.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "wed",
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c21-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "daway-c21-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              },
+              {
+                "id": "daway-c21-4",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 650.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆有滿 650 元嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c22",
+          "label": "天天好賺點－每週三四LOPIA",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "supermarket"
+          ],
+          "merchantListId": "sinopac-daway-lopia",
+          "rate": 6.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "wed|thu",
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c22-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "daway-c22-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              },
+              {
+                "id": "daway-c22-4",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 700.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆有滿 700 元嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c23",
+          "label": "天天好賺點－每週四五迪卡儂",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "sports"
+          ],
+          "merchantListId": "sinopac-daway-decathlon",
+          "rate": 6.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "thu|fri",
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c23-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "daway-c23-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              },
+              {
+                "id": "daway-c23-4",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 1500.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆有滿 1,500 元嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-daway-c24",
+          "label": "天天好賺點－每週六日IKEA",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "shopping"
+          ],
+          "merchantListId": "sinopac-daway-ikea",
+          "rate": 4.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "sat-sun",
+          "conditionPaths": [
+            [
+              {
+                "id": "daway-c24-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+              },
+              {
+                "id": "daway-c24-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": "linepay-marketing-consent",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+              },
+              {
+                "id": "daway-c24-4",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 2000.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆有滿 2,000 元嗎？"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sinopac-common",
+      "name": "永豐全行共通活動",
+      "aliases": [
+        "永豐共通活動",
+        "永豐全行活動",
+        "永豐信用卡全行加碼"
+      ],
+      "issuer": "永豐銀行",
+      "status": "virtual",
+      "variantOf": null,
+      "officialUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/list.html",
+      "applyUrl": null,
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "sinopac-common-c1",
+          "label": "捷運任你乘－Apple Pay感應搭捷運",
+          "archetype": "channel",
+          "categoryIds": [
+            "transport"
+          ],
+          "merchantListId": null,
+          "rate": 100.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 100.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "common-c1-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你登錄「捷運任你乘」活動了嗎？活動9/30截止，登錄了才拿得到100%回饋。"
+              },
+              {
+                "id": "common-c1-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "applepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "進捷運站時是用 Apple Pay 感應嗎？用實體卡或其他支付都不算。"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-common-c5",
+          "label": "有機商品單筆滿2000送100",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "supermarket"
+          ],
+          "merchantListId": "sinopac-common-organic",
+          "rate": 5.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 100.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "common-c5-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你登錄「有機商品滿額」活動了嗎？登錄當月起的消費才算，補登錄救不回上個月。"
+              },
+              {
+                "id": "common-c5-2",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 2000.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆在 GREEN & SAFE／里仁／棉花田要滿 2,000 元才有 100 元刷卡金，湊得到嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-common-c6",
+          "label": "大咖DACARD APP繳汽燃費10%",
+          "archetype": "channel",
+          "categoryIds": [
+            "utility"
+          ],
+          "merchantListId": null,
+          "rate": 10.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 50.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": "sinopac-common-tax",
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "common-c6-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你登錄「大咖APP繳汽燃費10%」活動了嗎？限量 5,000 名，可能已額滿。"
+              },
+              {
+                "id": "common-c6-2",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "dacard",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有下載大咖 DACARD App 嗎？這個活動必須用大咖 App 繳汽燃費才算。"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-common-c7",
+          "label": "指定稅款好朋友加碼0.2%",
+          "archetype": "channel",
+          "categoryIds": [
+            "utility"
+          ],
+          "merchantListId": null,
+          "rate": 0.2,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 100.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": "sinopac-common-tax",
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "common-c7-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你登錄「指定稅款好朋友加碼」活動了嗎？登錄當月起繳的稅才算。"
+              },
+              {
+                "id": "common-c7-2",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "sinopac-tax-oldfriend",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你在 2024 或 2025 年，有用永豐信用卡繳過牌照稅／房屋稅／地價稅／汽燃費嗎？"
+              },
+              {
+                "id": "common-c7-3",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 500.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆稅款要滿 500 元才有回饋，未滿 500 的零頭不計。"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-common-c8",
+          "label": "學費代繳每滿5萬回50",
+          "archetype": "channel",
+          "categoryIds": [
+            "tuition"
+          ],
+          "merchantListId": null,
+          "rate": 0.1,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "common-c8-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你登錄「學費代繳滿額回饋」活動了嗎？登錄當月起繳的學費才算。"
+              },
+              {
+                "id": "common-c8-2",
+                "stateClass": "recoverable",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 50000.0,
+                "valueUnit": "TWD",
+                "valuePeriod": "thisMonth",
+                "countsThisTx": true,
+                "userPrompt": "這個月透過 i繳費／學費通刷永豐卡繳的學費，累計滿 5 萬了嗎？每滿 5 萬才回 50 元。"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-common-c9",
+          "label": "公共事業費代扣繳－夏日大作戰2%",
+          "archetype": "channel",
+          "categoryIds": [
+            "utility"
+          ],
+          "merchantListId": null,
+          "rate": 2.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 50.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-08-01",
+          "validTo": "2026-10-31",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "common-c9-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你登錄「公共事業費夏日大作戰」活動了嗎？8/1 開放登錄，限量 5,000 名。"
+              },
+              {
+                "id": "common-c9-2",
+                "stateClass": "structural",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有申請水電瓦斯／路邊停車／中華電信費用自動扣繳到永豐信用卡嗎？"
+              },
+              {
+                "id": "common-c9-3",
+                "stateClass": "structural",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 4.0,
+                "valueUnit": "times",
+                "valuePeriod": "campaign",
+                "countsThisTx": false,
+                "userPrompt": "你在 2026/1/1~7/31 之間，有申請公共事業費任兩項並成功自動扣繳滿 4 次嗎？"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-common-c10",
+          "label": "特店分期享雙重好禮－第1重2%",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "rate": 2.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "replace",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "common-c10-1",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你登錄「特店分期享雙重好禮」活動了嗎？限量 12,000 名，9/30 前都能補登錄。"
+              },
+              {
+                "id": "common-c10-2",
+                "stateClass": "onsite",
+                "type": "installment",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要在店裡當場辦 3／6／12 期分期才算，刷完再打電話申請分期不算。"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "sinopac-common-c11",
+          "label": "王品瘋Pay週一永豐加碼3%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "dining"
+          ],
+          "merchantListId": "sinopac-common-wowprime",
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "wowprime-point",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "mon",
+          "conditionPaths": [
+            [
+              {
+                "id": "common-c11-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "wowprime-pay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "結帳時是用王品瘋美食 App 的「瘋Pay」電子錢包綁永豐卡付款嗎？直接刷卡沒有永豐加碼的 3%。"
               }
             ]
           ]
