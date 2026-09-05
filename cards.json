@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "dataVersion": "2026-09-05",
-  "generatedAt": "2026-09-04T19:24:25Z",
+  "generatedAt": "2026-09-05T00:07:32Z",
   "enums": {
     "cards.status": {
       "active": "發行中",
@@ -26,7 +26,8 @@
       "amount": "金額上限",
       "spend": "消費上限",
       "count": "次數上限",
-      "spendDynamic": "動態消費上限"
+      "spendDynamic": "動態消費上限",
+      "poolLimited": "總量限制型上限"
     },
     "components.capPeriod": {
       "calendarMonth": "日曆月",
@@ -453,7 +454,7 @@
       "id": "openpoint",
       "name": "OPENPOINT",
       "issuer": "統一超商",
-      "cashValue": null,
+      "cashValue": 1.0,
       "expiryMonths": null
     },
     {
@@ -4649,7 +4650,8 @@
             "valueUnit": "TWD",
             "valuePeriod": "lastMonth",
             "countsThisTx": null,
-            "userPrompt": "上月 Unicard 簽帳滿 3 萬了嗎？"
+            "userPrompt": "上月 Unicard 簽帳滿 3 萬了嗎？",
+            "registerUrl": null
           },
           {
             "id": "esun-up-sub-2",
@@ -4661,7 +4663,8 @@
             "valueUnit": "TWD",
             "valuePeriod": "lastMonth",
             "countsThisTx": null,
-            "userPrompt": "上月玉山平均資產有 30 萬嗎？"
+            "userPrompt": "上月玉山平均資產有 30 萬嗎？",
+            "registerUrl": null
           }
         ],
         [
@@ -4675,7 +4678,8 @@
             "valueUnit": "point",
             "valuePeriod": "thisMonth",
             "countsThisTx": null,
-            "userPrompt": "或用 149 點玉山 e point 付費訂閱"
+            "userPrompt": "或用 149 點玉山 e point 付費訂閱",
+            "registerUrl": null
           }
         ]
       ]
@@ -4710,7 +4714,8 @@
             "valueUnit": "TWD",
             "valuePeriod": "thisMonth",
             "countsThisTx": null,
-            "userPrompt": "這個月 DAWHO 平均財富有 30 萬嗎？"
+            "userPrompt": "這個月 DAWHO 平均財富有 30 萬嗎？",
+            "registerUrl": null
           }
         ],
         [
@@ -4724,7 +4729,8 @@
             "valueUnit": "TWD",
             "valuePeriod": "thisMonth",
             "countsThisTx": null,
-            "userPrompt": "這個月有完成單筆新臺幣換外幣 5,000 元以上嗎？"
+            "userPrompt": "這個月有完成單筆新臺幣換外幣 5,000 元以上嗎？",
+            "registerUrl": null
           }
         ],
         [
@@ -4738,7 +4744,8 @@
             "valueUnit": "times",
             "valuePeriod": "thisMonth",
             "countsThisTx": null,
-            "userPrompt": "這個月有用 DAWHO 帳戶完成台股現貨交易嗎？"
+            "userPrompt": "這個月有用 DAWHO 帳戶完成台股現貨交易嗎？",
+            "registerUrl": null
           }
         ],
         [
@@ -4752,7 +4759,8 @@
             "valueUnit": null,
             "valuePeriod": null,
             "countsThisTx": null,
-            "userPrompt": "你有用 DAWHO 帳戶當永豐信貸的授權扣款帳戶嗎？"
+            "userPrompt": "你有用 DAWHO 帳戶當永豐信貸的授權扣款帳戶嗎？",
+            "registerUrl": null
           }
         ]
       ]
@@ -4777,7 +4785,8 @@
             "valueUnit": "TWD",
             "valuePeriod": "thisMonth",
             "countsThisTx": null,
-            "userPrompt": "這個月 DAWHO 平均財富有 100 萬嗎？"
+            "userPrompt": "這個月 DAWHO 平均財富有 100 萬嗎？",
+            "registerUrl": null
           },
           {
             "id": "tier2-p2",
@@ -4789,7 +4798,8 @@
             "valueUnit": "TWD",
             "valuePeriod": "thisMonth",
             "countsThisTx": null,
-            "userPrompt": "這個月有完成單筆換匯 5,000 元以上嗎？"
+            "userPrompt": "這個月有完成單筆換匯 5,000 元以上嗎？",
+            "registerUrl": null
           }
         ],
         [
@@ -4803,7 +4813,8 @@
             "valueUnit": "TWD",
             "valuePeriod": "thisMonth",
             "countsThisTx": null,
-            "userPrompt": "這個月 DAWHO 平均財富有 100 萬嗎？"
+            "userPrompt": "這個月 DAWHO 平均財富有 100 萬嗎？",
+            "registerUrl": null
           },
           {
             "id": "tier2-p4",
@@ -4815,7 +4826,8 @@
             "valueUnit": "times",
             "valuePeriod": "thisMonth",
             "countsThisTx": null,
-            "userPrompt": "這個月有用 DAWHO 綁定永豐金證券完成台股現貨交易嗎？"
+            "userPrompt": "這個月有用 DAWHO 綁定永豐金證券完成台股現貨交易嗎？",
+            "registerUrl": null
           }
         ]
       ]
@@ -4880,7 +4892,8 @@
             "valueUnit": null,
             "valuePeriod": null,
             "countsThisTx": null,
-            "userPrompt": "你有用國泰世華帳戶設定自動扣繳 CUBE 卡費嗎？"
+            "userPrompt": "你有用國泰世華帳戶設定自動扣繳 CUBE 卡費嗎？",
+            "registerUrl": null
           }
         ],
         [
@@ -4894,7 +4907,8 @@
             "valueUnit": null,
             "valuePeriod": null,
             "countsThisTx": null,
-            "userPrompt": "你有用 CUBE App 繳這張卡的卡費嗎？"
+            "userPrompt": "你有用 CUBE App 繳這張卡的卡費嗎？",
+            "registerUrl": null
           }
         ]
       ]
@@ -4919,7 +4933,8 @@
             "valueUnit": null,
             "valuePeriod": null,
             "countsThisTx": null,
-            "userPrompt": "你是國泰世華財富管理貴賓嗎？"
+            "userPrompt": "你是國泰世華財富管理貴賓嗎？",
+            "registerUrl": null
           }
         ]
       ]
@@ -4954,7 +4969,8 @@
             "valueUnit": null,
             "valuePeriod": null,
             "countsThisTx": null,
-            "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐信用卡帳款嗎？"
+            "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐信用卡帳款嗎？",
+            "registerUrl": null
           },
           {
             "id": "daway-go-2",
@@ -4966,7 +4982,8 @@
             "valueUnit": null,
             "valuePeriod": null,
             "countsThisTx": null,
-            "userPrompt": "你有把信用卡帳單設定成電子或行動帳單嗎？"
+            "userPrompt": "你有把信用卡帳單設定成電子或行動帳單嗎？",
+            "registerUrl": null
           },
           {
             "id": "daway-go-3",
@@ -4978,7 +4995,8 @@
             "valueUnit": null,
             "valuePeriod": null,
             "countsThisTx": null,
-            "userPrompt": "你是永豐網路銀行會員，而且完成投資屬性問卷了嗎？"
+            "userPrompt": "你是永豐網路銀行會員，而且完成投資屬性問卷了嗎？",
+            "registerUrl": null
           }
         ]
       ]
@@ -5033,7 +5051,8 @@
             "valueUnit": "TWD",
             "valuePeriod": null,
             "countsThisTx": false,
-            "userPrompt": "這個會員週期的 Only 卡累積消費滿 16,800 元了嗎？"
+            "userPrompt": "這個會員週期的 Only 卡累積消費滿 16,800 元了嗎？",
+            "registerUrl": null
           }
         ]
       ]
@@ -5058,7 +5077,8 @@
             "valueUnit": "TWD",
             "valuePeriod": null,
             "countsThisTx": false,
-            "userPrompt": "這個會員週期的 Only 卡累積消費滿 168,000 元了嗎？"
+            "userPrompt": "這個會員週期的 Only 卡累積消費滿 168,000 元了嗎？",
+            "registerUrl": null
           }
         ]
       ]
@@ -5083,7 +5103,8 @@
             "valueUnit": "TWD",
             "valuePeriod": null,
             "countsThisTx": false,
-            "userPrompt": "這個會員週期的 Only 卡累積消費滿 388,000 元了嗎？"
+            "userPrompt": "這個會員週期的 Only 卡累積消費滿 388,000 元了嗎？",
+            "registerUrl": null
           }
         ]
       ]
@@ -5108,7 +5129,8 @@
             "valueUnit": "TWD",
             "valuePeriod": null,
             "countsThisTx": false,
-            "userPrompt": "這個會員週期的 Only 卡累積消費滿 688,000 元了嗎？"
+            "userPrompt": "這個會員週期的 Only 卡累積消費滿 688,000 元了嗎？",
+            "registerUrl": null
           }
         ]
       ]
@@ -5172,6 +5194,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-general",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5187,7 +5210,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）"
+                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）",
+                "registerUrl": null
               }
             ]
           ]
@@ -5214,6 +5238,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-general",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5229,7 +5254,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦玉山帳單e化嗎？"
+                "userPrompt": "你有申辦玉山帳單e化嗎？",
+                "registerUrl": null
               },
               {
                 "id": "esun-c2-2",
@@ -5241,7 +5267,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定玉山臺幣帳戶自動扣繳卡費嗎？"
+                "userPrompt": "你有設定玉山臺幣帳戶自動扣繳卡費嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -5268,6 +5295,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5283,7 +5311,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisMonth",
                 "countsThisTx": null,
-                "userPrompt": "這個月你的 Unicard 方案設定是哪一個？"
+                "userPrompt": "這個月你的 Unicard 方案設定是哪一個？",
+                "registerUrl": null
               }
             ]
           ]
@@ -5310,6 +5339,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5325,7 +5355,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisMonth",
                 "countsThisTx": null,
-                "userPrompt": "這個月你的 Unicard 方案設定是哪一個？"
+                "userPrompt": "這個月你的 Unicard 方案設定是哪一個？",
+                "registerUrl": null
               }
             ]
           ]
@@ -5352,6 +5383,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5367,7 +5399,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisMonth",
                 "countsThisTx": null,
-                "userPrompt": "你這個月有訂閱 UP選嗎？"
+                "userPrompt": "你這個月有訂閱 UP選嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -5394,6 +5427,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-newpromo",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5409,7 +5443,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是玉山信用卡新戶嗎？"
+                "userPrompt": "你是玉山信用卡新戶嗎？",
+                "registerUrl": null
               },
               {
                 "id": "esun-c6-2",
@@ -5421,7 +5456,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆有用玉山Wallet電子支付嗎？"
+                "userPrompt": "這筆有用玉山Wallet電子支付嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -5448,6 +5484,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-newpromo",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5463,7 +5500,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆有用玉山Wallet電子支付嗎？"
+                "userPrompt": "這筆有用玉山Wallet電子支付嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -5508,6 +5546,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5535,6 +5574,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5550,7 +5590,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐電子或行動帳單嗎？"
+                "userPrompt": "你有設定永豐電子或行動帳單嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -5577,6 +5618,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5592,7 +5634,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有下載大咖 DACARD App 並串接運動數據嗎？"
+                "userPrompt": "你有下載大咖 DACARD App 並串接運動數據嗎？",
+                "registerUrl": null
               },
               {
                 "id": "sport-c3-2",
@@ -5604,7 +5647,8 @@
                 "valueUnit": "kcal",
                 "valuePeriod": "thisMonth",
                 "countsThisTx": null,
-                "userPrompt": "這個月運動累積 10,000 大卡了嗎？"
+                "userPrompt": "這個月運動累積 10,000 大卡了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "sport-c3-3",
@@ -5616,7 +5660,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳卡費嗎？"
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳卡費嗎？",
+                "registerUrl": null
               }
             ],
             [
@@ -5630,7 +5675,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有下載大咖 DACARD App 並串接運動數據嗎？"
+                "userPrompt": "你有下載大咖 DACARD App 並串接運動數據嗎？",
+                "registerUrl": null
               },
               {
                 "id": "sport-c3-5",
@@ -5642,7 +5688,8 @@
                 "valueUnit": "rings",
                 "valuePeriod": "thisMonth",
                 "countsThisTx": null,
-                "userPrompt": "這個月 Apple Watch 完成 10 次圓滿畫圈了嗎？"
+                "userPrompt": "這個月 Apple Watch 完成 10 次圓滿畫圈了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "sport-c3-6",
@@ -5654,7 +5701,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳卡費嗎？"
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳卡費嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -5681,6 +5729,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5696,7 +5745,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有下載大咖 DACARD App 並串接運動數據嗎？"
+                "userPrompt": "你有下載大咖 DACARD App 並串接運動數據嗎？",
+                "registerUrl": null
               },
               {
                 "id": "sport-c4-2",
@@ -5708,7 +5758,8 @@
                 "valueUnit": "kcal",
                 "valuePeriod": "thisMonth",
                 "countsThisTx": null,
-                "userPrompt": "這個月運動累積 10,000 大卡了嗎？"
+                "userPrompt": "這個月運動累積 10,000 大卡了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "sport-c4-3",
@@ -5720,7 +5771,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳卡費嗎？"
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳卡費嗎？",
+                "registerUrl": null
               }
             ],
             [
@@ -5734,7 +5786,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有下載大咖 DACARD App 並串接運動數據嗎？"
+                "userPrompt": "你有下載大咖 DACARD App 並串接運動數據嗎？",
+                "registerUrl": null
               },
               {
                 "id": "sport-c4-5",
@@ -5746,7 +5799,8 @@
                 "valueUnit": "rings",
                 "valuePeriod": "thisMonth",
                 "countsThisTx": null,
-                "userPrompt": "這個月 Apple Watch 完成 10 次圓滿畫圈了嗎？"
+                "userPrompt": "這個月 Apple Watch 完成 10 次圓滿畫圈了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "sport-c4-6",
@@ -5758,7 +5812,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳卡費嗎？"
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳卡費嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -5785,6 +5840,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5800,7 +5856,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是永豐信用卡新戶嗎？"
+                "userPrompt": "你是永豐信用卡新戶嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -5844,6 +5901,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5871,6 +5929,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5898,6 +5957,7 @@
           "stackMode": "exclusive",
           "stackGroup": "dawho-tier-bonus",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5913,7 +5973,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？"
+                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？",
+                "registerUrl": null
               },
               {
                 "id": "dawho-c3-2",
@@ -5925,7 +5986,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定 DAWHO 帳戶自動扣繳卡費嗎？"
+                "userPrompt": "你有設定 DAWHO 帳戶自動扣繳卡費嗎？",
+                "registerUrl": null
               },
               {
                 "id": "dawho-c3-3",
@@ -5937,7 +5999,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定電子或行動帳單並取消實體帳單嗎？"
+                "userPrompt": "你有設定電子或行動帳單並取消實體帳單嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -5964,6 +6027,7 @@
           "stackMode": "exclusive",
           "stackGroup": "dawho-tier-bonus",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -5979,7 +6043,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？"
+                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？",
+                "registerUrl": null
               },
               {
                 "id": "dawho-c4-2",
@@ -5991,7 +6056,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定 DAWHO 帳戶自動扣繳卡費嗎？"
+                "userPrompt": "你有設定 DAWHO 帳戶自動扣繳卡費嗎？",
+                "registerUrl": null
               },
               {
                 "id": "dawho-c4-3",
@@ -6003,7 +6069,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定電子或行動帳單並取消實體帳單嗎？"
+                "userPrompt": "你有設定電子或行動帳單並取消實體帳單嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -6030,6 +6097,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6045,7 +6113,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？"
+                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？",
+                "registerUrl": null
               },
               {
                 "id": "dawho-c5-2",
@@ -6057,7 +6126,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定 DAWHO 帳戶自動扣繳卡費嗎？"
+                "userPrompt": "你有設定 DAWHO 帳戶自動扣繳卡費嗎？",
+                "registerUrl": null
               },
               {
                 "id": "dawho-c5-3",
@@ -6069,7 +6139,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定電子或行動帳單並取消實體帳單嗎？"
+                "userPrompt": "你有設定電子或行動帳單並取消實體帳單嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -6096,6 +6167,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6111,7 +6183,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？"
+                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？",
+                "registerUrl": null
               },
               {
                 "id": "dawho-c6-2",
@@ -6123,7 +6196,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定 DAWHO 帳戶自動扣繳卡費嗎？"
+                "userPrompt": "你有設定 DAWHO 帳戶自動扣繳卡費嗎？",
+                "registerUrl": null
               },
               {
                 "id": "dawho-c6-3",
@@ -6135,7 +6209,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定電子或行動帳單並取消實體帳單嗎？"
+                "userPrompt": "你有設定電子或行動帳單並取消實體帳單嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -6162,6 +6237,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6177,7 +6253,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是永豐信用卡新戶嗎？"
+                "userPrompt": "你是永豐信用卡新戶嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -6221,6 +6298,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6250,6 +6328,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6277,6 +6356,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6304,6 +6384,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6319,7 +6400,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有用滙豐帳戶設定自動扣繳這張卡的帳單嗎？"
+                "userPrompt": "你有用滙豐帳戶設定自動扣繳這張卡的帳單嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -6363,6 +6445,7 @@
           "stackMode": "exclusive",
           "stackGroup": "ubot-line-base",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6390,6 +6473,7 @@
           "stackMode": "exclusive",
           "stackGroup": "ubot-line-base",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6417,6 +6501,7 @@
           "stackMode": "exclusive",
           "stackGroup": "ubot-line-base",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6447,6 +6532,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6474,6 +6560,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6489,7 +6576,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是聯邦信用卡新戶嗎？"
+                "userPrompt": "你是聯邦信用卡新戶嗎？",
+                "registerUrl": null
               },
               {
                 "id": "ubot-c5-2",
@@ -6501,7 +6589,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有用 LINE Bank 主帳戶設定自動扣繳這張卡嗎？"
+                "userPrompt": "你有用 LINE Bank 主帳戶設定自動扣繳這張卡嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -6545,6 +6634,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6573,6 +6663,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6588,7 +6679,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
-                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？",
+                "registerUrl": null
               },
               {
                 "id": "cube-c1-lv",
@@ -6600,7 +6692,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？",
+                "registerUrl": null
               }
             ]
           ]
@@ -6628,6 +6721,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6643,7 +6737,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
-                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？",
+                "registerUrl": null
               },
               {
                 "id": "cube-c2-lv",
@@ -6655,7 +6750,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？",
+                "registerUrl": null
               }
             ]
           ]
@@ -6683,6 +6779,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6698,7 +6795,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
-                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？",
+                "registerUrl": null
               },
               {
                 "id": "cube-c3-lv",
@@ -6710,7 +6808,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？",
+                "registerUrl": null
               }
             ]
           ]
@@ -6740,6 +6839,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6755,7 +6855,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
-                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？",
+                "registerUrl": null
               },
               {
                 "id": "cube-c4-lv",
@@ -6767,7 +6868,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？",
+                "registerUrl": null
               }
             ]
           ]
@@ -6797,6 +6899,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6812,7 +6915,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
-                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？",
+                "registerUrl": null
               },
               {
                 "id": "cube-c5-lv",
@@ -6824,7 +6928,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？",
+                "registerUrl": null
               }
             ]
           ]
@@ -6854,6 +6959,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6869,7 +6975,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
-                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？",
+                "registerUrl": null
               },
               {
                 "id": "cube-c6-lv",
@@ -6881,7 +6988,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？",
+                "registerUrl": null
               }
             ]
           ]
@@ -6910,6 +7018,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6925,7 +7034,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
-                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？",
+                "registerUrl": null
               },
               {
                 "id": "cube-c7-lv",
@@ -6937,7 +7047,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？",
+                "registerUrl": null
               }
             ]
           ]
@@ -6966,6 +7077,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -6981,7 +7093,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
-                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？",
+                "registerUrl": null
               },
               {
                 "id": "cube-c8-lv",
@@ -6993,7 +7106,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7022,6 +7136,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7037,7 +7152,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
-                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？",
+                "registerUrl": null
               },
               {
                 "id": "cube-c9-lv",
@@ -7049,7 +7165,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 CUBE 卡是哪一個權益分級？"
+                "userPrompt": "你的 CUBE 卡是哪一個權益分級？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7078,6 +7195,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7093,7 +7211,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
-                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7122,6 +7241,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7137,7 +7257,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
-                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7165,6 +7286,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7180,7 +7302,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
-                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？",
+                "registerUrl": null
               },
               {
                 "id": "cube-c12-pay",
@@ -7192,7 +7315,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆有用全支付綁 CUBE 卡付款嗎？"
+                "userPrompt": "這筆有用全支付綁 CUBE 卡付款嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7219,6 +7343,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7234,7 +7359,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
-                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7261,6 +7387,7 @@
           "stackMode": "exclusive",
           "stackGroup": "cube-plan",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7276,7 +7403,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisDay",
                 "countsThisTx": null,
-                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？"
+                "userPrompt": "你今天的 CUBE 權益方案設定是哪一個？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7321,6 +7449,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7336,7 +7465,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有把永豐新臺幣＋外幣帳戶設為這張卡的自動扣繳帳戶嗎？"
+                "userPrompt": "你有把永豐新臺幣＋外幣帳戶設為這張卡的自動扣繳帳戶嗎？",
+                "registerUrl": null
               },
               {
                 "id": "bibei-c1-2",
@@ -7348,7 +7478,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐電子或行動帳單並取消實體帳單嗎？"
+                "userPrompt": "你有設定永豐電子或行動帳單並取消實體帳單嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7375,6 +7506,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7390,7 +7522,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有把永豐新臺幣＋外幣帳戶設為這張卡的自動扣繳帳戶嗎？"
+                "userPrompt": "你有把永豐新臺幣＋外幣帳戶設為這張卡的自動扣繳帳戶嗎？",
+                "registerUrl": null
               },
               {
                 "id": "bibei-c2-2",
@@ -7402,7 +7535,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐電子或行動帳單並取消實體帳單嗎？"
+                "userPrompt": "你有設定永豐電子或行動帳單並取消實體帳單嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7429,6 +7563,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7444,7 +7579,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有把永豐新臺幣＋外幣帳戶設為這張卡的自動扣繳帳戶嗎？"
+                "userPrompt": "你有把永豐新臺幣＋外幣帳戶設為這張卡的自動扣繳帳戶嗎？",
+                "registerUrl": null
               },
               {
                 "id": "bibei-c3-2",
@@ -7456,7 +7592,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐電子或行動帳單並取消實體帳單嗎？"
+                "userPrompt": "你有設定永豐電子或行動帳單並取消實體帳單嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7483,6 +7620,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7498,7 +7636,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有把永豐新臺幣＋外幣帳戶都設為自動扣繳帳戶，而且已經成功扣款過嗎？"
+                "userPrompt": "你有把永豐新臺幣＋外幣帳戶都設為自動扣繳帳戶，而且已經成功扣款過嗎？",
+                "registerUrl": null
               },
               {
                 "id": "bibei-c4-2",
@@ -7510,7 +7649,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定電子或行動帳單並取消實體帳單寄送嗎？"
+                "userPrompt": "你有設定電子或行動帳單並取消實體帳單寄送嗎？",
+                "registerUrl": null
               },
               {
                 "id": "bibei-c4-3",
@@ -7522,7 +7662,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": "lastMonth",
                 "countsThisTx": null,
-                "userPrompt": "你上個月在永豐的往來資產月平均餘額有到新臺幣10萬元嗎？"
+                "userPrompt": "你上個月在永豐的往來資產月平均餘額有到新臺幣10萬元嗎？",
+                "registerUrl": null
               }
             ],
             [
@@ -7536,7 +7677,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有把永豐新臺幣＋外幣帳戶都設為自動扣繳帳戶，而且已經成功扣款過嗎？"
+                "userPrompt": "你有把永豐新臺幣＋外幣帳戶都設為自動扣繳帳戶，而且已經成功扣款過嗎？",
+                "registerUrl": null
               },
               {
                 "id": "bibei-c4-5",
@@ -7548,7 +7690,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定電子或行動帳單並取消實體帳單寄送嗎？"
+                "userPrompt": "你有設定電子或行動帳單並取消實體帳單寄送嗎？",
+                "registerUrl": null
               },
               {
                 "id": "bibei-c4-6",
@@ -7560,7 +7703,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？"
+                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？",
+                "registerUrl": null
               }
             ],
             [
@@ -7574,7 +7718,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有把永豐新臺幣＋外幣帳戶都設為自動扣繳帳戶，而且已經成功扣款過嗎？"
+                "userPrompt": "你有把永豐新臺幣＋外幣帳戶都設為自動扣繳帳戶，而且已經成功扣款過嗎？",
+                "registerUrl": null
               },
               {
                 "id": "bibei-c4-8",
@@ -7586,7 +7731,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定電子或行動帳單並取消實體帳單寄送嗎？"
+                "userPrompt": "你有設定電子或行動帳單並取消實體帳單寄送嗎？",
+                "registerUrl": null
               },
               {
                 "id": "bibei-c4-9",
@@ -7598,7 +7744,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？"
+                "userPrompt": "你的 DAWHO 數位帳戶是什麼等級？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7625,6 +7772,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7640,7 +7788,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的幣倍卡是2026/7/1~12/31期間申辦的嗎？"
+                "userPrompt": "你的幣倍卡是2026/7/1~12/31期間申辦的嗎？",
+                "registerUrl": null
               },
               {
                 "id": "bibei-c5-2",
@@ -7652,7 +7801,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有把永豐新臺幣＋外幣帳戶設為這張卡的自動扣繳帳戶嗎？"
+                "userPrompt": "你有把永豐新臺幣＋外幣帳戶設為這張卡的自動扣繳帳戶嗎？",
+                "registerUrl": null
               },
               {
                 "id": "bibei-c5-3",
@@ -7664,7 +7814,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐電子或行動帳單並取消實體帳單嗎？"
+                "userPrompt": "你有設定永豐電子或行動帳單並取消實體帳單嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7691,6 +7842,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7706,7 +7858,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是永豐信用卡新戶嗎？"
+                "userPrompt": "你是永豐信用卡新戶嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7751,6 +7904,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/cashcard.html",
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7778,6 +7932,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/cashcard.html",
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7805,6 +7960,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/cashcard.html",
           "capGroup": "sinopac-green-cap300",
           "replaceGroup": null,
           "validDays": null,
@@ -7820,7 +7976,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的永豐信用卡帳單是電子或行動帳單嗎？"
+                "userPrompt": "你的永豐信用卡帳單是電子或行動帳單嗎？",
+                "registerUrl": null
               },
               {
                 "id": "green-c3-2",
@@ -7832,7 +7989,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐信用卡帳款嗎？"
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐信用卡帳款嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7859,6 +8017,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/cashcard.html",
           "capGroup": "sinopac-green-cap300",
           "replaceGroup": null,
           "validDays": null,
@@ -7874,7 +8033,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是永豐信用卡新戶嗎？"
+                "userPrompt": "你是永豐信用卡新戶嗎？",
+                "registerUrl": null
               },
               {
                 "id": "green-c4-2",
@@ -7886,7 +8046,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的永豐信用卡帳單是電子或行動帳單嗎？"
+                "userPrompt": "你的永豐信用卡帳單是電子或行動帳單嗎？",
+                "registerUrl": null
               },
               {
                 "id": "green-c4-3",
@@ -7898,7 +8059,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐信用卡帳款嗎？"
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐信用卡帳款嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -7925,6 +8087,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/cashcard.html",
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7971,6 +8134,7 @@
           "stackMode": "exclusive",
           "stackGroup": "mop-fengpoint",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -7998,6 +8162,7 @@
           "stackMode": "exclusive",
           "stackGroup": "mop-fengpoint",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8013,7 +8178,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": "statementCycle",
                 "countsThisTx": true,
-                "userPrompt": "這期帳單在三井OUTLET館內累積刷滿 30,000 元了嗎？"
+                "userPrompt": "這期帳單在三井OUTLET館內累積刷滿 30,000 元了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -8040,6 +8206,7 @@
           "stackMode": "exclusive",
           "stackGroup": "mop-fengpoint",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8068,6 +8235,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8083,7 +8251,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你登錄過永豐 MOP 卡『特選通路7%』活動了嗎？"
+                "userPrompt": "你登錄過永豐 MOP 卡『特選通路7%』活動了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "mop-c4-2",
@@ -8095,7 +8264,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐電子或行動帳單嗎？"
+                "userPrompt": "你有設定永豐電子或行動帳單嗎？",
+                "registerUrl": null
               },
               {
                 "id": "mop-c4-3",
@@ -8107,7 +8277,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐卡費嗎？"
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐卡費嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -8134,6 +8305,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8149,7 +8321,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你登錄過 MOP JCB 卡『日韓泰2%』第三季活動了嗎？"
+                "userPrompt": "你登錄過 MOP JCB 卡『日韓泰2%』第三季活動了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "mop-c5-2",
@@ -8161,7 +8334,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐卡費嗎？"
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐卡費嗎？",
+                "registerUrl": null
               },
               {
                 "id": "mop-c5-3",
@@ -8173,7 +8347,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": "campaign",
                 "countsThisTx": true,
-                "userPrompt": "這一季在日本／韓國／泰國實體店面刷滿 30,000 元了嗎？"
+                "userPrompt": "這一季在日本／韓國／泰國實體店面刷滿 30,000 元了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -8200,6 +8375,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8215,7 +8391,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你登錄過 MOP JCB 卡『日韓泰2%』第四季活動了嗎？"
+                "userPrompt": "你登錄過 MOP JCB 卡『日韓泰2%』第四季活動了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "mop-c6-2",
@@ -8227,7 +8404,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐卡費嗎？"
+                "userPrompt": "你有設定永豐或京城銀行帳戶自動扣繳永豐卡費嗎？",
+                "registerUrl": null
               },
               {
                 "id": "mop-c6-3",
@@ -8239,7 +8417,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": "campaign",
                 "countsThisTx": true,
-                "userPrompt": "這一季在日本／韓國／泰國實體店面刷滿 30,000 元了嗎？"
+                "userPrompt": "這一季在日本／韓國／泰國實體店面刷滿 30,000 元了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -8285,6 +8464,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8312,6 +8492,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": "sinopac-55688-appbind",
           "validDays": null,
@@ -8327,7 +8508,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有用 55688 APP 的「即時綁卡」功能，把這張卡綁到你本人的 55688 會員帳號嗎？"
+                "userPrompt": "你有用 55688 APP 的「即時綁卡」功能，把這張卡綁到你本人的 55688 會員帳號嗎？",
+                "registerUrl": null
               },
               {
                 "id": "55688-c2-2",
@@ -8339,7 +8521,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "結帳請直接用 55688 APP 裡綁定的這張卡付款（用實體卡刷、或用 Apple Pay／LINE Pay 付 55688 都拿不到 8%）"
+                "userPrompt": "結帳請直接用 55688 APP 裡綁定的這張卡付款（用實體卡刷、或用 Apple Pay／LINE Pay 付 55688 都拿不到 8%）",
+                "registerUrl": null
               }
             ]
           ]
@@ -8366,6 +8549,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": "sinopac-55688-appbind",
           "validDays": null,
@@ -8381,7 +8565,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是永豐信用卡新戶嗎？"
+                "userPrompt": "你是永豐信用卡新戶嗎？",
+                "registerUrl": null
               },
               {
                 "id": "55688-c3-2",
@@ -8393,7 +8578,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有用 55688 APP 的「即時綁卡」功能，把這張卡綁到你本人的 55688 會員帳號嗎？"
+                "userPrompt": "你有用 55688 APP 的「即時綁卡」功能，把這張卡綁到你本人的 55688 會員帳號嗎？",
+                "registerUrl": null
               },
               {
                 "id": "55688-c3-3",
@@ -8405,7 +8591,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "結帳請直接用 55688 APP 裡綁定的這張卡付款（用實體卡刷、或用行動支付付 55688 都不算）"
+                "userPrompt": "結帳請直接用 55688 APP 裡綁定的這張卡付款（用實體卡刷、或用行動支付付 55688 都不算）",
+                "registerUrl": null
               }
             ]
           ]
@@ -8432,6 +8619,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8447,7 +8635,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定永豐銀行或京城銀行帳戶自動扣繳永豐信用卡帳款嗎？"
+                "userPrompt": "你有設定永豐銀行或京城銀行帳戶自動扣繳永豐信用卡帳款嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -8492,6 +8681,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8507,7 +8697,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -8534,6 +8725,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8549,7 +8741,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -8576,6 +8769,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8591,7 +8785,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c3-2",
@@ -8603,7 +8798,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你符合 DAWAY GO 等級嗎？（自動扣繳＋電子帳單＋網銀會員含投資屬性問卷，三項都要）"
+                "userPrompt": "你符合 DAWAY GO 等級嗎？（自動扣繳＋電子帳單＋網銀會員含投資屬性問卷，三項都要）",
+                "registerUrl": null
               },
               {
                 "id": "daway-c3-3",
@@ -8615,7 +8811,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡沒有這個加碼）"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡沒有這個加碼）",
+                "registerUrl": null
               }
             ]
           ]
@@ -8642,6 +8839,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8657,7 +8855,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c4-2",
@@ -8669,7 +8868,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你符合 DAWAY GO 等級嗎？"
+                "userPrompt": "你符合 DAWAY GO 等級嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c4-3",
@@ -8681,7 +8881,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是永豐信用卡新戶嗎？"
+                "userPrompt": "你是永豐信用卡新戶嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c4-4",
@@ -8693,7 +8894,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -8720,6 +8922,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8735,7 +8938,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c5-2",
@@ -8747,7 +8951,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -8774,6 +8979,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8789,7 +8995,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c6-2",
@@ -8801,7 +9008,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -8828,6 +9036,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8843,7 +9052,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c7-2",
@@ -8855,7 +9065,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c7-3",
@@ -8867,7 +9078,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -8894,6 +9106,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8909,7 +9122,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c8-2",
@@ -8921,7 +9135,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -8948,6 +9163,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -8963,7 +9179,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c9-2",
@@ -8975,7 +9192,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c9-3",
@@ -8987,7 +9205,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9015,6 +9234,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -9030,7 +9250,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c10-2",
@@ -9042,7 +9263,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c10-3",
@@ -9054,7 +9276,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9082,6 +9305,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -9097,7 +9321,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c11-2",
@@ -9109,7 +9334,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9137,6 +9363,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -9152,7 +9379,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c12-2",
@@ -9164,7 +9392,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（須在韓國當地，並開啟 LINE Pay 定位服務切換韓國版付款條碼）"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（須在韓國當地，並開啟 LINE Pay 定位服務切換韓國版付款條碼）",
+                "registerUrl": null
               },
               {
                 "id": "daway-c12-3",
@@ -9176,7 +9405,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9204,6 +9434,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -9219,7 +9450,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（須在韓國當地）"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（須在韓國當地）",
+                "registerUrl": null
               },
               {
                 "id": "daway-c13-2",
@@ -9231,7 +9463,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9258,6 +9491,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -9273,7 +9507,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c14-2",
@@ -9285,7 +9520,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡不算）"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡不算）",
+                "registerUrl": null
               },
               {
                 "id": "daway-c14-3",
@@ -9297,7 +9533,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9324,6 +9561,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "wed",
@@ -9339,7 +9577,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c15-2",
@@ -9351,7 +9590,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡不算）"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡不算）",
+                "registerUrl": null
               },
               {
                 "id": "daway-c15-3",
@@ -9363,7 +9603,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9390,6 +9631,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "mon-fri",
@@ -9405,7 +9647,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c16-2",
@@ -9417,7 +9660,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9444,6 +9688,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "mon-fri",
@@ -9459,7 +9704,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c17-2",
@@ -9471,7 +9717,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡不算）"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡不算）",
+                "registerUrl": null
               },
               {
                 "id": "daway-c17-3",
@@ -9483,7 +9730,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9510,6 +9758,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "sat-sun",
@@ -9525,7 +9774,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c18-2",
@@ -9537,7 +9787,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9564,6 +9815,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "sat-sun",
@@ -9579,7 +9831,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？"
+                "userPrompt": "你已經把 DAWAY 卡綁定到 LINE Pay 了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c19-2",
@@ -9591,7 +9844,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡不算）"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡不算）",
+                "registerUrl": null
               },
               {
                 "id": "daway-c19-3",
@@ -9603,7 +9857,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9620,7 +9875,7 @@
           "unit": "point",
           "pointCurrencyId": "linepoints",
           "cap": {
-            "type": "none",
+            "type": "poolLimited",
             "value": null,
             "period": null,
             "anchorDays": null
@@ -9630,6 +9885,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/DAWAY.html",
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "mon",
@@ -9645,7 +9901,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c20-2",
@@ -9657,7 +9914,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9674,7 +9932,7 @@
           "unit": "point",
           "pointCurrencyId": "linepoints",
           "cap": {
-            "type": "none",
+            "type": "poolLimited",
             "value": null,
             "period": null,
             "anchorDays": null
@@ -9684,6 +9942,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/DAWAY.html",
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "wed",
@@ -9699,7 +9958,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c21-2",
@@ -9711,7 +9971,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c21-4",
@@ -9723,7 +9984,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆有滿 650 元嗎？"
+                "userPrompt": "這一筆有滿 650 元嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9740,7 +10002,7 @@
           "unit": "point",
           "pointCurrencyId": "linepoints",
           "cap": {
-            "type": "none",
+            "type": "poolLimited",
             "value": null,
             "period": null,
             "anchorDays": null
@@ -9750,6 +10012,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/DAWAY.html",
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "wed|thu",
@@ -9765,7 +10028,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c22-2",
@@ -9777,7 +10041,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c22-4",
@@ -9789,7 +10054,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆有滿 700 元嗎？"
+                "userPrompt": "這一筆有滿 700 元嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9806,7 +10072,7 @@
           "unit": "point",
           "pointCurrencyId": "linepoints",
           "cap": {
-            "type": "none",
+            "type": "poolLimited",
             "value": null,
             "period": null,
             "anchorDays": null
@@ -9816,6 +10082,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/DAWAY.html",
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "thu|fri",
@@ -9831,7 +10098,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c23-2",
@@ -9843,7 +10111,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c23-4",
@@ -9855,7 +10124,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆有滿 1,500 元嗎？"
+                "userPrompt": "這一筆有滿 1,500 元嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9872,7 +10142,7 @@
           "unit": "point",
           "pointCurrencyId": "linepoints",
           "cap": {
-            "type": "none",
+            "type": "poolLimited",
             "value": null,
             "period": null,
             "anchorDays": null
@@ -9882,6 +10152,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/DAWAY.html",
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "sat-sun",
@@ -9897,7 +10168,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c24-2",
@@ -9909,7 +10181,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "daway-c24-4",
@@ -9921,7 +10194,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆有滿 2,000 元嗎？"
+                "userPrompt": "這一筆有滿 2,000 元嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -9965,6 +10239,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -9980,7 +10255,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你登錄「捷運任你乘」活動了嗎？活動9/30截止，登錄了才拿得到100%回饋。"
+                "userPrompt": "你登錄「捷運任你乘」活動了嗎？活動9/30截止，登錄了才拿得到100%回饋。",
+                "registerUrl": "https://mma.sinopac.com/SinoCard/Activity/Register?Code=XH40"
               },
               {
                 "id": "common-c1-2",
@@ -9992,7 +10268,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "進捷運站時是用 Apple Pay 感應嗎？用實體卡或其他支付都不算。"
+                "userPrompt": "進捷運站時是用 Apple Pay 感應嗎？用實體卡或其他支付都不算。",
+                "registerUrl": null
               }
             ]
           ]
@@ -10019,6 +10296,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -10034,7 +10312,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你登錄「有機商品滿額」活動了嗎？登錄當月起的消費才算，補登錄救不回上個月。"
+                "userPrompt": "你登錄「有機商品滿額」活動了嗎？登錄當月起的消費才算，補登錄救不回上個月。",
+                "registerUrl": "https://mma.sinopac.com/SinoCard/Activity/Register?Code=XE69"
               },
               {
                 "id": "common-c5-2",
@@ -10046,7 +10325,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆在 GREEN & SAFE／里仁／棉花田要滿 2,000 元才有 100 元刷卡金，湊得到嗎？"
+                "userPrompt": "這一筆在 GREEN & SAFE／里仁／棉花田要滿 2,000 元才有 100 元刷卡金，湊得到嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -10073,6 +10353,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": "sinopac-common-tax",
           "validDays": null,
@@ -10088,7 +10369,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你登錄「大咖APP繳汽燃費10%」活動了嗎？限量 5,000 名，可能已額滿。"
+                "userPrompt": "你登錄「大咖APP繳汽燃費10%」活動了嗎？限量 5,000 名，可能已額滿。",
+                "registerUrl": null
               },
               {
                 "id": "common-c6-2",
@@ -10100,7 +10382,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有下載大咖 DACARD App 嗎？這個活動必須用大咖 App 繳汽燃費才算。"
+                "userPrompt": "你有下載大咖 DACARD App 嗎？這個活動必須用大咖 App 繳汽燃費才算。",
+                "registerUrl": null
               }
             ]
           ]
@@ -10127,6 +10410,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": "sinopac-common-tax",
           "validDays": null,
@@ -10142,7 +10426,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你登錄「指定稅款好朋友加碼」活動了嗎？登錄當月起繳的稅才算。"
+                "userPrompt": "你登錄「指定稅款好朋友加碼」活動了嗎？登錄當月起繳的稅才算。",
+                "registerUrl": "https://mma.sinopac.com/SinoCard/Activity/Register?Code=XE66"
               },
               {
                 "id": "common-c7-2",
@@ -10154,7 +10439,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 2024 或 2025 年，有用永豐信用卡繳過牌照稅／房屋稅／地價稅／汽燃費嗎？"
+                "userPrompt": "你在 2024 或 2025 年，有用永豐信用卡繳過牌照稅／房屋稅／地價稅／汽燃費嗎？",
+                "registerUrl": null
               },
               {
                 "id": "common-c7-3",
@@ -10166,7 +10452,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆稅款要滿 500 元才有回饋，未滿 500 的零頭不計。"
+                "userPrompt": "這一筆稅款要滿 500 元才有回饋，未滿 500 的零頭不計。",
+                "registerUrl": null
               }
             ]
           ]
@@ -10193,6 +10480,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -10208,7 +10496,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你登錄「學費代繳滿額回饋」活動了嗎？登錄當月起繳的學費才算。"
+                "userPrompt": "你登錄「學費代繳滿額回饋」活動了嗎？登錄當月起繳的學費才算。",
+                "registerUrl": "https://mma.sinopac.com/SinoCard/Activity/Register?Code=XE64"
               },
               {
                 "id": "common-c8-2",
@@ -10220,7 +10509,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": "thisMonth",
                 "countsThisTx": true,
-                "userPrompt": "這個月透過 i繳費／學費通刷永豐卡繳的學費，累計滿 5 萬了嗎？每滿 5 萬才回 50 元。"
+                "userPrompt": "這個月透過 i繳費／學費通刷永豐卡繳的學費，累計滿 5 萬了嗎？每滿 5 萬才回 50 元。",
+                "registerUrl": null
               }
             ]
           ]
@@ -10247,6 +10537,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -10262,7 +10553,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你登錄「公共事業費夏日大作戰」活動了嗎？8/1 開放登錄，限量 5,000 名。"
+                "userPrompt": "你登錄「公共事業費夏日大作戰」活動了嗎？8/1 開放登錄，限量 5,000 名。",
+                "registerUrl": "https://mma.sinopac.com/SinoCard/Activity/Register?Code=XF78"
               },
               {
                 "id": "common-c9-2",
@@ -10274,7 +10566,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申請水電瓦斯／路邊停車／中華電信費用自動扣繳到永豐信用卡嗎？"
+                "userPrompt": "你有申請水電瓦斯／路邊停車／中華電信費用自動扣繳到永豐信用卡嗎？",
+                "registerUrl": null
               },
               {
                 "id": "common-c9-3",
@@ -10286,7 +10579,8 @@
                 "valueUnit": "times",
                 "valuePeriod": "campaign",
                 "countsThisTx": false,
-                "userPrompt": "你在 2026/1/1~7/31 之間，有申請公共事業費任兩項並成功自動扣繳滿 4 次嗎？"
+                "userPrompt": "你在 2026/1/1~7/31 之間，有申請公共事業費任兩項並成功自動扣繳滿 4 次嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -10313,6 +10607,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -10328,7 +10623,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你登錄「特店分期享雙重好禮」活動了嗎？限量 12,000 名，9/30 前都能補登錄。"
+                "userPrompt": "你登錄「特店分期享雙重好禮」活動了嗎？限量 12,000 名，9/30 前都能補登錄。",
+                "registerUrl": "https://mma.sinopac.com/SinoCard/Activity/Register?Code=XH60"
               },
               {
                 "id": "common-c10-2",
@@ -10340,7 +10636,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要在店裡當場辦 3／6／12 期分期才算，刷完再打電話申請分期不算。"
+                "userPrompt": "這筆要在店裡當場辦 3／6／12 期分期才算，刷完再打電話申請分期不算。",
+                "registerUrl": null
               }
             ]
           ]
@@ -10367,6 +10664,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "mon",
@@ -10382,7 +10680,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "結帳時是用王品瘋美食 App 的「瘋Pay」電子錢包綁永豐卡付款嗎？直接刷卡沒有永豐加碼的 3%。"
+                "userPrompt": "結帳時是用王品瘋美食 App 的「瘋Pay」電子錢包綁永豐卡付款嗎？直接刷卡沒有永豐加碼的 3%。",
+                "registerUrl": null
               }
             ]
           ]
@@ -10409,6 +10708,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "sat-sun",
@@ -10424,7 +10724,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "結帳時是用 PX Pay 或 PX Pay Plus 綁永豐卡付款嗎？直接刷實體卡不算。"
+                "userPrompt": "結帳時是用 PX Pay 或 PX Pay Plus 綁永豐卡付款嗎？直接刷實體卡不算。",
+                "registerUrl": null
               },
               {
                 "id": "common-c12-2",
@@ -10436,7 +10737,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆全聯要滿 1,200 元才有 360 福利點，不含儲值、菸品、嬰兒奶粉。"
+                "userPrompt": "這一筆全聯要滿 1,200 元才有 360 福利點，不含儲值、菸品、嬰兒奶粉。",
+                "registerUrl": null
               }
             ]
           ]
@@ -10482,6 +10784,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-pi-general",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -10497,7 +10800,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？"
+                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -10524,6 +10828,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-pi-general",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -10539,7 +10844,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？"
+                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？",
+                "registerUrl": null
               },
               {
                 "id": "esun-pi-c2-2",
@@ -10551,139 +10857,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）"
-              }
-            ]
-          ]
-        },
-        {
-          "id": "esun-pi-c3",
-          "label": "一般消費加碼－每月累積滿10,000~29,999元",
-          "archetype": "base",
-          "categoryIds": [
-            "*"
-          ],
-          "merchantListId": null,
-          "rate": 0.8,
-          "unit": "point",
-          "pointCurrencyId": "pi-pcoin",
-          "cap": {
-            "type": "none",
-            "value": null,
-            "period": null,
-            "anchorDays": null
-          },
-          "validFrom": "2026-09-01",
-          "validTo": "2027-02-28",
-          "stackMode": "exclusive",
-          "stackGroup": "esun-pi-tier",
-          "minSpend": null,
-          "capGroup": null,
-          "replaceGroup": null,
-          "validDays": null,
-          "conditionPaths": [
-            [
-              {
-                "id": "esun-pi-c3-1",
-                "stateClass": "structural",
-                "type": "appBinding",
-                "targetId": "pi-wallet",
-                "operator": null,
-                "value": null,
-                "valueUnit": null,
-                "valuePeriod": null,
-                "countsThisTx": null,
-                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？"
-              },
-              {
-                "id": "esun-pi-c3-2",
-                "stateClass": "recoverable",
-                "type": "registration",
-                "targetId": null,
-                "operator": null,
-                "value": null,
-                "valueUnit": null,
-                "valuePeriod": null,
-                "countsThisTx": null,
-                "userPrompt": "你登錄過玉山 Pi 卡『一般消費加碼回饋』活動了嗎？（整個活動期間只要登錄1次）"
-              },
-              {
-                "id": "esun-pi-c3-3",
-                "stateClass": "recoverable",
-                "type": "spendThreshold",
-                "targetId": null,
-                "operator": "gte",
-                "value": 10000.0,
-                "valueUnit": "TWD",
-                "valuePeriod": "thisMonth",
-                "countsThisTx": true,
-                "userPrompt": "這個月國內外一般消費累積滿 10,000 元了嗎？（不含保險消費）"
-              }
-            ]
-          ]
-        },
-        {
-          "id": "esun-pi-c4",
-          "label": "一般消費加碼－每月累積滿30,000元以上",
-          "archetype": "base",
-          "categoryIds": [
-            "*"
-          ],
-          "merchantListId": null,
-          "rate": 2.0,
-          "unit": "point",
-          "pointCurrencyId": "pi-pcoin",
-          "cap": {
-            "type": "amount",
-            "value": 3000.0,
-            "period": "calendarMonth",
-            "anchorDays": null
-          },
-          "validFrom": "2026-09-01",
-          "validTo": "2027-02-28",
-          "stackMode": "exclusive",
-          "stackGroup": "esun-pi-tier",
-          "minSpend": null,
-          "capGroup": null,
-          "replaceGroup": null,
-          "validDays": null,
-          "conditionPaths": [
-            [
-              {
-                "id": "esun-pi-c4-1",
-                "stateClass": "structural",
-                "type": "appBinding",
-                "targetId": "pi-wallet",
-                "operator": null,
-                "value": null,
-                "valueUnit": null,
-                "valuePeriod": null,
-                "countsThisTx": null,
-                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？"
-              },
-              {
-                "id": "esun-pi-c4-2",
-                "stateClass": "recoverable",
-                "type": "registration",
-                "targetId": null,
-                "operator": null,
-                "value": null,
-                "valueUnit": null,
-                "valuePeriod": null,
-                "countsThisTx": null,
-                "userPrompt": "你登錄過玉山 Pi 卡『一般消費加碼回饋』活動了嗎？（整個活動期間只要登錄1次）"
-              },
-              {
-                "id": "esun-pi-c4-3",
-                "stateClass": "recoverable",
-                "type": "spendThreshold",
-                "targetId": null,
-                "operator": "gte",
-                "value": 30000.0,
-                "valueUnit": "TWD",
-                "valuePeriod": "thisMonth",
-                "countsThisTx": true,
-                "userPrompt": "這個月國內外一般消費累積滿 30,000 元了嗎？（不含保險消費）"
+                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）",
+                "registerUrl": null
               }
             ]
           ]
@@ -10710,6 +10885,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -10725,7 +10901,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？"
+                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？",
+                "registerUrl": null
               },
               {
                 "id": "esun-pi-c5-2",
@@ -10737,7 +10914,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這一筆是用 Pi 拍錢包 App 出示／掃描付款碼結帳的嗎？"
+                "userPrompt": "這一筆是用 Pi 拍錢包 App 出示／掃描付款碼結帳的嗎？",
+                "registerUrl": null
               },
               {
                 "id": "esun-pi-c5-3",
@@ -10749,7 +10927,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你登錄過玉山 Pi 卡『拍錢包加碼』活動了嗎？（整個活動期間只要登錄1次）"
+                "userPrompt": "你登錄過玉山 Pi 卡『拍錢包加碼』活動了嗎？（整個活動期間只要登錄1次）",
+                "registerUrl": "https://esun.co/C4tor"
               },
               {
                 "id": "esun-pi-c5-4",
@@ -10761,7 +10940,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦玉山銀行台幣帳戶自動扣款（自動扣繳信用卡費）嗎？"
+                "userPrompt": "你有申辦玉山銀行台幣帳戶自動扣款（自動扣繳信用卡費）嗎？",
+                "registerUrl": null
               },
               {
                 "id": "esun-pi-c5-5",
@@ -10773,7 +10953,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆有滿 499 元嗎？（未滿 499 就沒有拍錢包加碼）"
+                "userPrompt": "這一筆有滿 499 元嗎？（未滿 499 就沒有拍錢包加碼）",
+                "registerUrl": null
               }
             ]
           ]
@@ -10800,6 +10981,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -10815,7 +10997,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是玉山信用卡新戶嗎？（核卡日前六個月內未持有玉山任一張流通正卡）"
+                "userPrompt": "你是玉山信用卡新戶嗎？（核卡日前六個月內未持有玉山任一張流通正卡）",
+                "registerUrl": null
               },
               {
                 "id": "esun-pi-c6-2",
@@ -10827,7 +11010,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？"
+                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？",
+                "registerUrl": null
               },
               {
                 "id": "esun-pi-c6-3",
@@ -10839,7 +11023,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）"
+                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）",
+                "registerUrl": null
               }
             ]
           ]
@@ -10866,6 +11051,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -10881,7 +11067,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？"
+                "userPrompt": "你有註冊 Pi 拍錢包 App 並成功把這張卡綁上去嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -10928,6 +11115,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-ubear-general",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -10943,7 +11131,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）"
+                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）",
+                "registerUrl": null
               }
             ],
             [
@@ -10957,7 +11146,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定玉山銀行臺幣帳戶自動扣繳卡費嗎？"
+                "userPrompt": "你有設定玉山銀行臺幣帳戶自動扣繳卡費嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -10984,6 +11174,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-ubear-general",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -10999,7 +11190,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）"
+                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）",
+                "registerUrl": null
               },
               {
                 "id": "ubear-c2-2",
@@ -11011,7 +11203,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有設定玉山銀行臺幣帳戶自動扣繳卡費嗎？（且已成功扣繳）"
+                "userPrompt": "你有設定玉山銀行臺幣帳戶自動扣繳卡費嗎？（且已成功扣繳）",
+                "registerUrl": null
               }
             ]
           ]
@@ -11038,6 +11231,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11053,7 +11247,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）"
+                "userPrompt": "你有申辦玉山帳單e化嗎？（Email電子帳單或簡訊帳單）",
+                "registerUrl": null
               }
             ]
           ]
@@ -11081,6 +11276,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11108,6 +11304,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11123,7 +11320,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是玉山信用卡新戶嗎？（核卡日前六個月內未持有玉山任一張流通正卡）"
+                "userPrompt": "你是玉山信用卡新戶嗎？（核卡日前六個月內未持有玉山任一張流通正卡）",
+                "registerUrl": null
               }
             ]
           ]
@@ -11153,6 +11351,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11168,7 +11367,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是在 2026/9/1~11/30 期間第一次申辦玉山U Bear信用卡正卡並核卡的嗎？"
+                "userPrompt": "你是在 2026/9/1~11/30 期間第一次申辦玉山U Bear信用卡正卡並核卡的嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -11195,6 +11395,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11210,7 +11411,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisMonth",
                 "countsThisTx": null,
-                "userPrompt": "這個月你有登錄「LINE Pay單筆滿500享5%」活動嗎？"
+                "userPrompt": "這個月你有登錄「LINE Pay單筆滿500享5%」活動嗎？",
+                "registerUrl": null
               },
               {
                 "id": "ubear-c7-2",
@@ -11222,7 +11424,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆有用綁定玉山U Bear卡的 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆有用綁定玉山U Bear卡的 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "ubear-c7-3",
@@ -11234,7 +11437,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆有滿 500 元嗎？"
+                "userPrompt": "這一筆有滿 500 元嗎？",
+                "registerUrl": null
               },
               {
                 "id": "ubear-c7-4",
@@ -11246,7 +11450,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是在 2026/9/1~11/30 期間第一次綁定玉山 LINE 個人化通知的嗎？"
+                "userPrompt": "你是在 2026/9/1~11/30 期間第一次綁定玉山 LINE 個人化通知的嗎？",
+                "registerUrl": null
               }
             ],
             [
@@ -11260,7 +11465,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisMonth",
                 "countsThisTx": null,
-                "userPrompt": "這個月你有登錄「LINE Pay單筆滿500享5%」活動嗎？"
+                "userPrompt": "這個月你有登錄「LINE Pay單筆滿500享5%」活動嗎？",
+                "registerUrl": null
               },
               {
                 "id": "ubear-c7-6",
@@ -11272,7 +11478,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆有用綁定玉山U Bear卡的 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆有用綁定玉山U Bear卡的 LINE Pay 結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "ubear-c7-7",
@@ -11284,7 +11491,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆有滿 500 元嗎？"
+                "userPrompt": "這一筆有滿 500 元嗎？",
+                "registerUrl": null
               },
               {
                 "id": "ubear-c7-8",
@@ -11296,7 +11504,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是在 2026/9/1~11/30 期間第一次用玉山信用卡綁 LINE Pay 並完成消費的嗎？"
+                "userPrompt": "你是在 2026/9/1~11/30 期間第一次用玉山信用卡綁 LINE Pay 並完成消費的嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -11320,9 +11529,10 @@
           },
           "validFrom": "2026-07-01",
           "validTo": "2026-12-31",
-          "stackMode": "add",
+          "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11338,7 +11548,8 @@
                 "valueUnit": null,
                 "valuePeriod": "thisMonth",
                 "countsThisTx": null,
-                "userPrompt": "這個月你有登錄「icash Pay 7-ELEVEN 6%」活動嗎？"
+                "userPrompt": "這個月你有登錄「icash Pay 7-ELEVEN 6%」活動嗎？",
+                "registerUrl": null
               },
               {
                 "id": "ubear-c8-2",
@@ -11350,7 +11561,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆有用綁定玉山U Bear卡的 icash Pay 結帳嗎？"
+                "userPrompt": "這筆有用綁定玉山U Bear卡的 icash Pay 結帳嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -11377,6 +11589,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11392,7 +11605,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆有用綁定玉山U Bear卡的 icash Pay 結帳嗎？"
+                "userPrompt": "這筆有用綁定玉山U Bear卡的 icash Pay 結帳嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -11438,6 +11652,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11465,6 +11680,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-only-bdf",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": "esun-only-bdf-cap",
           "replaceGroup": null,
           "validDays": null,
@@ -11480,7 +11696,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）"
+                "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）",
+                "registerUrl": null
               }
             ]
           ]
@@ -11507,6 +11724,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-only-bdf",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": "esun-only-bdf-cap",
           "replaceGroup": null,
           "validDays": null,
@@ -11522,7 +11740,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）"
+                "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）",
+                "registerUrl": null
               }
             ]
           ]
@@ -11549,6 +11768,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-only-bdf",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": "esun-only-bdf-cap",
           "replaceGroup": null,
           "validDays": null,
@@ -11564,7 +11784,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）"
+                "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）",
+                "registerUrl": null
               }
             ]
           ]
@@ -11591,6 +11812,7 @@
           "stackMode": "exclusive",
           "stackGroup": "esun-only-bdf",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": "esun-only-bdf-cap",
           "replaceGroup": null,
           "validDays": null,
@@ -11606,7 +11828,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）"
+                "userPrompt": "你的玉山Only卡「紅利倍多芬」是第幾級會員？（可在玉山Wallet首頁查）",
+                "registerUrl": null
               }
             ]
           ]
@@ -11652,6 +11875,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11667,7 +11891,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？（電子帳單-Email／行動帳單-簡訊／LINE帳單）"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？（電子帳單-Email／行動帳單-簡訊／LINE帳單）",
+                "registerUrl": null
               }
             ]
           ]
@@ -11694,6 +11919,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11709,7 +11935,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？（電子帳單-Email／行動帳單-簡訊／LINE帳單）"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？（電子帳單-Email／行動帳單-簡訊／LINE帳單）",
+                "registerUrl": null
               }
             ]
           ]
@@ -11737,6 +11964,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11752,7 +11980,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？（電子帳單-Email／行動帳單-簡訊／LINE帳單）"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？（電子帳單-Email／行動帳單-簡訊／LINE帳單）",
+                "registerUrl": null
               }
             ]
           ]
@@ -11779,6 +12008,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11794,7 +12024,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？（電子帳單-Email／行動帳單-簡訊／LINE帳單）"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？（電子帳單-Email／行動帳單-簡訊／LINE帳單）",
+                "registerUrl": null
               }
             ]
           ]
@@ -11821,6 +12052,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": 15000.0,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11836,7 +12068,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這個月登錄過聯邦『指定卡別海外加碼』活動了嗎？"
+                "userPrompt": "這個月登錄過聯邦『指定卡別海外加碼』活動了嗎？",
+                "registerUrl": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx"
               },
               {
                 "id": "ubot-m-c5-2",
@@ -11848,7 +12081,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": "thisMonth",
                 "countsThisTx": true,
-                "userPrompt": "這個月在日/韓/泰/美/加/墨的海外實體店家刷滿 15,000 元了嗎？"
+                "userPrompt": "這個月在日/韓/泰/美/加/墨的海外實體店家刷滿 15,000 元了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -11894,6 +12128,7 @@
           "stackMode": "exclusive",
           "stackGroup": "ubot-green-base",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11909,7 +12144,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的聯邦綠卡有申辦電子化帳單（電子／行動／LINE帳單）嗎？"
+                "userPrompt": "你的聯邦綠卡有申辦電子化帳單（電子／行動／LINE帳單）嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -11936,6 +12172,7 @@
           "stackMode": "exclusive",
           "stackGroup": "ubot-green-base",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11951,7 +12188,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的聯邦綠卡有申辦電子化帳單（電子／行動／LINE帳單）嗎？"
+                "userPrompt": "你的聯邦綠卡有申辦電子化帳單（電子／行動／LINE帳單）嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -11981,6 +12219,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -11996,7 +12235,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的聯邦綠卡有申辦電子化帳單（電子／行動／LINE帳單）嗎？"
+                "userPrompt": "你的聯邦綠卡有申辦電子化帳單（電子／行動／LINE帳單）嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -12024,6 +12264,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -12039,7 +12280,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你的聯邦綠卡有申辦電子化帳單（電子／行動／LINE帳單）嗎？"
+                "userPrompt": "你的聯邦綠卡有申辦電子化帳單（電子／行動／LINE帳單）嗎？",
+                "registerUrl": null
               },
               {
                 "id": "ubot-green-c4-2",
@@ -12051,7 +12293,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有用聯邦綠卡設定水電瓦斯／電信／公有路邊停車費的自動代扣繳嗎？"
+                "userPrompt": "你有用聯邦綠卡設定水電瓦斯／電信／公有路邊停車費的自動代扣繳嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -12078,6 +12321,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -12093,7 +12337,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是在2026/7/1～2026/12/31期間才第一次申辦並成功開立聯邦 New New Bank 數位帳戶的嗎？"
+                "userPrompt": "你是在2026/7/1～2026/12/31期間才第一次申辦並成功開立聯邦 New New Bank 數位帳戶的嗎？",
+                "registerUrl": null
               },
               {
                 "id": "ubot-green-c5-2",
@@ -12105,7 +12350,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有把這張聯邦綠卡的帳單設定由 New New Bank 帳戶自動扣繳嗎？"
+                "userPrompt": "你有把這張聯邦綠卡的帳單設定由 New New Bank 帳戶自動扣繳嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -12153,6 +12399,7 @@
           "stackMode": "exclusive",
           "stackGroup": "ubot-laidian-base",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -12168,7 +12415,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？（Email帳單／簡訊帳單／LINE帳單三選一）"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？（Email帳單／簡訊帳單／LINE帳單三選一）",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c1-2",
@@ -12180,7 +12428,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -12207,6 +12456,7 @@
           "stackMode": "exclusive",
           "stackGroup": "ubot-laidian-base",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -12222,7 +12472,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c2-2",
@@ -12234,7 +12485,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -12261,6 +12513,7 @@
           "stackMode": "exclusive",
           "stackGroup": "ubot-laidian-base",
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -12276,7 +12529,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c3-2",
@@ -12288,7 +12542,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -12315,6 +12570,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -12330,7 +12586,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c4-2",
@@ -12342,7 +12599,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c4-3",
@@ -12354,7 +12612,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡沒有這個加碼）"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（刷實體卡沒有這個加碼）",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c4-4",
@@ -12366,7 +12625,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆有滿 100 元嗎？"
+                "userPrompt": "這一筆有滿 100 元嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -12393,6 +12653,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -12408,7 +12669,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c5-2",
@@ -12420,7 +12682,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c5-3",
@@ -12432,7 +12695,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是聯邦信用卡新戶嗎？（核卡前六個月內未曾持有任何一張聯邦信用卡）"
+                "userPrompt": "你是聯邦信用卡新戶嗎？（核卡前六個月內未曾持有任何一張聯邦信用卡）",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c5-4",
@@ -12444,7 +12708,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -12474,6 +12739,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "even",
@@ -12489,7 +12755,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c6-2",
@@ -12501,7 +12768,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c6-3",
@@ -12513,7 +12781,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（實體卡與其他支付方式都不算）"
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（實體卡與其他支付方式都不算）",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c6-4",
@@ -12525,7 +12794,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆有滿 100 元嗎？"
+                "userPrompt": "這一筆有滿 100 元嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c6-5",
@@ -12537,7 +12807,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -12566,6 +12837,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -12581,7 +12853,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c7-2",
@@ -12593,7 +12866,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -12620,6 +12894,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -12635,7 +12910,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是聯邦信用卡新戶嗎？（核卡前六個月內未曾持有任何一張聯邦信用卡）"
+                "userPrompt": "你是聯邦信用卡新戶嗎？（核卡前六個月內未曾持有任何一張聯邦信用卡）",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c8-2",
@@ -12647,7 +12923,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有到聯邦「一般活動登錄專區」登錄 115 年保費一次付清加碼活動嗎？（限量2500戶，額滿提前關閉）"
+                "userPrompt": "你有到聯邦「一般活動登錄專區」登錄 115 年保費一次付清加碼活動嗎？（限量2500戶，額滿提前關閉）",
+                "registerUrl": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx"
               }
             ]
           ]
@@ -12674,6 +12951,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -12689,7 +12967,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c9-2",
@@ -12701,7 +12980,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c9-3",
@@ -12713,7 +12993,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？（刷實體卡不算）"
+                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？（刷實體卡不算）",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c9-4",
@@ -12725,7 +13006,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -12752,6 +13034,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -12767,7 +13050,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c10-2",
@@ -12779,7 +13063,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c10-3",
@@ -12791,7 +13076,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？"
+                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c10-4",
@@ -12803,7 +13089,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -12830,6 +13117,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -12845,7 +13133,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c11-2",
@@ -12857,7 +13146,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c11-3",
@@ -12869,7 +13159,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？"
+                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c11-4",
@@ -12881,7 +13172,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -12908,6 +13200,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -12923,7 +13216,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c12-2",
@@ -12935,7 +13229,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c12-3",
@@ -12947,7 +13242,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？"
+                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c12-4",
@@ -12959,7 +13255,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -12986,6 +13283,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -13001,7 +13299,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有申辦聯邦電子化帳單嗎？"
+                "userPrompt": "你有申辦聯邦電子化帳單嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c13-2",
@@ -13013,7 +13312,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？"
+                "userPrompt": "你已經把賴點卡綁定到台灣的 LINE Pay 帳號了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c13-3",
@@ -13025,7 +13325,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？"
+                "userPrompt": "這筆要在韓國用 LINE Pay 的「韓國版條碼」結帳嗎？",
+                "registerUrl": null
               },
               {
                 "id": "laidian-c13-4",
@@ -13037,7 +13338,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？"
+                "userPrompt": "你在 LINE Pay 的『設定＞服務條款＞行銷資訊提供政策』勾選同意了嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -13082,6 +13384,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -13097,7 +13400,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你是在 2026/7/1～12/31 期間才第一次申辦並成功開立聯邦 New New Bank 數位帳戶的嗎？"
+                "userPrompt": "你是在 2026/7/1～12/31 期間才第一次申辦並成功開立聯邦 New New Bank 數位帳戶的嗎？",
+                "registerUrl": null
               },
               {
                 "id": "ubotc-c1-2",
@@ -13109,7 +13413,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你有把聯邦信用卡的帳單設定成由 New New Bank 帳戶自動扣繳嗎？（★注意：設了這個，LINE Bank 自扣禮 5% 就永遠拿不到了）"
+                "userPrompt": "你有把聯邦信用卡的帳單設定成由 New New Bank 帳戶自動扣繳嗎？（★注意：設了這個，LINE Bank 自扣禮 5% 就永遠拿不到了）",
+                "registerUrl": null
               }
             ]
           ]
@@ -13136,6 +13441,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -13151,7 +13457,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 iPASS MONEY App 裡完成「同意加入一卡通綠點」，並綁定了任一張聯邦信用卡嗎？"
+                "userPrompt": "你在 iPASS MONEY App 裡完成「同意加入一卡通綠點」，並綁定了任一張聯邦信用卡嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -13178,6 +13485,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -13193,7 +13501,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 iPASS MONEY App 裡完成「同意加入一卡通綠點」並綁定聯邦卡了嗎？（★7、8、9 月名額都已額滿，最快 10 月才有）"
+                "userPrompt": "你在 iPASS MONEY App 裡完成「同意加入一卡通綠點」並綁定聯邦卡了嗎？（★7、8、9 月名額都已額滿，最快 10 月才有）",
+                "registerUrl": null
               },
               {
                 "id": "ubotc-c3-2",
@@ -13205,7 +13514,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆用 iPASS MONEY 綁聯邦卡要滿 200 元才有 10% 綠點，湊得到嗎？"
+                "userPrompt": "這一筆用 iPASS MONEY 綁聯邦卡要滿 200 元才有 10% 綠點，湊得到嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -13232,6 +13542,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -13247,7 +13558,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "結帳時是用全支付的「付款碼」或掃「全支付 QR Code／TWQR 立牌」付款嗎？（在全聯／大全聯刷不算）"
+                "userPrompt": "結帳時是用全支付的「付款碼」或掃「全支付 QR Code／TWQR 立牌」付款嗎？（在全聯／大全聯刷不算）",
+                "registerUrl": null
               }
             ]
           ]
@@ -13274,6 +13586,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": "ubot-common-drugsuper",
           "replaceGroup": null,
           "validDays": null,
@@ -13289,7 +13602,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這個月登錄「美廉社／小北百貨」活動了嗎？每月 20 日上午 11 點開放，限量 5,000 名，沒登錄這個月刷的就白刷了。"
+                "userPrompt": "這個月登錄「美廉社／小北百貨」活動了嗎？每月 20 日上午 11 點開放，限量 5,000 名，沒登錄這個月刷的就白刷了。",
+                "registerUrl": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx"
               }
             ]
           ]
@@ -13316,6 +13630,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": "ubot-common-drugsuper",
           "replaceGroup": null,
           "validDays": null,
@@ -13331,7 +13646,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這個月登錄「美廉社／小北百貨」活動了嗎？每月 20 日上午 11 點開放，限量 5,000 名。"
+                "userPrompt": "這個月登錄「美廉社／小北百貨」活動了嗎？每月 20 日上午 11 點開放，限量 5,000 名。",
+                "registerUrl": null
               }
             ]
           ]
@@ -13358,6 +13674,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": "ubot-common-watsons-cap",
           "replaceGroup": null,
           "validDays": "sun|mon|tue|wed|thu|fri",
@@ -13373,7 +13690,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這個月登錄「屈臣氏聯邦日」了嗎？每月 5 日下午 2 點開放，限量 6,000 名，補登錄救不回上個月。"
+                "userPrompt": "這個月登錄「屈臣氏聯邦日」了嗎？每月 5 日下午 2 點開放，限量 6,000 名，補登錄救不回上個月。",
+                "registerUrl": null
               },
               {
                 "id": "ubotc-c7-2",
@@ -13385,7 +13703,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆屈臣氏要滿 888 元才有 5%（週六是 10%），湊得到嗎？"
+                "userPrompt": "這一筆屈臣氏要滿 888 元才有 5%（週六是 10%），湊得到嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -13412,6 +13731,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": "ubot-common-watsons-cap",
           "replaceGroup": null,
           "validDays": "sat",
@@ -13427,7 +13747,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "這個月登錄「屈臣氏聯邦日」了嗎？每月 5 日下午 2 點開放，限量 6,000 名。"
+                "userPrompt": "這個月登錄「屈臣氏聯邦日」了嗎？每月 5 日下午 2 點開放，限量 6,000 名。",
+                "registerUrl": null
               },
               {
                 "id": "ubotc-c8-2",
@@ -13439,7 +13760,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "今天週六，這一筆屈臣氏滿 888 元就有 10%，湊得到嗎？"
+                "userPrompt": "今天週六，這一筆屈臣氏滿 888 元就有 10%，湊得到嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -13466,6 +13788,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -13481,7 +13804,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 OPEN錢包（OPENPOINT App）裡綁定聯邦信用卡了嗎？"
+                "userPrompt": "你在 OPEN錢包（OPENPOINT App）裡綁定聯邦信用卡了嗎？",
+                "registerUrl": null
               },
               {
                 "id": "ubotc-c9-2",
@@ -13493,7 +13817,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "這一筆 7-ELEVEN 要滿 100 元才有 10% OPENPOINT，湊得到嗎？"
+                "userPrompt": "這一筆 7-ELEVEN 要滿 100 元才有 10% OPENPOINT，湊得到嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -13520,6 +13845,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -13547,6 +13873,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "sat",
@@ -13562,7 +13889,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "今天週六，結帳時是用王品瘋美食 App 的「瘋Pay」綁聯邦卡付款、並出示會員卡嗎？"
+                "userPrompt": "今天週六，結帳時是用王品瘋美食 App 的「瘋Pay」綁聯邦卡付款、並出示會員卡嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -13589,6 +13917,7 @@
           "stackMode": "replace",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": "sat-sun",
@@ -13604,7 +13933,8 @@
                 "valueUnit": "TWD",
                 "valuePeriod": null,
                 "countsThisTx": true,
-                "userPrompt": "今天週六/日，這一筆全聯要滿 1,200 元才有 360 福利點（約值 36 元），湊得到嗎？"
+                "userPrompt": "今天週六/日，這一筆全聯要滿 1,200 元才有 360 福利點（約值 36 元），湊得到嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -13631,6 +13961,7 @@
           "stackMode": "add",
           "stackGroup": null,
           "minSpend": null,
+          "activityUrl": null,
           "capGroup": null,
           "replaceGroup": null,
           "validDays": null,
@@ -13646,7 +13977,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你在 2025/7/1～2026/6/30 之間，完全沒有用任何一張聯邦信用卡繳過保費嗎？"
+                "userPrompt": "你在 2025/7/1～2026/6/30 之間，完全沒有用任何一張聯邦信用卡繳過保費嗎？",
+                "registerUrl": null
               },
               {
                 "id": "ubotc-c13-2",
@@ -13658,7 +13990,8 @@
                 "valueUnit": null,
                 "valuePeriod": null,
                 "countsThisTx": null,
-                "userPrompt": "你登錄「保費一次付清加碼」活動了嗎？限量 10,000 名，而且回饋只從登錄當月起算，之前刷的救不回來。"
+                "userPrompt": "你登錄「保費一次付清加碼」活動了嗎？限量 10,000 名，而且回饋只從登錄當月起算，之前刷的救不回來。",
+                "registerUrl": null
               }
             ]
           ]
