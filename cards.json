@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "dataVersion": "2026-09-05",
-  "generatedAt": "2026-09-05T00:07:32Z",
+  "dataVersion": "2026-09-06",
+  "generatedAt": "2026-09-06T13:18:43Z",
   "enums": {
     "cards.status": {
       "active": "發行中",
@@ -27,7 +27,8 @@
       "spend": "消費上限",
       "count": "次數上限",
       "spendDynamic": "動態消費上限",
-      "poolLimited": "總量限制型上限"
+      "poolLimited": "總量限制型上限",
+      "unspecified": "未載明上限"
     },
     "components.capPeriod": {
       "calendarMonth": "日曆月",
@@ -42,7 +43,8 @@
     "conditions.stateClass": {
       "structural": "結構前提",
       "recoverable": "期間內可補救",
-      "onsite": "當場可操作"
+      "onsite": "當場可操作",
+      "advisory": "僅供告知"
     },
     "conditions.type": {
       "membership": "需具備身份",
@@ -59,7 +61,8 @@
       "fxExchange": "換匯",
       "securityTrade": "證券交易",
       "installment": "分期交易",
-      "investProfile": "投資屬性問卷"
+      "investProfile": "投資屬性問卷",
+      "merchantNameMatch": "帳單店名須對得上"
     },
     "conditions.operator": {
       "gte": "大於等於",
@@ -119,12 +122,37 @@
       "openwallet": "OPEN 錢包",
       "ipassmoney": "iPASS MONEY",
       "esun-line-notify": "玉山 LINE 官方帳號綁定",
-      "pxpay": "PX Pay"
+      "pxpay": "PX Pay",
+      "instore-inc-googlepay": "實體店當面刷（含 Google Pay）",
+      "instore-exc-googlepay": "實體店當面刷（不含 Google Pay）",
+      "physicalcard": "僅限實體卡直接刷",
+      "directcard": "直接以本卡扣款",
+      "contactless-phone": "手機感應支付",
+      "wallet-fullpay": "指定行動支付全額付款",
+      "no-linepay-applepay": "不得使用 LINE Pay 或 Apple Pay",
+      "ev-charge-app": "Tesla／Gogoro 官方 APP",
+      "pchome-account": "PChome 線上購物會員帳號",
+      "uniopen-member": "uniopen 會員連結",
+      "jkopay": "街口支付",
+      "dbs-cardplus": "星展 Card+ 數位服務"
     },
     "components.stackMode": {
       "add": "相加",
       "replace": "取代",
       "exclusive": "互斥擇一"
+    },
+    "cards.rewardProgram": {
+      "ctbc-bonus": "中信紅利點數計劃",
+      "ctbc-cashback": "中信現金回饋計劃",
+      "ctbc-uniopen": "中信 uniopen 聯名計劃"
+    },
+    "components.regionMode": {
+      "include": "僅限這些地區",
+      "exclude": "排除這些地區"
+    },
+    "components.scope": {
+      "card": "信用卡消費回饋",
+      "account": "帳戶／電子錢包優惠"
     }
   },
   "categories": [
@@ -391,6 +419,12 @@
         "註冊費",
         "學雜費"
       ]
+    },
+    {
+      "id": "domestic",
+      "name": "國內消費",
+      "parentId": null,
+      "keywords": []
     }
   ],
   "pointCurrencies": [
@@ -477,6 +511,34 @@
       "issuer": "全聯實業",
       "cashValue": 0.1,
       "expiryMonths": null
+    },
+    {
+      "id": "dbs-cashpoint",
+      "name": "現金積點",
+      "issuer": "星展銀行",
+      "cashValue": 1.0,
+      "expiryMonths": 18
+    },
+    {
+      "id": "dbs-cashbonus",
+      "name": "現金紅利",
+      "issuer": "星展銀行",
+      "cashValue": 1.0,
+      "expiryMonths": null
+    },
+    {
+      "id": "pchome-point",
+      "name": "PChome聯名紅利點數",
+      "issuer": "星展銀行",
+      "cashValue": 0.8,
+      "expiryMonths": null
+    },
+    {
+      "id": "pchome-pcoin",
+      "name": "P幣（PChome 24h購物）",
+      "issuer": "網路家庭國際資訊（PChome）",
+      "cashValue": 1.0,
+      "expiryMonths": 6
     }
   ],
   "merchantLists": [
@@ -4510,8 +4572,8 @@
       ]
     },
     {
-      "id": "ubot-common-mlsocial",
-      "name": "聯邦美廉社加碼指定通路",
+      "id": "ubot-common-social-xiaobei",
+      "name": "聯邦美廉社／小北百貨加碼指定通路",
       "merchants": [
         {
           "name": "美廉社",
@@ -4527,13 +4589,7 @@
             "心樸"
           ],
           "categoryId": "supermarket"
-        }
-      ]
-    },
-    {
-      "id": "ubot-common-xiaobei",
-      "name": "聯邦小北百貨加碼指定通路",
-      "merchants": [
+        },
         {
           "name": "小北百貨",
           "aliases": [
@@ -4625,6 +4681,1666 @@
             "PXMart"
           ],
           "categoryId": "supermarket"
+        }
+      ]
+    },
+    {
+      "id": "dbs-eco-social",
+      "name": "星展基金會支持的社會企業及中小企業",
+      "merchants": [
+        {
+          "name": "鮮乳坊",
+          "aliases": [
+            "鮮乳坊"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "茶籽堂",
+          "aliases": [
+            "茶籽堂"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "綠藤生機",
+          "aliases": [
+            "綠藤",
+            "綠藤生物科技股份有限公司",
+            "商線–綠藤生物科技股份有限公司",
+            "greenvines",
+            "SHOPLINE–greenvines"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "nextdoorfresh",
+          "aliases": [
+            "nextdoorfresh"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "直接跟農夫買",
+          "aliases": [
+            "直接跟農夫買"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "玩轉學校",
+          "aliases": [
+            "玩轉學校"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "甘樂文創",
+          "aliases": [
+            "甘樂文創"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "禾乃川",
+          "aliases": [
+            "禾乃川",
+            "禾乃川釀酵吧"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "馳綠",
+          "aliases": [
+            "馳綠",
+            "CCILU",
+            "CILU",
+            "LAB22"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "艾瑪絲",
+          "aliases": [
+            "艾瑪絲",
+            "Aromase"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "覺亞",
+          "aliases": [
+            "覺亞",
+            "juliart",
+            "JuliArt"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "EVOPURE+優織隆",
+          "aliases": [
+            "EVOPURE+",
+            "Evopureplus",
+            "優織隆"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "臺灣藍鵲茶",
+          "aliases": [
+            "藍鵲茶",
+            "臺灣藍鵲茶與石虎米",
+            "石虎米"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "銀色大門",
+          "aliases": [
+            "銀色大門"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "多扶假期",
+          "aliases": [
+            "多扶假期"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "淨毒五郎",
+          "aliases": [
+            "淨毒五郎"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "美科實業股份有限公司",
+          "aliases": [
+            "美科實業股份有限公司",
+            "MacroHICoLtd"
+          ],
+          "categoryId": "pharmacy"
+        }
+      ]
+    },
+    {
+      "id": "dbs-eco-ev",
+      "name": "eco消費－Tesla充電資費與Gogoro電池資費",
+      "merchants": [
+        {
+          "name": "台灣特斯拉",
+          "aliases": [
+            "台灣特斯拉",
+            "Tesla",
+            "特斯拉"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "Gogoro",
+          "aliases": [
+            "Gogoro",
+            "Gogoro–EC",
+            "GogoroNetwork",
+            "Gogoro Network",
+            "PBGN"
+          ],
+          "categoryId": "transport"
+        }
+      ]
+    },
+    {
+      "id": "dbs-pchome-instation",
+      "name": "星展PChome Prime聯名卡 PChome站內消費",
+      "merchants": [
+        {
+          "name": "PChome 24h購物",
+          "aliases": [
+            "PChome24h",
+            "PChome 24h",
+            "PChome線上購物",
+            "PChome24h購物",
+            "PChome 24購物",
+            "網路家庭"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "PChome 24h書店",
+          "aliases": [
+            "PChome書店",
+            "PChome 24h書店"
+          ],
+          "categoryId": "ecommerce"
+        }
+      ]
+    },
+    {
+      "id": "dbs-pchome-overseas",
+      "name": "星展PChome Prime聯名卡 國外加碼指定通路",
+      "merchants": [
+        {
+          "name": "Coupang",
+          "aliases": [
+            "Coupang",
+            "酷澎"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Amazon",
+          "aliases": [
+            "Amazon",
+            "亞馬遜"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "ASOS",
+          "aliases": [
+            "ASOS"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Selfridges",
+          "aliases": [
+            "Selfridges"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "SHEIN",
+          "aliases": [
+            "SHEIN",
+            "希音"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "iHerb",
+          "aliases": [
+            "iHerb"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "DOKODEMO",
+          "aliases": [
+            "DOKODEMO",
+            "ドコデモ"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Gmarket",
+          "aliases": [
+            "Gmarket"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Mercari",
+          "aliases": [
+            "Mercari",
+            "メルカリ",
+            "煤爐"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "拼多多",
+          "aliases": [
+            "拼多多",
+            "Pinduoduo",
+            "Temu"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "ZenMarket",
+          "aliases": [
+            "ZenMarket",
+            "ゼンマーケット"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Netflix",
+          "aliases": [
+            "Netflix",
+            "網飛"
+          ],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "Disney+",
+          "aliases": [
+            "Disney+",
+            "Disney Plus",
+            "迪士尼+"
+          ],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "Spotify",
+          "aliases": [
+            "Spotify"
+          ],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "YouTube",
+          "aliases": [
+            "YouTube",
+            "YouTube Premium",
+            "Google YouTube"
+          ],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "Nintendo",
+          "aliases": [
+            "Nintendo",
+            "任天堂",
+            "Nintendo eShop"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Steam Games",
+          "aliases": [
+            "Steam",
+            "Steam Games",
+            "Valve"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "PlayStation store",
+          "aliases": [
+            "PlayStation store",
+            "PS Store",
+            "PSN",
+            "索尼互動娛樂"
+          ],
+          "categoryId": "gaming"
+        }
+      ]
+    },
+    {
+      "id": "dbs-aov-gamerlife",
+      "name": "星展傳說對決聯名卡生活玩家精選通路",
+      "merchants": [
+        {
+          "name": "App Store",
+          "aliases": [
+            "APPLE.COM",
+            "Apple"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Google Play",
+          "aliases": [
+            "Google"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Garena",
+          "aliases": [
+            "競舞娛樂",
+            "傳說對決",
+            "貝殼幣"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "GASH",
+          "aliases": [
+            "樂點",
+            "樂點卡",
+            "GASH POINT"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "MyCard",
+          "aliases": [
+            "智冠科技",
+            "智冠"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "巴哈姆特",
+          "aliases": [
+            "BAHAMUT",
+            "勇者造型",
+            "哈啦幣"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Nintendo",
+          "aliases": [
+            "任天堂",
+            "Nintendo eShop",
+            "Switch"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Play Station",
+          "aliases": [
+            "PlayStation",
+            "PSN",
+            "索尼互動娛樂"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Steam",
+          "aliases": [
+            "Valve",
+            "Steam錢包"
+          ],
+          "categoryId": "gaming"
+        },
+        {
+          "name": "Logitech",
+          "aliases": [
+            "羅技"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "NOVA",
+          "aliases": [
+            "NOVA資訊廣場"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "三創生活園區",
+          "aliases": [
+            "三創",
+            "Syntrend"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "寬宏售票",
+          "aliases": [
+            "寬宏藝術"
+          ],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "KKTIX",
+          "aliases": [],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "年代售票",
+          "aliases": [
+            "ERACOM",
+            "年代購票",
+            "ticket.com.tw"
+          ],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "拓元售票",
+          "aliases": [
+            "TIXCRAFT",
+            "tixCraft",
+            "拓元"
+          ],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "Youtube Premium",
+          "aliases": [
+            "YouTube",
+            "YT Premium",
+            "YouTube Music"
+          ],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "Netflix",
+          "aliases": [
+            "網飛"
+          ],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "Disney+",
+          "aliases": [
+            "Disney Plus",
+            "迪士尼+"
+          ],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "Twitch",
+          "aliases": [],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "TikTok",
+          "aliases": [
+            "TIKTOK",
+            "抖音"
+          ],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "愛奇藝",
+          "aliases": [
+            "IQIYI",
+            "iQIYI"
+          ],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "Catchplay",
+          "aliases": [
+            "CATCHPLAY+"
+          ],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "KKTV",
+          "aliases": [],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "LiTV",
+          "aliases": [
+            "立視科技"
+          ],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "Spotify",
+          "aliases": [],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "KKBOX",
+          "aliases": [],
+          "categoryId": "streaming"
+        },
+        {
+          "name": "Uber Eats",
+          "aliases": [
+            "優食",
+            "優步",
+            "UberEats"
+          ],
+          "categoryId": "delivery"
+        },
+        {
+          "name": "foodpanda",
+          "aliases": [
+            "ＦＰ－",
+            "FP-",
+            "空腹熊貓",
+            "熊貓"
+          ],
+          "categoryId": "delivery"
+        },
+        {
+          "name": "麥當勞",
+          "aliases": [
+            "McDonald",
+            "M記"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "肯德基",
+          "aliases": [
+            "KFC"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "摩斯漢堡",
+          "aliases": [
+            "MOS",
+            "MOS BURGER",
+            "安心食品"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "拿坡里",
+          "aliases": [
+            "拿坡里披薩",
+            "拿坡里意total"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "Pizza Hut",
+          "aliases": [
+            "必勝客",
+            "Pizzahut"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "蝦皮",
+          "aliases": [
+            "SHOPEE",
+            "蝦皮購物",
+            "蝦皮商城"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "淘寶",
+          "aliases": [
+            "TAOBAO",
+            "Taobao",
+            "天貓"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Animate",
+          "aliases": [
+            "ANIMATE",
+            "安利美特"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "野獸國",
+          "aliases": [
+            "BEASTKINGDOM",
+            "Beast Kingdom"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "POPMART",
+          "aliases": [
+            "泡泡瑪特",
+            "泡泡玛特",
+            "LABUBU"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "鼎美玩具",
+          "aliases": [
+            "鼎美股份有限公司",
+            "鼎美"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "KHTOY",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "TOYSNAP",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "東海模型",
+          "aliases": [],
+          "categoryId": "shopping"
+        }
+      ]
+    },
+    {
+      "id": "ctbc-uniopen-unigroup",
+      "name": "uniopen聯名卡統一企業集團品牌",
+      "merchants": [
+        {
+          "name": "統一超商",
+          "aliases": [
+            "7-ELEVEN",
+            "7-11",
+            "小七",
+            "統一超商股份有限公司"
+          ],
+          "categoryId": "convenience"
+        },
+        {
+          "name": "康是美",
+          "aliases": [
+            "康是美網購eShop",
+            "Cosmed"
+          ],
+          "categoryId": "pharmacy"
+        },
+        {
+          "name": "夢時代購物中心",
+          "aliases": [
+            "統一時代百貨高雄店",
+            "夢時代"
+          ],
+          "categoryId": "department"
+        },
+        {
+          "name": "統一時代百貨台北店",
+          "aliases": [
+            "統一時代百貨"
+          ],
+          "categoryId": "department"
+        },
+        {
+          "name": "DREAM PLAZA",
+          "aliases": [
+            "夢廣場"
+          ],
+          "categoryId": "department"
+        },
+        {
+          "name": "UNIKCY",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "玲廊滿藝",
+          "aliases": [],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "BEING spa",
+          "aliases": [],
+          "categoryId": "other"
+        },
+        {
+          "name": "星巴克",
+          "aliases": [
+            "Starbucks",
+            "統一星巴克"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "21Plus",
+          "aliases": [
+            "21風味館"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "Mister Donut",
+          "aliases": [
+            "統一多拿滋"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "COLD STONE",
+          "aliases": [
+            "酷聖石冰淇淋",
+            "酷聖石"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "Semeur聖娜",
+          "aliases": [
+            "聖娜多堡",
+            "聖娜"
+          ],
+          "categoryId": "dining"
+        },
+        {
+          "name": "萬家福",
+          "aliases": [
+            "萬家福量販",
+            "萬家福量販店"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "樂家康",
+          "aliases": [
+            "樂家康超市",
+            "樂家康超市店"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "Mia C'bon",
+          "aliases": [
+            "Mia Cbon",
+            "松青"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "Yahoo購物",
+          "aliases": [
+            "Yahoo購物中心",
+            "Yahoo拍賣",
+            "雅虎購物"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "博客來",
+          "aliases": [
+            "books.com.tw",
+            "博客來網路書店"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "聖德科斯",
+          "aliases": [
+            "聖德科斯生機食品"
+          ],
+          "categoryId": "supermarket"
+        },
+        {
+          "name": "統一生機",
+          "aliases": [
+            "統一生機開發"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "統一精工速邁樂加油站",
+          "aliases": [
+            "速邁樂",
+            "速邁樂加油中心",
+            "統一精工"
+          ],
+          "categoryId": "transport"
+        },
+        {
+          "name": "foodomo",
+          "aliases": [],
+          "categoryId": "delivery"
+        },
+        {
+          "name": "DUSKIN",
+          "aliases": [
+            "樂清",
+            "樂清線上購"
+          ],
+          "categoryId": "shopping"
+        },
+        {
+          "name": "黑貓宅急便",
+          "aliases": [
+            "統一速達",
+            "宅急便"
+          ],
+          "categoryId": "delivery"
+        },
+        {
+          "name": "ibon售票系統",
+          "aliases": [
+            "ibon",
+            "ibon售票"
+          ],
+          "categoryId": "ticketing"
+        },
+        {
+          "name": "統一渡假村",
+          "aliases": [
+            "統一渡假村官網"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "台北W飯店",
+          "aliases": [
+            "W Taipei"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "台北時代寓所",
+          "aliases": [
+            "Hotel Resonance Taipei"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "統一友友旅行社",
+          "aliases": [
+            "友友旅行社"
+          ],
+          "categoryId": "travel"
+        },
+        {
+          "name": "CupiCho",
+          "aliases": [],
+          "categoryId": "other"
+        },
+        {
+          "name": "統一夢公園",
+          "aliases": [],
+          "categoryId": "other"
+        },
+        {
+          "name": "統一超商商場",
+          "aliases": [
+            "統一商場"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "統一行動牛奶車",
+          "aliases": [
+            "行動牛奶車"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "太子建設指定專案",
+          "aliases": [
+            "太子建設"
+          ],
+          "categoryId": "other"
+        },
+        {
+          "name": "太子文旅",
+          "aliases": [
+            "太子文旅修齊館",
+            "太子文旅成大館",
+            "Academy Hotel"
+          ],
+          "categoryId": "travel"
+        }
+      ]
+    },
+    {
+      "id": "ctbc-uniopen-dreammall",
+      "name": "uniopen聯名卡夢時代週末用餐加碼指定店櫃",
+      "merchants": [
+        {
+          "name": "夢時代購物中心指定用餐店櫃",
+          "aliases": [
+            "統一時代百貨高雄店指定用餐店櫃",
+            "夢時代餐飲"
+          ],
+          "categoryId": "dining"
+        }
+      ]
+    },
+    {
+      "id": "ctbc-uniopen-yahoo",
+      "name": "uniopen聯名卡Yahoo購物加碼通路",
+      "merchants": [
+        {
+          "name": "Yahoo購物中心",
+          "aliases": [
+            "Yahoo奇摩購物中心",
+            "雅虎購物中心"
+          ],
+          "categoryId": "ecommerce"
+        },
+        {
+          "name": "Yahoo拍賣",
+          "aliases": [
+            "Yahoo奇摩拍賣"
+          ],
+          "categoryId": "ecommerce"
+        }
+      ]
+    },
+    {
+      "id": "ctbc-uniopen-books",
+      "name": "uniopen聯名卡博客來App加碼通路",
+      "merchants": [
+        {
+          "name": "博客來App",
+          "aliases": [
+            "博客來",
+            "books.com.tw"
+          ],
+          "categoryId": "ecommerce"
+        }
+      ]
+    },
+    {
+      "id": "ctbc-uniopen-takkyubin",
+      "name": "uniopen聯名卡黑貓宅急便運費加碼",
+      "merchants": [
+        {
+          "name": "黑貓宅急便",
+          "aliases": [
+            "統一速達",
+            "宅急便運費"
+          ],
+          "categoryId": "delivery"
+        }
+      ]
+    }
+  ],
+  "regionLists": [
+    {
+      "id": "dbs-europe-excluded",
+      "name": "星展歐洲實體商店排除名單",
+      "countries": [
+        {
+          "code": "AUT",
+          "name": "奧地利"
+        },
+        {
+          "code": "BEL",
+          "name": "比利時"
+        },
+        {
+          "code": "BGR",
+          "name": "保加利亞"
+        },
+        {
+          "code": "HRV",
+          "name": "克羅埃西亞"
+        },
+        {
+          "code": "CYP",
+          "name": "賽普勒斯"
+        },
+        {
+          "code": "CZE",
+          "name": "捷克"
+        },
+        {
+          "code": "DNK",
+          "name": "丹麥"
+        },
+        {
+          "code": "EST",
+          "name": "愛沙尼亞"
+        },
+        {
+          "code": "FIN",
+          "name": "芬蘭"
+        },
+        {
+          "code": "FRA",
+          "name": "法國"
+        },
+        {
+          "code": "DEU",
+          "name": "德國"
+        },
+        {
+          "code": "GRC",
+          "name": "希臘"
+        },
+        {
+          "code": "HUN",
+          "name": "匈牙利"
+        },
+        {
+          "code": "IRL",
+          "name": "愛爾蘭"
+        },
+        {
+          "code": "ITA",
+          "name": "義大利"
+        },
+        {
+          "code": "LVA",
+          "name": "拉脫維亞"
+        },
+        {
+          "code": "LTU",
+          "name": "立陶宛"
+        },
+        {
+          "code": "LUX",
+          "name": "盧森堡"
+        },
+        {
+          "code": "MLT",
+          "name": "馬爾他"
+        },
+        {
+          "code": "NLD",
+          "name": "荷蘭"
+        },
+        {
+          "code": "POL",
+          "name": "波蘭"
+        },
+        {
+          "code": "PRT",
+          "name": "葡萄牙"
+        },
+        {
+          "code": "ROM",
+          "name": "羅馬尼亞"
+        },
+        {
+          "code": "SVK",
+          "name": "斯洛伐克"
+        },
+        {
+          "code": "SVN",
+          "name": "斯洛維尼亞"
+        },
+        {
+          "code": "ESP",
+          "name": "西班牙"
+        },
+        {
+          "code": "SWE",
+          "name": "瑞典"
+        },
+        {
+          "code": "ISL",
+          "name": "冰島"
+        },
+        {
+          "code": "LIE",
+          "name": "列支敦斯登"
+        },
+        {
+          "code": "NOR",
+          "name": "挪威"
+        },
+        {
+          "code": "GBR",
+          "name": "英國"
+        }
+      ]
+    },
+    {
+      "id": "dbs-oversea-66",
+      "name": "星展國外加碼指定國家名單（66國）",
+      "countries": [
+        {
+          "code": "ARG",
+          "name": "阿根廷"
+        },
+        {
+          "code": "AUT",
+          "name": "奧地利"
+        },
+        {
+          "code": "BEL",
+          "name": "比利時"
+        },
+        {
+          "code": "BGR",
+          "name": "保加利亞"
+        },
+        {
+          "code": "BIH",
+          "name": "波士尼亞"
+        },
+        {
+          "code": "BLZ",
+          "name": "貝里斯"
+        },
+        {
+          "code": "BRA",
+          "name": "巴西"
+        },
+        {
+          "code": "CAN",
+          "name": "加拿大"
+        },
+        {
+          "code": "CHE",
+          "name": "瑞士"
+        },
+        {
+          "code": "CHL",
+          "name": "智利"
+        },
+        {
+          "code": "COL",
+          "name": "哥倫比亞"
+        },
+        {
+          "code": "CYP",
+          "name": "塞浦勒斯"
+        },
+        {
+          "code": "CZE",
+          "name": "捷克"
+        },
+        {
+          "code": "DEU",
+          "name": "德國"
+        },
+        {
+          "code": "DNK",
+          "name": "丹麥"
+        },
+        {
+          "code": "DOM",
+          "name": "多明尼加"
+        },
+        {
+          "code": "ECU",
+          "name": "厄瓜多"
+        },
+        {
+          "code": "ESP",
+          "name": "西班牙"
+        },
+        {
+          "code": "EST",
+          "name": "愛沙尼亞"
+        },
+        {
+          "code": "FIN",
+          "name": "芬蘭"
+        },
+        {
+          "code": "FRA",
+          "name": "法國"
+        },
+        {
+          "code": "FRO",
+          "name": "法羅群島"
+        },
+        {
+          "code": "GBR",
+          "name": "英國"
+        },
+        {
+          "code": "GIB",
+          "name": "直布羅陀"
+        },
+        {
+          "code": "GRC",
+          "name": "希臘"
+        },
+        {
+          "code": "GTM",
+          "name": "瓜地馬拉"
+        },
+        {
+          "code": "GUF",
+          "name": "法屬圭亞那"
+        },
+        {
+          "code": "GUM",
+          "name": "關島"
+        },
+        {
+          "code": "HND",
+          "name": "宏都拉斯"
+        },
+        {
+          "code": "HRV",
+          "name": "克羅埃西亞"
+        },
+        {
+          "code": "HUN",
+          "name": "匈牙利"
+        },
+        {
+          "code": "IRL",
+          "name": "愛爾蘭"
+        },
+        {
+          "code": "ISL",
+          "name": "冰島"
+        },
+        {
+          "code": "ITA",
+          "name": "義大利"
+        },
+        {
+          "code": "JPN",
+          "name": "日本"
+        },
+        {
+          "code": "KNA",
+          "name": "聖克里斯多福及尼維斯"
+        },
+        {
+          "code": "KOR",
+          "name": "韓國"
+        },
+        {
+          "code": "LCA",
+          "name": "聖盧西亞"
+        },
+        {
+          "code": "LTU",
+          "name": "立陶宛"
+        },
+        {
+          "code": "LUX",
+          "name": "盧森堡"
+        },
+        {
+          "code": "LVA",
+          "name": "拉脫維亞"
+        },
+        {
+          "code": "MCO",
+          "name": "摩納哥"
+        },
+        {
+          "code": "MEX",
+          "name": "墨西哥"
+        },
+        {
+          "code": "MLT",
+          "name": "馬爾他"
+        },
+        {
+          "code": "MNE",
+          "name": "蒙特內哥羅"
+        },
+        {
+          "code": "NLD",
+          "name": "荷蘭"
+        },
+        {
+          "code": "NOR",
+          "name": "挪威"
+        },
+        {
+          "code": "PER",
+          "name": "秘魯"
+        },
+        {
+          "code": "POL",
+          "name": "波蘭"
+        },
+        {
+          "code": "PRI",
+          "name": "波多黎各"
+        },
+        {
+          "code": "PRT",
+          "name": "葡萄牙"
+        },
+        {
+          "code": "ROM",
+          "name": "羅馬尼亞"
+        },
+        {
+          "code": "SGP",
+          "name": "新加坡"
+        },
+        {
+          "code": "SLV",
+          "name": "薩爾瓦多"
+        },
+        {
+          "code": "SMR",
+          "name": "聖馬利諾"
+        },
+        {
+          "code": "SVK",
+          "name": "斯洛伐克"
+        },
+        {
+          "code": "SVN",
+          "name": "斯洛維尼亞"
+        },
+        {
+          "code": "SWE",
+          "name": "瑞典"
+        },
+        {
+          "code": "THA",
+          "name": "泰國"
+        },
+        {
+          "code": "TUR",
+          "name": "土耳其"
+        },
+        {
+          "code": "UKR",
+          "name": "烏克蘭"
+        },
+        {
+          "code": "USA",
+          "name": "美國"
+        },
+        {
+          "code": "VAT",
+          "name": "梵蒂岡"
+        },
+        {
+          "code": "VIR",
+          "name": "美屬維爾京群島"
+        },
+        {
+          "code": "PRY",
+          "name": "巴拉圭"
+        },
+        {
+          "code": "ALB",
+          "name": "阿爾巴尼亞"
+        }
+      ]
+    },
+    {
+      "id": "dbs-oversea-25",
+      "name": "星展 eco 極簡卡國外加碼指定國家名單（25國）",
+      "countries": [
+        {
+          "code": "ARG",
+          "name": "阿根廷"
+        },
+        {
+          "code": "BLZ",
+          "name": "貝里斯"
+        },
+        {
+          "code": "BRA",
+          "name": "巴西"
+        },
+        {
+          "code": "CAN",
+          "name": "加拿大"
+        },
+        {
+          "code": "CHL",
+          "name": "智利"
+        },
+        {
+          "code": "COL",
+          "name": "哥倫比亞"
+        },
+        {
+          "code": "DOM",
+          "name": "多明尼加共和國"
+        },
+        {
+          "code": "ECU",
+          "name": "厄瓜多"
+        },
+        {
+          "code": "GTM",
+          "name": "瓜地馬拉"
+        },
+        {
+          "code": "GUF",
+          "name": "法屬圭亞那"
+        },
+        {
+          "code": "GUM",
+          "name": "關島"
+        },
+        {
+          "code": "HND",
+          "name": "宏都拉斯"
+        },
+        {
+          "code": "JPN",
+          "name": "日本"
+        },
+        {
+          "code": "KNA",
+          "name": "聖克里斯多福及尼維斯"
+        },
+        {
+          "code": "KOR",
+          "name": "韓國"
+        },
+        {
+          "code": "LCA",
+          "name": "聖盧西亞"
+        },
+        {
+          "code": "MEX",
+          "name": "墨西哥"
+        },
+        {
+          "code": "PER",
+          "name": "秘魯"
+        },
+        {
+          "code": "PRI",
+          "name": "波多黎各"
+        },
+        {
+          "code": "SGP",
+          "name": "新加坡"
+        },
+        {
+          "code": "SLV",
+          "name": "薩爾瓦多"
+        },
+        {
+          "code": "THA",
+          "name": "泰國"
+        },
+        {
+          "code": "USA",
+          "name": "美國"
+        },
+        {
+          "code": "VIR",
+          "name": "美屬維爾京群島"
+        },
+        {
+          "code": "PRY",
+          "name": "巴拉圭"
+        }
+      ]
+    },
+    {
+      "id": "dbs-oversea-non-eu",
+      "name": "星展國外加碼指定國家－非歐洲部分",
+      "countries": [
+        {
+          "code": "ARG",
+          "name": "阿根廷"
+        },
+        {
+          "code": "BIH",
+          "name": "波士尼亞"
+        },
+        {
+          "code": "BLZ",
+          "name": "貝里斯"
+        },
+        {
+          "code": "BRA",
+          "name": "巴西"
+        },
+        {
+          "code": "CAN",
+          "name": "加拿大"
+        },
+        {
+          "code": "CHE",
+          "name": "瑞士"
+        },
+        {
+          "code": "CHL",
+          "name": "智利"
+        },
+        {
+          "code": "COL",
+          "name": "哥倫比亞"
+        },
+        {
+          "code": "DOM",
+          "name": "多明尼加"
+        },
+        {
+          "code": "ECU",
+          "name": "厄瓜多"
+        },
+        {
+          "code": "FRO",
+          "name": "法羅群島"
+        },
+        {
+          "code": "GIB",
+          "name": "直布羅陀"
+        },
+        {
+          "code": "GTM",
+          "name": "瓜地馬拉"
+        },
+        {
+          "code": "GUF",
+          "name": "法屬圭亞那"
+        },
+        {
+          "code": "GUM",
+          "name": "關島"
+        },
+        {
+          "code": "HND",
+          "name": "宏都拉斯"
+        },
+        {
+          "code": "JPN",
+          "name": "日本"
+        },
+        {
+          "code": "KNA",
+          "name": "聖克里斯多福及尼維斯"
+        },
+        {
+          "code": "KOR",
+          "name": "韓國"
+        },
+        {
+          "code": "LCA",
+          "name": "聖盧西亞"
+        },
+        {
+          "code": "MCO",
+          "name": "摩納哥"
+        },
+        {
+          "code": "MEX",
+          "name": "墨西哥"
+        },
+        {
+          "code": "MNE",
+          "name": "蒙特內哥羅"
+        },
+        {
+          "code": "PER",
+          "name": "秘魯"
+        },
+        {
+          "code": "PRI",
+          "name": "波多黎各"
+        },
+        {
+          "code": "SGP",
+          "name": "新加坡"
+        },
+        {
+          "code": "SLV",
+          "name": "薩爾瓦多"
+        },
+        {
+          "code": "SMR",
+          "name": "聖馬利諾"
+        },
+        {
+          "code": "THA",
+          "name": "泰國"
+        },
+        {
+          "code": "TUR",
+          "name": "土耳其"
+        },
+        {
+          "code": "UKR",
+          "name": "烏克蘭"
+        },
+        {
+          "code": "USA",
+          "name": "美國"
+        },
+        {
+          "code": "VAT",
+          "name": "梵蒂岡"
+        },
+        {
+          "code": "VIR",
+          "name": "美屬維爾京群島"
+        },
+        {
+          "code": "PRY",
+          "name": "巴拉圭"
+        },
+        {
+          "code": "ALB",
+          "name": "阿爾巴尼亞"
         }
       ]
     }
@@ -5154,6 +6870,26 @@
       "level": null,
       "userPrompt": "你在 2025/7/1～2026/6/30 之間，完全沒有用任何一張聯邦信用卡繳過保費嗎？",
       "qualifyPaths": []
+    },
+    {
+      "id": "dbs-newuser",
+      "name": "星展信用卡新戶",
+      "kind": "registration",
+      "issuer": "星展銀行",
+      "scope": "account",
+      "level": null,
+      "userPrompt": "你是星展信用卡新戶嗎？（申請當日之前180天內未持有星展任一張信用卡正卡）",
+      "qualifyPaths": []
+    },
+    {
+      "id": "ctbc-uniopen-firstbind",
+      "name": "uniopen聯名卡首次綁定行動支付",
+      "kind": "history",
+      "issuer": "中國信託",
+      "scope": "card",
+      "level": null,
+      "userPrompt": "你這張 uniopen 聯名卡以前綁過 Apple Pay／Google Pay／Samsung Pay 嗎？(綁過就永遠拿不到北捷加碼 6%)",
+      "qualifyPaths": []
     }
   ],
   "cards": [
@@ -5167,6 +6903,7 @@
       ],
       "issuer": "玉山銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://event.esunbank.com.tw/credit/unicard/index.html",
       "applyUrl": null,
@@ -5180,6 +6917,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 0.3,
           "unit": "point",
           "pointCurrencyId": "esun-epoint",
@@ -5224,6 +6963,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "point",
           "pointCurrencyId": "esun-epoint",
@@ -5281,6 +7022,8 @@
             "*"
           ],
           "merchantListId": "esun-up-list",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "point",
           "pointCurrencyId": "esun-epoint",
@@ -5325,6 +7068,8 @@
             "*"
           ],
           "merchantListId": "esun-up-list",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.5,
           "unit": "point",
           "pointCurrencyId": "esun-epoint",
@@ -5369,6 +7114,8 @@
             "*"
           ],
           "merchantListId": "esun-up-list",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.5,
           "unit": "point",
           "pointCurrencyId": "esun-epoint",
@@ -5413,6 +7160,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 15.5,
           "unit": "point",
           "pointCurrencyId": "esun-epoint",
@@ -5470,6 +7219,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.5,
           "unit": "point",
           "pointCurrencyId": "esun-epoint",
@@ -5519,6 +7270,7 @@
       ],
       "issuer": "永豐銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://bank.sinopac.com/sinopacBT/webevents/2008_SportCard2/index.html",
       "applyUrl": null,
@@ -5532,6 +7284,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 0.3,
           "unit": "point",
           "pointCurrencyId": "sinopac-fengpoint",
@@ -5560,6 +7314,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 0.7,
           "unit": "point",
           "pointCurrencyId": "sinopac-fengpoint",
@@ -5604,6 +7360,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "point",
           "pointCurrencyId": "sinopac-fengpoint",
@@ -5715,6 +7473,8 @@
             "*"
           ],
           "merchantListId": "sinopac-sport-list",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "point",
           "pointCurrencyId": "sinopac-fengpoint",
@@ -5826,6 +7586,8 @@
             "*"
           ],
           "merchantListId": "sinopac-sport-newpay",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 20.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -5874,6 +7636,7 @@
       ],
       "issuer": "永豐銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/DAWHO.html",
       "applyUrl": null,
@@ -5884,9 +7647,11 @@
           "label": "基本回饋－國內",
           "archetype": "base",
           "categoryIds": [
-            "*"
+            "domestic"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -5915,6 +7680,8 @@
             "overseas"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -5943,6 +7710,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.5,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -6013,6 +7782,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 4.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -6083,6 +7854,8 @@
             "transitcard"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -6153,6 +7926,8 @@
             "transitcard"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -6223,6 +7998,8 @@
             "*"
           ],
           "merchantListId": "sinopac-dawho-newpay",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 20.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -6271,6 +8048,7 @@
       ],
       "issuer": "滙豐銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://www.hsbc.com.tw/credit-cards/products/liveplus/",
       "applyUrl": null,
@@ -6284,6 +8062,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 0.88,
           "unit": "point",
           "pointCurrencyId": "hsbc-cashpoint",
@@ -6314,6 +8094,8 @@
             "entertainment"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "point",
           "pointCurrencyId": "hsbc-cashpoint",
@@ -6342,6 +8124,8 @@
             "dining"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "point",
           "pointCurrencyId": "hsbc-cashpoint",
@@ -6370,6 +8154,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "point",
           "pointCurrencyId": "hsbc-cashpoint",
@@ -6418,6 +8204,7 @@
       ],
       "issuer": "聯邦銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://activity.ubot.com.tw/LINEBankCard/index.htm",
       "applyUrl": null,
@@ -6428,9 +8215,11 @@
           "label": "國內一般消費",
           "archetype": "base",
           "categoryIds": [
-            "*"
+            "domestic"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -6459,6 +8248,8 @@
             "overseas"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.5,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -6487,6 +8278,8 @@
             "insurance"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -6518,6 +8311,8 @@
             "ticketing"
           ],
           "merchantListId": "ubot-line-list",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -6537,63 +8332,6 @@
           "replaceGroup": null,
           "validDays": null,
           "conditionPaths": []
-        },
-        {
-          "id": "ubot-linebank-c5",
-          "label": "新戶自動扣款禮",
-          "archetype": "channel",
-          "categoryIds": [
-            "*"
-          ],
-          "merchantListId": null,
-          "rate": 5.0,
-          "unit": "percent",
-          "pointCurrencyId": null,
-          "cap": {
-            "type": "count",
-            "value": 3.0,
-            "period": "cardAnchor",
-            "anchorDays": 180
-          },
-          "validFrom": "2026-08-01",
-          "validTo": "2027-07-31",
-          "stackMode": "add",
-          "stackGroup": null,
-          "minSpend": null,
-          "activityUrl": null,
-          "capGroup": null,
-          "replaceGroup": null,
-          "validDays": null,
-          "conditionPaths": [
-            [
-              {
-                "id": "ubot-c5-1",
-                "stateClass": "structural",
-                "type": "membership",
-                "targetId": "ubot-newuser",
-                "operator": null,
-                "value": null,
-                "valueUnit": null,
-                "valuePeriod": null,
-                "countsThisTx": null,
-                "userPrompt": "你是聯邦信用卡新戶嗎？",
-                "registerUrl": null
-              },
-              {
-                "id": "ubot-c5-2",
-                "stateClass": "recoverable",
-                "type": "autopay",
-                "targetId": null,
-                "operator": null,
-                "value": null,
-                "valueUnit": null,
-                "valuePeriod": null,
-                "countsThisTx": null,
-                "userPrompt": "你有用 LINE Bank 主帳戶設定自動扣繳這張卡嗎？",
-                "registerUrl": null
-              }
-            ]
-          ]
         }
       ]
     },
@@ -6607,6 +8345,7 @@
       ],
       "issuer": "國泰世華",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://www.cathay-cube.com.tw/cathaybk/personal/product/credit-card/cards/cube",
       "applyUrl": null,
@@ -6620,6 +8359,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 0.3,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -6649,6 +8390,8 @@
             "streaming"
           ],
           "merchantListId": "cathay-cube-digital",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -6707,6 +8450,8 @@
             "streaming"
           ],
           "merchantListId": "cathay-cube-digital",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -6765,6 +8510,8 @@
             "streaming"
           ],
           "merchantListId": "cathay-cube-digital",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.3,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -6825,6 +8572,8 @@
             "shopping"
           ],
           "merchantListId": "cathay-cube-food",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -6885,6 +8634,8 @@
             "shopping"
           ],
           "merchantListId": "cathay-cube-food",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -6945,6 +8696,8 @@
             "shopping"
           ],
           "merchantListId": "cathay-cube-food",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.3,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -7004,6 +8757,8 @@
             "overseas"
           ],
           "merchantListId": "cathay-cube-travel",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -7063,6 +8818,8 @@
             "overseas"
           ],
           "merchantListId": "cathay-cube-travel",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -7122,6 +8879,8 @@
             "overseas"
           ],
           "merchantListId": "cathay-cube-travel",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.3,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -7181,6 +8940,8 @@
             "transport"
           ],
           "merchantListId": "cathay-cube-select",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -7227,6 +8988,8 @@
             "pharmacy"
           ],
           "merchantListId": "cathay-cube-fpg",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -7272,6 +9035,8 @@
             "supermarket"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -7329,6 +9094,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.2,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -7373,6 +9140,8 @@
             "overseas"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.5,
           "unit": "point",
           "pointCurrencyId": "cathay-treepoint",
@@ -7422,6 +9191,7 @@
       ],
       "issuer": "永豐銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/dual-currency-card.html",
       "applyUrl": "https://mma.sinopac.com/SinoCard/Application/ApplyCard?prodtype=6",
@@ -7432,9 +9202,11 @@
           "label": "基本回饋－國內",
           "archetype": "base",
           "categoryIds": [
-            "*"
+            "domestic"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -7492,6 +9264,8 @@
             "overseas"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -7549,6 +9323,8 @@
             "insurance"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.2,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -7606,6 +9382,8 @@
             "*"
           ],
           "merchantListId": "sinopac-bibei-selected",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 4.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -7758,6 +9536,8 @@
             "*"
           ],
           "merchantListId": "sinopac-bibei-newapplypay",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -7828,6 +9608,8 @@
             "*"
           ],
           "merchantListId": "sinopac-bibei-newpay",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 20.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -7877,6 +9659,7 @@
       ],
       "issuer": "永豐銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/cashcard.html",
       "applyUrl": "https://mma.sinopac.com/SinoCard/Application/ApplyCard?CardFace=278178&Branch=official&Flag=01&mode=1",
@@ -7887,9 +9670,11 @@
           "label": "基本回饋－國內",
           "archetype": "base",
           "categoryIds": [
-            "*"
+            "domestic"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -7918,6 +9703,8 @@
             "overseas"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -7943,9 +9730,11 @@
           "label": "精選國內綠色通路加碼",
           "archetype": "merchantList",
           "categoryIds": [
-            "*"
+            "domestic"
           ],
           "merchantListId": "sinopac-green-list",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 4.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -8003,6 +9792,8 @@
             "transitcard"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 4.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -8073,6 +9864,8 @@
             "insurance"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -8107,6 +9900,7 @@
       ],
       "issuer": "永豐銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/co-brand/mitsui-outlet-park-card.html",
       "applyUrl": null,
@@ -8120,6 +9914,8 @@
             "department"
           ],
           "merchantListId": "sinopac-mop-inhouse",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 0.5,
           "unit": "point",
           "pointCurrencyId": "sinopac-fengpoint",
@@ -8148,6 +9944,8 @@
             "department"
           ],
           "merchantListId": "sinopac-mop-inhouse",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "point",
           "pointCurrencyId": "sinopac-fengpoint",
@@ -8192,6 +9990,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 0.3,
           "unit": "point",
           "pointCurrencyId": "sinopac-fengpoint",
@@ -8221,6 +10021,8 @@
             "mobilepay"
           ],
           "merchantListId": "sinopac-mop-7pct",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 7.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -8252,7 +10054,7 @@
                 "valuePeriod": null,
                 "countsThisTx": null,
                 "userPrompt": "你登錄過永豐 MOP 卡『特選通路7%』活動了嗎？",
-                "registerUrl": null
+                "registerUrl": "https://mma.sinopac.com/SinoCard/Activity/Register?Code=XH64"
               },
               {
                 "id": "mop-c4-2",
@@ -8291,6 +10093,8 @@
             "overseas"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -8322,7 +10126,7 @@
                 "valuePeriod": null,
                 "countsThisTx": null,
                 "userPrompt": "你登錄過 MOP JCB 卡『日韓泰2%』第三季活動了嗎？",
-                "registerUrl": null
+                "registerUrl": "https://mma.sinopac.com/SinoCard/Activity/Register?Code=XH65"
               },
               {
                 "id": "mop-c5-2",
@@ -8361,6 +10165,8 @@
             "overseas"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -8392,7 +10198,7 @@
                 "valuePeriod": null,
                 "countsThisTx": null,
                 "userPrompt": "你登錄過 MOP JCB 卡『日韓泰2%』第四季活動了嗎？",
-                "registerUrl": null
+                "registerUrl": "https://mma.sinopac.com/SinoCard/Activity/Register?Code=XH66"
               },
               {
                 "id": "mop-c6-2",
@@ -8437,6 +10243,7 @@
       ],
       "issuer": "永豐銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/co-brand/taxicard.html",
       "applyUrl": "https://app-api.taiwantaxi.com.tw/SinoPacCard/Apply",
@@ -8450,6 +10257,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "point",
           "pointCurrencyId": "taiwantaxi-tpoints",
@@ -8478,6 +10287,8 @@
             "transport"
           ],
           "merchantListId": "sinopac-55688-app",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 8.0,
           "unit": "point",
           "pointCurrencyId": "taiwantaxi-tpoints",
@@ -8535,6 +10346,8 @@
             "transport"
           ],
           "merchantListId": "sinopac-55688-app",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 10.0,
           "unit": "point",
           "pointCurrencyId": "taiwantaxi-tpoints",
@@ -8605,6 +10418,8 @@
             "*"
           ],
           "merchantListId": "sinopac-55688-select",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "point",
           "pointCurrencyId": "taiwantaxi-tpoints",
@@ -8654,6 +10469,7 @@
       ],
       "issuer": "永豐銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/bankcard/DAWAY.html",
       "applyUrl": "https://mma.sinopac.com/SinoCard/Application/ApplyCard?prodtype=11&Branch=official",
@@ -8664,9 +10480,11 @@
           "label": "基礎回饋－國內一般消費",
           "archetype": "base",
           "categoryIds": [
-            "*"
+            "domestic"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 0.5,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -8711,6 +10529,8 @@
             "overseas"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.5,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -8755,6 +10575,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.5,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -8825,6 +10647,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 6.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -8908,6 +10732,8 @@
             "overseas"
           ],
           "merchantListId": "sinopac-daway-kr-food",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -8943,7 +10769,7 @@
               },
               {
                 "id": "daway-c5-2",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -8965,6 +10791,8 @@
             "overseas"
           ],
           "merchantListId": "sinopac-daway-kr-food",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 10.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9000,7 +10828,7 @@
               },
               {
                 "id": "daway-c6-2",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9022,6 +10850,8 @@
             "overseas"
           ],
           "merchantListId": "sinopac-daway-kr-food",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 7.5,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9070,7 +10900,7 @@
               },
               {
                 "id": "daway-c7-3",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9092,6 +10922,8 @@
             "overseas"
           ],
           "merchantListId": "sinopac-daway-kr-shop",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9127,7 +10959,7 @@
               },
               {
                 "id": "daway-c8-2",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9149,6 +10981,8 @@
             "overseas"
           ],
           "merchantListId": "sinopac-daway-kr-shop",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.5,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9197,7 +11031,7 @@
               },
               {
                 "id": "daway-c9-3",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9220,6 +11054,8 @@
             "ecommerce"
           ],
           "merchantListId": "sinopac-daway-kr-oliveyoung-online",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 7.5,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9268,7 +11104,7 @@
               },
               {
                 "id": "daway-c10-3",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9291,6 +11127,8 @@
             "ecommerce"
           ],
           "merchantListId": "sinopac-daway-kr-oliveyoung-online",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 10.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9326,7 +11164,7 @@
               },
               {
                 "id": "daway-c11-2",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9349,6 +11187,8 @@
             "shopping"
           ],
           "merchantListId": "sinopac-daway-kr-oliveyoung-store",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 7.5,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9397,7 +11237,7 @@
               },
               {
                 "id": "daway-c12-3",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9420,6 +11260,8 @@
             "shopping"
           ],
           "merchantListId": "sinopac-daway-kr-oliveyoung-store",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 10.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9455,7 +11297,7 @@
               },
               {
                 "id": "daway-c13-2",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9477,6 +11319,8 @@
             "dining"
           ],
           "merchantListId": "sinopac-daway-louisa",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9525,7 +11369,7 @@
               },
               {
                 "id": "daway-c14-3",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9547,6 +11391,8 @@
             "ecommerce"
           ],
           "merchantListId": "sinopac-daway-coupang",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9595,7 +11441,7 @@
               },
               {
                 "id": "daway-c15-3",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9617,6 +11463,8 @@
             "entertainment"
           ],
           "merchantListId": "sinopac-daway-linepay-exp",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 8.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9652,7 +11500,7 @@
               },
               {
                 "id": "daway-c16-2",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9674,6 +11522,8 @@
             "entertainment"
           ],
           "merchantListId": "sinopac-daway-linepay-exp",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 8.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9722,7 +11572,7 @@
               },
               {
                 "id": "daway-c17-3",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9744,6 +11594,8 @@
             "entertainment"
           ],
           "merchantListId": "sinopac-daway-linepay-exp",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 14.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9779,7 +11631,7 @@
               },
               {
                 "id": "daway-c18-2",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9801,6 +11653,8 @@
             "entertainment"
           ],
           "merchantListId": "sinopac-daway-linepay-exp",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 8.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9849,7 +11703,7 @@
               },
               {
                 "id": "daway-c19-3",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9871,6 +11725,8 @@
             "travel"
           ],
           "merchantListId": "sinopac-daway-agoda",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 12.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9906,7 +11762,7 @@
               },
               {
                 "id": "daway-c20-2",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9928,6 +11784,8 @@
             "pharmacy"
           ],
           "merchantListId": "sinopac-daway-poya",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -9963,7 +11821,7 @@
               },
               {
                 "id": "daway-c21-2",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -9998,6 +11856,8 @@
             "supermarket"
           ],
           "merchantListId": "sinopac-daway-lopia",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 6.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -10033,7 +11893,7 @@
               },
               {
                 "id": "daway-c22-2",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -10068,6 +11928,8 @@
             "sports"
           ],
           "merchantListId": "sinopac-daway-decathlon",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 6.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -10103,7 +11965,7 @@
               },
               {
                 "id": "daway-c23-2",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -10138,6 +12000,8 @@
             "shopping"
           ],
           "merchantListId": "sinopac-daway-ikea",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 4.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -10173,7 +12037,7 @@
               },
               {
                 "id": "daway-c24-2",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -10212,6 +12076,7 @@
       ],
       "issuer": "永豐銀行",
       "status": "virtual",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/list.html",
       "applyUrl": null,
@@ -10225,6 +12090,8 @@
             "transport"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 100.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -10282,6 +12149,8 @@
             "supermarket"
           ],
           "merchantListId": "sinopac-common-organic",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -10339,6 +12208,8 @@
             "utility"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 10.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -10396,6 +12267,8 @@
             "utility"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 0.2,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -10466,6 +12339,8 @@
             "tuition"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 0.1,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -10523,6 +12398,8 @@
             "utility"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -10593,6 +12470,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -10650,6 +12529,8 @@
             "dining"
           ],
           "merchantListId": "sinopac-common-wowprime",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "point",
           "pointCurrencyId": "wowprime-point",
@@ -10694,6 +12575,8 @@
             "supermarket"
           ],
           "merchantListId": "sinopac-common-pxmart",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 30.0,
           "unit": "point",
           "pointCurrencyId": "pxmart-point",
@@ -10757,6 +12640,7 @@
       ],
       "issuer": "玉山銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://www.esunbank.com/zh-tw/personal/credit-card/intro/co-branded-card/pi-card",
       "applyUrl": "https://www.esunbank.com.tw/event/credit/card_pi/index.html",
@@ -10770,6 +12654,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 0.3,
           "unit": "point",
           "pointCurrencyId": "pi-pcoin",
@@ -10814,6 +12700,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "point",
           "pointCurrencyId": "pi-pcoin",
@@ -10871,6 +12759,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 4.0,
           "unit": "point",
           "pointCurrencyId": "pi-pcoin",
@@ -10967,6 +12857,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "point",
           "pointCurrencyId": "pi-pcoin",
@@ -11037,6 +12929,8 @@
             "insurance"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.2,
           "unit": "point",
           "pointCurrencyId": "pi-pcoin",
@@ -11088,6 +12982,7 @@
       ],
       "issuer": "玉山銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://www.esunbank.com/zh-tw/personal/credit-card/intro/bank-card/u-bear",
       "applyUrl": "https://esun.co/hGCrV",
@@ -11101,6 +12996,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 0.5,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -11160,6 +13057,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -11217,6 +13116,8 @@
             "*"
           ],
           "merchantListId": "esun-ubear-eclist",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -11262,6 +13163,8 @@
             "gaming"
           ],
           "merchantListId": "esun-ubear-subs",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 10.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -11290,6 +13193,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 10.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -11337,6 +13242,8 @@
             "ticketing"
           ],
           "merchantListId": "esun-ubear-3ch",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 10.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -11381,6 +13288,8 @@
             "mobilepay"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "point",
           "pointCurrencyId": "esun-epoint",
@@ -11412,7 +13321,7 @@
                 "valuePeriod": "thisMonth",
                 "countsThisTx": null,
                 "userPrompt": "這個月你有登錄「LINE Pay單筆滿500享5%」活動嗎？",
-                "registerUrl": null
+                "registerUrl": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV"
               },
               {
                 "id": "ubear-c7-2",
@@ -11466,7 +13375,7 @@
                 "valuePeriod": "thisMonth",
                 "countsThisTx": null,
                 "userPrompt": "這個月你有登錄「LINE Pay單筆滿500享5%」活動嗎？",
-                "registerUrl": null
+                "registerUrl": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV"
               },
               {
                 "id": "ubear-c7-6",
@@ -11518,6 +13427,8 @@
             "convenience"
           ],
           "merchantListId": "esun-ubear-711",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 6.0,
           "unit": "point",
           "pointCurrencyId": "openpoint",
@@ -11549,7 +13460,7 @@
                 "valuePeriod": "thisMonth",
                 "countsThisTx": null,
                 "userPrompt": "這個月你有登錄「icash Pay 7-ELEVEN 6%」活動嗎？",
-                "registerUrl": null
+                "registerUrl": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV"
               },
               {
                 "id": "ubear-c8-2",
@@ -11575,6 +13486,8 @@
             "other"
           ],
           "merchantListId": "esun-ubear-sty",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 10.0,
           "unit": "point",
           "pointCurrencyId": "openpoint",
@@ -11625,6 +13538,7 @@
       ],
       "issuer": "玉山銀行",
       "status": "discontinued",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://www.esunbank.com/zh-tw/personal/credit-card/intro/bank-card/only-card",
       "applyUrl": null,
@@ -11638,6 +13552,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 0.4,
           "unit": "point",
           "pointCurrencyId": "esun-epoint",
@@ -11666,6 +13582,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 0.4,
           "unit": "point",
           "pointCurrencyId": "esun-epoint",
@@ -11710,6 +13628,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.2,
           "unit": "point",
           "pointCurrencyId": "esun-epoint",
@@ -11754,6 +13674,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "point",
           "pointCurrencyId": "esun-epoint",
@@ -11798,6 +13720,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.8,
           "unit": "point",
           "pointCurrencyId": "esun-epoint",
@@ -11848,6 +13772,7 @@
       ],
       "issuer": "聯邦銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://activity.ubot.com.tw/2026Mcard/index.htm",
       "applyUrl": "https://card.ubot.com.tw/card_apply/?GID=39&IDE=C",
@@ -11858,9 +13783,11 @@
           "label": "國內一般消費",
           "archetype": "base",
           "categoryIds": [
-            "*"
+            "domestic"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -11905,6 +13832,8 @@
             "overseas"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -11950,6 +13879,8 @@
             "transport"
           ],
           "merchantListId": "ubot-mcard-scene",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 6.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -11994,6 +13925,8 @@
             "insurance"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.2,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -12038,6 +13971,8 @@
             "overseas"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -12101,6 +14036,7 @@
       ],
       "issuer": "聯邦銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://card.ubot.com.tw/CardDetail/cardDetail204",
       "applyUrl": "https://card.ubot.com.tw/eCard/dspCardOnLineApply.aspx?GID=64&IDE=A&strID=2008060014",
@@ -12111,9 +14047,11 @@
           "label": "國內一般消費",
           "archetype": "base",
           "categoryIds": [
-            "*"
+            "domestic"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -12158,6 +14096,8 @@
             "overseas"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -12205,6 +14145,8 @@
             "other"
           ],
           "merchantListId": "ubot-green-list",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -12250,6 +14192,8 @@
             "transport"
           ],
           "merchantListId": "ubot-green-autopay-list",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -12298,63 +14242,6 @@
               }
             ]
           ]
-        },
-        {
-          "id": "ubot-green-c5",
-          "label": "新開立New New Bank自動扣繳加碼",
-          "archetype": "channel",
-          "categoryIds": [
-            "*"
-          ],
-          "merchantListId": null,
-          "rate": 10.0,
-          "unit": "percent",
-          "pointCurrencyId": null,
-          "cap": {
-            "type": "count",
-            "value": 3.0,
-            "period": "campaign",
-            "anchorDays": null
-          },
-          "validFrom": "2026-07-01",
-          "validTo": "2026-12-31",
-          "stackMode": "add",
-          "stackGroup": null,
-          "minSpend": null,
-          "activityUrl": null,
-          "capGroup": null,
-          "replaceGroup": null,
-          "validDays": null,
-          "conditionPaths": [
-            [
-              {
-                "id": "ubot-green-c5-1",
-                "stateClass": "structural",
-                "type": "membership",
-                "targetId": "ubot-newnewbank-new",
-                "operator": null,
-                "value": null,
-                "valueUnit": null,
-                "valuePeriod": null,
-                "countsThisTx": null,
-                "userPrompt": "你是在2026/7/1～2026/12/31期間才第一次申辦並成功開立聯邦 New New Bank 數位帳戶的嗎？",
-                "registerUrl": null
-              },
-              {
-                "id": "ubot-green-c5-2",
-                "stateClass": "recoverable",
-                "type": "autopay",
-                "targetId": null,
-                "operator": null,
-                "value": null,
-                "valueUnit": null,
-                "valuePeriod": null,
-                "countsThisTx": null,
-                "userPrompt": "你有把這張聯邦綠卡的帳單設定由 New New Bank 帳戶自動扣繳嗎？",
-                "registerUrl": null
-              }
-            ]
-          ]
         }
       ]
     },
@@ -12372,6 +14259,7 @@
       ],
       "issuer": "聯邦銀行",
       "status": "active",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://card.ubot.com.tw/CardDetail/cardDetail201",
       "applyUrl": "https://card.ubot.com.tw/eCard/dspCardOnLineApply.aspx?GID=99&IDE=A&strID=2008060014",
@@ -12382,9 +14270,11 @@
           "label": "國內一般消費基本回饋",
           "archetype": "base",
           "categoryIds": [
-            "*"
+            "domestic"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -12442,6 +14332,8 @@
             "overseas"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -12499,6 +14391,8 @@
             "overseas"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -12553,9 +14447,11 @@
           "label": "國內LINE Pay加碼1%",
           "archetype": "channel",
           "categoryIds": [
-            "*"
+            "domestic"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -12639,6 +14535,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 4.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -12725,6 +14623,8 @@
             "sports"
           ],
           "merchantListId": "ubot-laidian-evenday",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -12799,7 +14699,7 @@
               },
               {
                 "id": "laidian-c6-5",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -12823,6 +14723,8 @@
             "shopping"
           ],
           "merchantListId": "ubot-laidian-ip",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -12880,6 +14782,8 @@
             "insurance"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -12937,6 +14841,8 @@
             "overseas"
           ],
           "merchantListId": "ubot-laidian-kr-food",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -12998,7 +14904,7 @@
               },
               {
                 "id": "laidian-c9-4",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -13020,6 +14926,8 @@
             "overseas"
           ],
           "merchantListId": "ubot-laidian-kr-food",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 10.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -13081,7 +14989,7 @@
               },
               {
                 "id": "laidian-c10-4",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -13103,6 +15011,8 @@
             "overseas"
           ],
           "merchantListId": "ubot-laidian-kr-food",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 7.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -13164,7 +15074,7 @@
               },
               {
                 "id": "laidian-c11-4",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -13186,6 +15096,8 @@
             "overseas"
           ],
           "merchantListId": "ubot-laidian-kr-shop",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -13247,7 +15159,7 @@
               },
               {
                 "id": "laidian-c12-4",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -13269,6 +15181,8 @@
             "overseas"
           ],
           "merchantListId": "ubot-laidian-kr-shop",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 2.0,
           "unit": "point",
           "pointCurrencyId": "linepoints",
@@ -13330,7 +15244,7 @@
               },
               {
                 "id": "laidian-c13-4",
-                "stateClass": "recoverable",
+                "stateClass": "advisory",
                 "type": "registration",
                 "targetId": "linepay-marketing-consent",
                 "operator": null,
@@ -13357,112 +15271,12 @@
       ],
       "issuer": "聯邦銀行",
       "status": "virtual",
+      "rewardProgram": null,
       "variantOf": null,
       "officialUrl": "https://card.ubot.com.tw/CardActivity",
       "applyUrl": null,
       "lastVerified": "2026-09-05",
       "components": [
-        {
-          "id": "ubot-common-c1",
-          "label": "New New Bank新戶自動扣繳卡費10%",
-          "archetype": "channel",
-          "categoryIds": [
-            "*"
-          ],
-          "merchantListId": null,
-          "rate": 10.0,
-          "unit": "percent",
-          "pointCurrencyId": null,
-          "cap": {
-            "type": "count",
-            "value": 3.0,
-            "period": "campaign",
-            "anchorDays": null
-          },
-          "validFrom": "2026-07-01",
-          "validTo": "2026-12-31",
-          "stackMode": "add",
-          "stackGroup": null,
-          "minSpend": null,
-          "activityUrl": null,
-          "capGroup": null,
-          "replaceGroup": null,
-          "validDays": null,
-          "conditionPaths": [
-            [
-              {
-                "id": "ubotc-c1-1",
-                "stateClass": "structural",
-                "type": "membership",
-                "targetId": "ubot-newnewbank-new",
-                "operator": null,
-                "value": null,
-                "valueUnit": null,
-                "valuePeriod": null,
-                "countsThisTx": null,
-                "userPrompt": "你是在 2026/7/1～12/31 期間才第一次申辦並成功開立聯邦 New New Bank 數位帳戶的嗎？",
-                "registerUrl": null
-              },
-              {
-                "id": "ubotc-c1-2",
-                "stateClass": "recoverable",
-                "type": "autopay",
-                "targetId": null,
-                "operator": null,
-                "value": null,
-                "valueUnit": null,
-                "valuePeriod": null,
-                "countsThisTx": null,
-                "userPrompt": "你有把聯邦信用卡的帳單設定成由 New New Bank 帳戶自動扣繳嗎？（★注意：設了這個，LINE Bank 自扣禮 5% 就永遠拿不到了）",
-                "registerUrl": null
-              }
-            ]
-          ]
-        },
-        {
-          "id": "ubot-common-c2",
-          "label": "iPASS MONEY繳卡費1%綠點",
-          "archetype": "channel",
-          "categoryIds": [
-            "*"
-          ],
-          "merchantListId": null,
-          "rate": 1.0,
-          "unit": "point",
-          "pointCurrencyId": "ipass-greenpoint",
-          "cap": {
-            "type": "amount",
-            "value": 200.0,
-            "period": "calendarMonth",
-            "anchorDays": null
-          },
-          "validFrom": "2026-06-17",
-          "validTo": "2026-12-31",
-          "stackMode": "add",
-          "stackGroup": null,
-          "minSpend": null,
-          "activityUrl": null,
-          "capGroup": null,
-          "replaceGroup": null,
-          "validDays": null,
-          "conditionPaths": [
-            [
-              {
-                "id": "ubotc-c2-1",
-                "stateClass": "recoverable",
-                "type": "appBinding",
-                "targetId": "ipassmoney",
-                "operator": null,
-                "value": null,
-                "valueUnit": null,
-                "valuePeriod": null,
-                "countsThisTx": null,
-                "userPrompt": "你在 iPASS MONEY App 裡完成「同意加入一卡通綠點」，並綁定了任一張聯邦信用卡嗎？",
-                "registerUrl": null
-              }
-            ]
-          ]
-        },
         {
           "id": "ubot-common-c3",
           "label": "iPASS MONEY APP綁卡消費10%綠點",
@@ -13471,6 +15285,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 10.0,
           "unit": "point",
           "pointCurrencyId": "ipass-greenpoint",
@@ -13516,6 +15332,19 @@
                 "countsThisTx": true,
                 "userPrompt": "這一筆用 iPASS MONEY 綁聯邦卡要滿 200 元才有 10% 綠點，湊得到嗎？",
                 "registerUrl": null
+              },
+              {
+                "id": "ubotc-c3-3",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "ipassmoney",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這一筆要用綁了聯邦卡的 iPASS MONEY 付嗎？（用實體卡或其他支付都拿不到這 10%）",
+                "registerUrl": null
               }
             ]
           ]
@@ -13528,6 +15357,8 @@
             "*"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "point",
           "pointCurrencyId": "pluspay-point",
@@ -13566,12 +15397,15 @@
         },
         {
           "id": "ubot-common-c5",
-          "label": "美廉社5%",
+          "label": "美廉社／小北百貨 天天滿300享5%",
           "archetype": "merchantList",
           "categoryIds": [
-            "supermarket"
+            "supermarket",
+            "other"
           ],
-          "merchantListId": "ubot-common-mlsocial",
+          "merchantListId": "ubot-common-social-xiaobei",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -13583,8 +15417,8 @@
           },
           "validFrom": "2026-07-01",
           "validTo": "2026-12-31",
-          "stackMode": "add",
-          "stackGroup": null,
+          "stackMode": "exclusive",
+          "stackGroup": "ubot-common-social",
           "minSpend": null,
           "activityUrl": null,
           "capGroup": "ubot-common-drugsuper",
@@ -13604,18 +15438,34 @@
                 "countsThisTx": null,
                 "userPrompt": "這個月登錄「美廉社／小北百貨」活動了嗎？每月 20 日上午 11 點開放，限量 5,000 名，沒登錄這個月刷的就白刷了。",
                 "registerUrl": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx"
+              },
+              {
+                "id": "ubotc-c5-2",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 300.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆美廉社／小北百貨要滿 300 元才有 5%，湊得到嗎？",
+                "registerUrl": null
               }
             ]
           ]
         },
         {
           "id": "ubot-common-c6",
-          "label": "小北百貨8%",
+          "label": "美廉社／小北百貨 週日滿500享8%",
           "archetype": "merchantList",
           "categoryIds": [
+            "supermarket",
             "other"
           ],
-          "merchantListId": "ubot-common-xiaobei",
+          "merchantListId": "ubot-common-social-xiaobei",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 8.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -13627,13 +15477,13 @@
           },
           "validFrom": "2026-07-01",
           "validTo": "2026-12-31",
-          "stackMode": "add",
-          "stackGroup": null,
+          "stackMode": "exclusive",
+          "stackGroup": "ubot-common-social",
           "minSpend": null,
           "activityUrl": null,
           "capGroup": "ubot-common-drugsuper",
           "replaceGroup": null,
-          "validDays": null,
+          "validDays": "sun",
           "conditionPaths": [
             [
               {
@@ -13647,6 +15497,19 @@
                 "valuePeriod": null,
                 "countsThisTx": null,
                 "userPrompt": "這個月登錄「美廉社／小北百貨」活動了嗎？每月 20 日上午 11 點開放，限量 5,000 名。",
+                "registerUrl": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx"
+              },
+              {
+                "id": "ubotc-c6-2",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 500.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "今天週日，這一筆美廉社／小北百貨滿 500 元就有 8%（未滿只有 5%），湊得到嗎？",
                 "registerUrl": null
               }
             ]
@@ -13660,6 +15523,8 @@
             "pharmacy"
           ],
           "merchantListId": "ubot-common-watsons",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -13691,7 +15556,7 @@
                 "valuePeriod": null,
                 "countsThisTx": null,
                 "userPrompt": "這個月登錄「屈臣氏聯邦日」了嗎？每月 5 日下午 2 點開放，限量 6,000 名，補登錄救不回上個月。",
-                "registerUrl": null
+                "registerUrl": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx"
               },
               {
                 "id": "ubotc-c7-2",
@@ -13717,6 +15582,8 @@
             "pharmacy"
           ],
           "merchantListId": "ubot-common-watsons",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 10.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -13748,7 +15615,7 @@
                 "valuePeriod": null,
                 "countsThisTx": null,
                 "userPrompt": "這個月登錄「屈臣氏聯邦日」了嗎？每月 5 日下午 2 點開放，限量 6,000 名。",
-                "registerUrl": null
+                "registerUrl": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx"
               },
               {
                 "id": "ubotc-c8-2",
@@ -13774,6 +15641,8 @@
             "convenience"
           ],
           "merchantListId": "ubot-common-711",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 10.0,
           "unit": "point",
           "pointCurrencyId": "openpoint",
@@ -13819,6 +15688,19 @@
                 "countsThisTx": true,
                 "userPrompt": "這一筆 7-ELEVEN 要滿 100 元才有 10% OPENPOINT，湊得到嗎？",
                 "registerUrl": null
+              },
+              {
+                "id": "ubotc-c9-3",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "openwallet",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這一筆要在 7-ELEVEN 用綁了聯邦卡的 OPEN 錢包付嗎？",
+                "registerUrl": null
               }
             ]
           ]
@@ -13831,6 +15713,8 @@
             "convenience"
           ],
           "merchantListId": "ubot-common-hilife",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 5.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -13859,6 +15743,8 @@
             "dining"
           ],
           "merchantListId": "ubot-common-wowprime",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 3.0,
           "unit": "point",
           "pointCurrencyId": "wowprime-point",
@@ -13903,6 +15789,8 @@
             "supermarket"
           ],
           "merchantListId": "ubot-common-pxmart",
+          "regionListId": null,
+          "regionMode": null,
           "rate": 30.0,
           "unit": "point",
           "pointCurrencyId": "pxmart-point",
@@ -13947,6 +15835,8 @@
             "insurance"
           ],
           "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
           "rate": 1.0,
           "unit": "percent",
           "pointCurrencyId": null,
@@ -13991,6 +15881,2431 @@
                 "valuePeriod": null,
                 "countsThisTx": null,
                 "userPrompt": "你登錄「保費一次付清加碼」活動了嗎？限量 10,000 名，而且回饋只從登錄當月起算，之前刷的救不回來。",
+                "registerUrl": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dbs-eco",
+      "name": "星展eco永續卡",
+      "aliases": [
+        "eco永續卡",
+        "星展eco卡",
+        "DBS eco卡",
+        "星展永續卡",
+        "星展ECO卡",
+        "星展eco永續信用卡"
+      ],
+      "issuer": "星展銀行",
+      "status": "active",
+      "rewardProgram": null,
+      "variantOf": null,
+      "officialUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs_eco/index.html",
+      "applyUrl": "https://www.dbs.com.tw/personal-zh/hoap/tw-ccoa/home?cardId=310",
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "dbs-eco-c1",
+          "label": "國內外一般消費基本回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "dbs-cashpoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs_eco/index.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "dbs-eco-c2",
+          "label": "國外指定地區實體商店一般消費加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "regionListId": "dbs-oversea-66",
+          "regionMode": "include",
+          "rate": 4.0,
+          "unit": "point",
+          "pointCurrencyId": "dbs-cashpoint",
+          "cap": {
+            "type": "amount",
+            "value": 600.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs_eco/index.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "dbs-eco-c2-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "instore-exc-googlepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆是在日本／韓國／泰國／新加坡／美洲／歐洲等指定國家的『當地實體門市』，用實體卡或 Apple Pay／Samsung Pay 面對面刷卡嗎？（網購、非面對面交易、當地電子票證儲值如日本SUICA／PASMO都不算；中國大陸、港澳、東南亞多數國家、澳洲不在指定名單內）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "dbs-eco-c3",
+          "label": "eco消費加碼－星展支持的社會企業及中小企業",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "shopping"
+          ],
+          "merchantListId": "dbs-eco-social",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 9.0,
+          "unit": "point",
+          "pointCurrencyId": "dbs-cashpoint",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs_eco/index.html",
+          "capGroup": "dbs-eco-cap-eco9",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "dbs-eco-c3-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "directcard",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆是直接刷星展eco永續卡付款嗎？（用街口支付、LINE Pay 等第三方支付、轉帳匯款、電子票證付款，或辦分期，都拿不到這 9%）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "dbs-eco-c4",
+          "label": "eco消費加碼－Tesla充電資費／Gogoro電池資費",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "transport"
+          ],
+          "merchantListId": "dbs-eco-ev",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 9.0,
+          "unit": "point",
+          "pointCurrencyId": "dbs-cashpoint",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs_eco/index.html",
+          "capGroup": "dbs-eco-cap-eco9",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "dbs-eco-c4-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "ev-charge-app",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把星展eco永續卡綁在 Tesla APP 或 Gogoro APP，用來繳『全額』充電資費／電池資費了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "dbs-eco-c4-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "directcard",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆是直接以綁定的星展eco永續卡扣款嗎？（改用第三方支付、轉帳匯款、電子票證或辦分期都不算）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "dbs-eco-c5",
+          "label": "新申辦卡友LINE Pay加碼9%",
+          "archetype": "channel",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 9.0,
+          "unit": "point",
+          "pointCurrencyId": "linepoints",
+          "cap": {
+            "type": "amount",
+            "value": 300.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs_eco/index.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "dbs-eco-c5-1",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "dbs-newuser",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你是星展信用卡新戶嗎？（申請當日之前180天內未持有星展任一張信用卡正卡）",
+                "registerUrl": null
+              },
+              {
+                "id": "dbs-eco-c5-2",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把星展eco永續卡綁定到 LINE Pay 了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "dbs-eco-c5-3",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "linepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆要用 LINE Pay 結帳嗎？（帳單明細必須出現「連加*」「LINE Pay」「LPEPI」「連支*」其中一個才算）",
+                "registerUrl": null
+              },
+              {
+                "id": "dbs-eco-c5-4",
+                "stateClass": "recoverable",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 3000.0,
+                "valueUnit": "TWD",
+                "valuePeriod": "campaign",
+                "countsThisTx": true,
+                "userPrompt": "到 2026/9/30 為止，你用這張卡刷 LINE Pay 累積滿 3,000 元了嗎？差 1 元就整筆 9% 全部拿不到",
+                "registerUrl": null
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dbs-eco-min",
+      "name": "星展eco永續極簡卡",
+      "aliases": [
+        "eco永續極簡卡",
+        "星展eco極簡卡",
+        "eco極簡卡",
+        "DBS eco極簡卡",
+        "星展永續極簡卡",
+        "星展ECO永續極簡卡",
+        "星展eco永續極簡信用卡",
+        "極簡卡"
+      ],
+      "issuer": "星展銀行",
+      "status": "discontinued",
+      "rewardProgram": null,
+      "variantOf": null,
+      "officialUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-credit-cards/eco-ez",
+      "applyUrl": null,
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "dbs-eco-min-c1",
+          "label": "國內外一般消費基本回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "regionListId": "dbs-europe-excluded",
+          "regionMode": "exclude",
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "dbs-cashbonus",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-credit-cards/eco-ez",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "dbs-eco-min-c2",
+          "label": "國外指定地區一般消費加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "regionListId": "dbs-oversea-25",
+          "regionMode": "include",
+          "rate": 4.0,
+          "unit": "point",
+          "pointCurrencyId": "dbs-cashbonus",
+          "cap": {
+            "type": "amount",
+            "value": 600.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-credit-cards/eco-ez",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "dbs-eco-min-c2-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "instore-exc-googlepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆是在日本、韓國、泰國、新加坡或美洲地區〈共25國，含美國、加拿大、墨西哥、巴西、關島等〉當地刷的，而且是用實體卡片或 Apple Pay／Samsung Pay、以當地幣別結帳嗎？（★歐洲、中國大陸、港澳、越南、馬來西亞、菲律賓、澳洲、紐西蘭都不在名單內；帳單上必須同時出現「國外交易手續費」這一筆才算）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "dbs-eco-min-c3",
+          "label": "eco消費加碼－星展支持的社會企業及中小企業",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "shopping"
+          ],
+          "merchantListId": "dbs-eco-social",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 9.0,
+          "unit": "point",
+          "pointCurrencyId": "dbs-cashbonus",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-credit-cards/eco-ez",
+          "capGroup": "dbs-eco-min-cap-eco9",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "dbs-eco-min-c3-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "directcard",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆是直接刷星展eco永續極簡卡付款嗎？（用街口支付、LINE Pay 等第三方支付、轉帳匯款、電子票證付款，或辦分期，都拿不到這 9%）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "dbs-eco-min-c4",
+          "label": "eco消費加碼－Tesla充電資費／Gogoro電池資費",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "transport"
+          ],
+          "merchantListId": "dbs-eco-ev",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 9.0,
+          "unit": "point",
+          "pointCurrencyId": "dbs-cashbonus",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-credit-cards/eco-ez",
+          "capGroup": "dbs-eco-min-cap-eco9",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "dbs-eco-min-c4-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "ev-charge-app",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把星展eco永續極簡卡綁在 Tesla 或 Gogoro 的官方 APP，用來繳『全額』充電資費／電池資費了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "dbs-eco-min-c4-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "directcard",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆是直接以綁定的星展eco永續極簡卡扣款嗎？（改用第三方支付、轉帳匯款、電子票證或辦分期都不算）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dbs-pchome",
+      "name": "星展PChome Prime聯名卡",
+      "aliases": [
+        "PChome Prime聯名卡",
+        "星展PChome卡",
+        "PChome聯名卡",
+        "DBS PChome Prime",
+        "星展PChome Prime卡",
+        "PChome Prime卡",
+        "星展網家聯名卡"
+      ],
+      "issuer": "星展銀行",
+      "status": "active",
+      "rewardProgram": null,
+      "variantOf": null,
+      "officialUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-pchomeprime/index.html",
+      "applyUrl": "https://www.dbs.com.tw/personal-zh/hoap/tw-ccoa/home?cardId=771",
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "dbs-pchome-c1",
+          "label": "國內外一般消費基本回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "regionListId": "dbs-europe-excluded",
+          "regionMode": "exclude",
+          "rate": 0.5,
+          "unit": "point",
+          "pointCurrencyId": "pchome-point",
+          "cap": {
+            "type": "amount",
+            "value": 1000.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-pchomeprime/index.html",
+          "capGroup": "dbs-pchome-cap-point",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "dbs-pchome-c2",
+          "label": "PChome站內一般消費－額外聯名點數加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "ecommerce"
+          ],
+          "merchantListId": "dbs-pchome-instation",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 1.5,
+          "unit": "point",
+          "pointCurrencyId": "pchome-point",
+          "cap": {
+            "type": "amount",
+            "value": 1000.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-pchomeprime/index.html",
+          "capGroup": "dbs-pchome-cap-point",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "dbs-pchome-c3",
+          "label": "PChome站內一般消費－P幣2%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "ecommerce"
+          ],
+          "merchantListId": "dbs-pchome-instation",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "pchome-pcoin",
+          "cap": {
+            "type": "amount",
+            "value": 1000.0,
+            "period": "statementCycle",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-pchomeprime/index.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "dbs-pchome-c3-1",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "pchome-account",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把星展PChome Prime聯名卡（正卡）綁定到你的 PChome 線上購物會員帳號了嗎？（沒綁定就一毛 P 幣都拿不到，而且官網明講「若未綁定恕不個案補發」）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "dbs-pchome-c4",
+          "label": "PChome站內每週四加碼P幣2%（一般消費）",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "ecommerce"
+          ],
+          "merchantListId": "dbs-pchome-instation",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "pchome-pcoin",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-pchomeprime/index.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "thu",
+          "conditionPaths": [
+            [
+              {
+                "id": "dbs-pchome-c4-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "wallet-fullpay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆 PChome 站內消費，是用實體聯名卡，或用 Apple Pay／LINE Pay／Samsung Pay／Pi 拍錢包／悠遊付／全盈+PAY 綁這張卡「全額」付掉的嗎？（只要有一部分用 PChome 儲值金或禮券折抵，週四這 2% 就整筆不算）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "dbs-pchome-c5",
+          "label": "國外指定通路加碼P幣2.5%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": "dbs-pchome-overseas",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 2.5,
+          "unit": "point",
+          "pointCurrencyId": "pchome-pcoin",
+          "cap": {
+            "type": "amount",
+            "value": 2000.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-pchomeprime/index.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "dbs-pchome-c5-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "physicalcard",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆是在指定的國外通路（Coupang、Amazon、ASOS、SHEIN、iHerb、Netflix、Spotify、Steam…共18家）「直接刷」這張聯名卡嗎？而且商店國別不是台灣、不是用新台幣結帳、帳單上會另外收一筆國外交易手續費？（★用 Apple Pay、Samsung Pay、Google Pay、LINE Pay、街口、全支付等任何行動支付或第三方支付都拿不到這 2.5%）",
+                "registerUrl": null
+              },
+              {
+                "id": "dbs-pchome-c5-2",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "pchome-account",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把星展PChome Prime聯名卡（正卡）綁定到 PChome 線上購物會員帳號了嗎？（這 2.5% 是 P 幣，會匯進你綁定的 PChome 帳戶；官網明文「若未綁定恕不個案補發」）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "dbs-pchome-c6",
+          "label": "PChome站內分期消費－P幣4%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "ecommerce"
+          ],
+          "merchantListId": "dbs-pchome-instation",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 4.0,
+          "unit": "point",
+          "pointCurrencyId": "pchome-pcoin",
+          "cap": {
+            "type": "amount",
+            "value": 8000.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-pchomeprime/index.html",
+          "capGroup": null,
+          "replaceGroup": "dbs-pchome-installment",
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "dbs-pchome-c6-1",
+                "stateClass": "onsite",
+                "type": "installment",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆 PChome 站內消費要在結帳當下辦分期嗎？（刷完之後再申請分期、或帳單分期都不算）",
+                "registerUrl": null
+              },
+              {
+                "id": "dbs-pchome-c6-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "★這 4% P 幣要「事後登錄」才拿得到：刷完分期之後，最晚要在【消費當月的次月 15 日前】到 PChome 網站（先登入 PChome 會員）登錄這筆分期交易，逾期不補、不個案處理。★整個活動期間（到 2026/12/31）每張卡只能登錄一筆，一旦登錄成功不能取消或改；若期間有多筆分期，系統會取金額最高的那筆",
+                "registerUrl": null
+              },
+              {
+                "id": "dbs-pchome-c6-3",
+                "stateClass": "structural",
+                "type": "appBinding",
+                "targetId": "pchome-account",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把星展PChome Prime聯名卡（正卡）綁定到 PChome 線上購物會員帳號了嗎？（分期的 4% P 幣同樣會匯進綁定的帳戶）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "dbs-pchome-c7",
+          "label": "PChome站內分期消費－每週四加碼P幣2%",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "ecommerce"
+          ],
+          "merchantListId": "dbs-pchome-instation",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "pchome-pcoin",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-pchomeprime/index.html",
+          "capGroup": null,
+          "replaceGroup": "dbs-pchome-installment",
+          "validDays": "thu",
+          "conditionPaths": [
+            [
+              {
+                "id": "dbs-pchome-c7-1",
+                "stateClass": "onsite",
+                "type": "installment",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆 PChome 站內消費要在結帳當下辦分期嗎？（刷完之後再申請分期、或帳單分期都不算）",
+                "registerUrl": null
+              },
+              {
+                "id": "dbs-pchome-c7-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "wallet-fullpay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這筆分期是用實體聯名卡，或用 Apple Pay／LINE Pay／Samsung Pay／Pi 拍錢包／悠遊付／全盈+PAY 綁這張卡「全額」付掉的嗎？（搭配 PChome 儲值金或禮券折抵就不算）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dbs-aov",
+      "name": "星展傳說對決聯名卡",
+      "aliases": [
+        "傳說對決聯名卡",
+        "星展傳說對決卡",
+        "傳說對決信用卡",
+        "星展AOV卡",
+        "DBS AOV",
+        "星展傳說對決聯名卡(一卡通)",
+        "Arena of Valor聯名卡",
+        "AOV聯名卡"
+      ],
+      "issuer": "星展銀行",
+      "status": "active",
+      "rewardProgram": null,
+      "variantOf": null,
+      "officialUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-aov/index.html",
+      "applyUrl": "https://www.dbs.com.tw/personal-zh/hoap/tw-ccoa/home?cardId=130",
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "dbs-aov-c1",
+          "label": "國內一般消費基本回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "domestic"
+          ],
+          "merchantListId": null,
+          "regionListId": "dbs-europe-excluded",
+          "regionMode": "exclude",
+          "rate": 0.2,
+          "unit": "point",
+          "pointCurrencyId": "dbs-cashpoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "dbs-aov-base",
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-aov/index.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "dbs-aov-c2",
+          "label": "國內一般消費－存戶升級回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "domestic"
+          ],
+          "merchantListId": null,
+          "regionListId": "dbs-europe-excluded",
+          "regionMode": "exclude",
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "dbs-cashpoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "dbs-aov-base",
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-aov/index.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "aov-c2-1",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有用指定的星展帳戶設定這張卡的信用卡自動轉帳付款嗎？（沒設定的話國內只有 0.2%）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "dbs-aov-c3",
+          "label": "國外一般消費基本回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "regionListId": "dbs-europe-excluded",
+          "regionMode": "exclude",
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "dbs-cashpoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "dbs-aov-base",
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-aov/index.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "dbs-aov-c4",
+          "label": "存戶升級－生活玩家精選通路加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "gaming",
+            "streaming",
+            "ecommerce",
+            "delivery",
+            "dining",
+            "shopping",
+            "ticketing"
+          ],
+          "merchantListId": "dbs-aov-gamerlife",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 9.0,
+          "unit": "point",
+          "pointCurrencyId": "dbs-cashpoint",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-aov/index.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "aov-c4-1",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有用指定的星展帳戶設定這張卡的信用卡自動轉帳付款嗎？（沒設定的話精選通路只有原本的 1%）",
+                "registerUrl": null
+              },
+              {
+                "id": "aov-c4-2",
+                "stateClass": "onsite",
+                "type": "merchantNameMatch",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這一筆的信用卡帳單明細會不會直接顯示這家店的名字？（在百貨櫃位、店中櫃、複合店，或用外送平台代收的話系統認不出來，就沒有這 9%）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "dbs-aov-c5",
+          "label": "存戶升級－日韓泰新美洲實體商店加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "regionListId": "dbs-oversea-non-eu",
+          "regionMode": "include",
+          "rate": 4.0,
+          "unit": "point",
+          "pointCurrencyId": "dbs-cashpoint",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-aov/index.html",
+          "capGroup": "dbs-aov-cap-oversea",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "aov-c5-1",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有用指定的星展帳戶設定這張卡的信用卡自動轉帳付款嗎？（沒設定的話海外實體店只有原本的 1%）",
+                "registerUrl": null
+              },
+              {
+                "id": "aov-c5-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "instore-exc-googlepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你人在日本、韓國、泰國、新加坡、美洲或指定歐洲國家，而且是拿實體卡／Apple Pay／Samsung Pay 當面刷的嗎？（網購、中國大陸、港澳、東南亞其他國家都不算）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "dbs-aov-c6",
+          "label": "存戶升級－歐洲地區實體商店加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "regionListId": "dbs-europe-excluded",
+          "regionMode": "include",
+          "rate": 5.0,
+          "unit": "point",
+          "pointCurrencyId": "dbs-cashpoint",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.dbs.com.tw/personal-zh/cards/dbs-aov/index.html",
+          "capGroup": "dbs-aov-cap-oversea",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "aov-c6-1",
+                "stateClass": "recoverable",
+                "type": "autopay",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有用指定的星展帳戶設定這張卡的信用卡自動轉帳付款嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "aov-c6-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "instore-exc-googlepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你人在歐洲 31 國之一，而且是拿實體卡／Apple Pay／Samsung Pay 當面刷的嗎？（歐洲實體店沒有基本 1%，這 5% 就是全部）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ctbc-uniopen",
+      "name": "uniopen聯名卡",
+      "aliases": [
+        "中國信託uniopen聯名卡",
+        "uniopen卡",
+        "中信uniopen",
+        "中信7-11聯名卡",
+        "統一超商聯名卡",
+        "OPENPOINT聯名卡",
+        "uniopen世界卡",
+        "uniopen鈦金卡",
+        "CTBC uniopen"
+      ],
+      "issuer": "中國信託",
+      "status": "active",
+      "rewardProgram": null,
+      "variantOf": null,
+      "officialUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/cc_index/cc_product/cc_introduction_index/C_uniopen.html",
+      "applyUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/onlinecounter_index/cc_service/cc_service_card_index/cc_service_card_apply.html?Dsn=0&Card1[Crd]=C_uniopen&Unit=13157&ck=1",
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "ctbc-uniopen-c1",
+          "label": "國內一般消費基本回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "domestic"
+          ],
+          "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "ctbc-uniopen-base",
+          "minSpend": null,
+          "activityUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/cc_index/cc_product/cc_introduction_index/C_uniopen.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c1-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？（沒連結的話點數拿不到手）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c2",
+          "label": "國外一般消費基本回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "ctbc-uniopen-base",
+          "minSpend": null,
+          "activityUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/cc_index/cc_product/cc_introduction_index/C_uniopen.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c2-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c3",
+          "label": "國外實體商店加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "none",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/cc_index/cc_product/cc_introduction_index/C_uniopen.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c3-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c3-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "instore-inc-googlepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這一筆是在國外的實體店面「當面刷」的嗎？（實體卡／Apple Pay／Google Pay／Samsung Pay 都算；網購、掃條碼、第三方支付都不算）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c4",
+          "label": "國外實體商店再加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 8.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/cc_index/cc_product/cc_introduction_index/C_uniopen.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c4-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c4-2",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "instore-inc-googlepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這一筆是在國外的實體店面「當面刷」的嗎？（網購、掃條碼、第三方支付都不算）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c5",
+          "label": "統一企業集團消費加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "convenience",
+            "dining",
+            "department",
+            "supermarket",
+            "ecommerce",
+            "shopping",
+            "travel",
+            "transport"
+          ],
+          "merchantListId": "ctbc-uniopen-unigroup",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/cc_index/cc_product/cc_introduction_index/C_uniopen.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c5-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c5-2",
+                "stateClass": "onsite",
+                "type": "merchantNameMatch",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這一筆的信用卡帳單明細會不會直接顯示這家店的名字？（在百貨／商場／機場／車站／飯店／賣場／美食街裡面的櫃位，系統常認不出來就沒有這 2%）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c6a",
+          "label": "統一企業集團踩點任務加碼－當月2個品牌",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "convenience",
+            "dining",
+            "department",
+            "supermarket",
+            "ecommerce",
+            "shopping",
+            "travel",
+            "transport"
+          ],
+          "merchantListId": "ctbc-uniopen-unigroup",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 1.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "ctbc-uniopen-stamp",
+          "minSpend": null,
+          "activityUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/cc_index/cc_product/cc_introduction_index/C_uniopen.html",
+          "capGroup": "ctbc-uniopen-cap-stamp",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c6a-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c6a-2",
+                "stateClass": "recoverable",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 2.0,
+                "valueUnit": "times",
+                "valuePeriod": "thisMonth",
+                "countsThisTx": true,
+                "userPrompt": "這個月（含這一筆）你已經在幾個「不同」的統一企業集團品牌各刷滿 199 元？滿 2 家才有 1%",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c6a-3",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 199.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆有滿 199 元嗎？（沒滿的話這家店不算進踩點）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c6b",
+          "label": "統一企業集團踩點任務加碼－當月3個品牌",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "convenience",
+            "dining",
+            "department",
+            "supermarket",
+            "ecommerce",
+            "shopping",
+            "travel",
+            "transport"
+          ],
+          "merchantListId": "ctbc-uniopen-unigroup",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 2.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "ctbc-uniopen-stamp",
+          "minSpend": null,
+          "activityUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/cc_index/cc_product/cc_introduction_index/C_uniopen.html",
+          "capGroup": "ctbc-uniopen-cap-stamp",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c6b-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c6b-2",
+                "stateClass": "recoverable",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 3.0,
+                "valueUnit": "times",
+                "valuePeriod": "thisMonth",
+                "countsThisTx": true,
+                "userPrompt": "這個月（含這一筆）你已經在幾個「不同」的統一企業集團品牌各刷滿 199 元？滿 3 家有 2%",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c6b-3",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 199.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆有滿 199 元嗎？",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c6c",
+          "label": "統一企業集團踩點任務加碼－當月4個品牌",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "convenience",
+            "dining",
+            "department",
+            "supermarket",
+            "ecommerce",
+            "shopping",
+            "travel",
+            "transport"
+          ],
+          "merchantListId": "ctbc-uniopen-unigroup",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "ctbc-uniopen-stamp",
+          "minSpend": null,
+          "activityUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/cc_index/cc_product/cc_introduction_index/C_uniopen.html",
+          "capGroup": "ctbc-uniopen-cap-stamp",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c6c-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c6c-2",
+                "stateClass": "recoverable",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 4.0,
+                "valueUnit": "times",
+                "valuePeriod": "thisMonth",
+                "countsThisTx": true,
+                "userPrompt": "這個月（含這一筆）你已經在幾個「不同」的統一企業集團品牌各刷滿 199 元？滿 4 家有 3%",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c6c-3",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 199.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆有滿 199 元嗎？",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c6d",
+          "label": "統一企業集團踩點任務加碼－當月5個品牌以上",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "convenience",
+            "dining",
+            "department",
+            "supermarket",
+            "ecommerce",
+            "shopping",
+            "travel",
+            "transport"
+          ],
+          "merchantListId": "ctbc-uniopen-unigroup",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 4.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 500.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2026-12-31",
+          "stackMode": "exclusive",
+          "stackGroup": "ctbc-uniopen-stamp",
+          "minSpend": null,
+          "activityUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/cc_index/cc_product/cc_introduction_index/C_uniopen.html",
+          "capGroup": "ctbc-uniopen-cap-stamp",
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c6d-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c6d-2",
+                "stateClass": "recoverable",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 5.0,
+                "valueUnit": "times",
+                "valuePeriod": "thisMonth",
+                "countsThisTx": true,
+                "userPrompt": "這個月（含這一筆）你已經在幾個「不同」的統一企業集團品牌各刷滿 199 元？滿 5 家（含以上）有 4%",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c6d-3",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 199.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆有滿 199 元嗎？",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c7",
+          "label": "綁定icash Pay加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "domestic"
+          ],
+          "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 4.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 150.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-09-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/cc_index/cc_product/cc_introduction_index/C_uniopen.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c7-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c7-2",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "icashpay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你已經把 uniopen 聯名卡綁進 icash Pay 了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c7-3",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "icashpay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這一筆要用 icash Pay 結帳嗎？（直接刷實體卡沒有這個 4%）",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c7-4",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 199.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆有滿 199 元嗎？",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c8",
+          "label": "夢時代週末指定用餐店櫃加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "dining"
+          ],
+          "merchantListId": "ctbc-uniopen-dreammall",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 8.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 150.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://mkt.ctbcbank.com/long/creditcard/N2025052600033_01/search.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "fri-sun",
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c8-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c8-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你這個月有到中信銀行 APP 領「夢時代加碼 8%」的卡友專屬券嗎？（每月 1 日開放領，每月要重領一次，限量 15,000 名）",
+                "registerUrl": "https://www.ctbcbank.com/content/dam/minisite/long/mobile/PRO_URL.html?TWRBM_Application_TX011"
+              },
+              {
+                "id": "uniopen-c8-3",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "physicalcard",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這一筆要用 uniopen 聯名卡的「實體卡」單筆全額刷嗎？（Apple Pay／Google Pay／Samsung Pay／icash Pay／OPEN錢包／LINE Pay 都不算）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c9a",
+          "label": "首次綁定行動支付搭北捷加碼－2026Q3",
+          "archetype": "channel",
+          "categoryIds": [
+            "transport"
+          ],
+          "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 6.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 50.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-09-30",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://mkt.ctbcbank.com/long/creditcard/N2025052600033_01/search.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c9a-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c9a-2",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "ctbc-uniopen-firstbind",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這張 uniopen 聯名卡以前綁過 Apple Pay／Google Pay／Samsung Pay 嗎？（綁過就永遠拿不到這個 6%）",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c9a-3",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你這一季有到中信銀行 APP 領「北捷加碼 6%」的卡友專屬券嗎？（每季要重領一次，券數不限量）",
+                "registerUrl": "https://www.ctbcbank.com/content/dam/minisite/long/mobile/PRO_URL.html?TWRBM_Application_TX011"
+              },
+              {
+                "id": "uniopen-c9a-4",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "contactless-phone",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這一筆是拿手機（Apple Pay／Google Pay／Samsung Pay）感應台北捷運閘門付車資嗎？",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c9b",
+          "label": "首次綁定行動支付搭北捷加碼－2026Q4",
+          "archetype": "channel",
+          "categoryIds": [
+            "transport"
+          ],
+          "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 6.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 50.0,
+            "period": "campaign",
+            "anchorDays": null
+          },
+          "validFrom": "2026-10-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://mkt.ctbcbank.com/long/creditcard/N2025052600033_01/search.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c9b-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c9b-2",
+                "stateClass": "structural",
+                "type": "membership",
+                "targetId": "ctbc-uniopen-firstbind",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這張 uniopen 聯名卡以前綁過 Apple Pay／Google Pay／Samsung Pay 嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c9b-3",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你這一季有到中信銀行 APP 領「北捷加碼 6%」的卡友專屬券嗎？（每季要重領一次）",
+                "registerUrl": "https://www.ctbcbank.com/content/dam/minisite/long/mobile/PRO_URL.html?TWRBM_Application_TX011"
+              },
+              {
+                "id": "uniopen-c9b-4",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "contactless-phone",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這一筆是拿手機感應台北捷運閘門付車資嗎？",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c10",
+          "label": "Yahoo購物週五加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "ecommerce"
+          ],
+          "merchantListId": "ctbc-uniopen-yahoo",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 5.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 200.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://mkt.ctbcbank.com/long/creditcard/N2025052600033_01/search.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "fri",
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c10-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c10-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你這一週有到 Yahoo 購物平台登記這檔 5% 活動嗎？（每週五下午 3 點開放登記，每週限量 100 名，額滿提前結束）",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c10-3",
+                "stateClass": "recoverable",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 2000.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "你這一週（含這一筆）在 Yahoo 購物中心＋Yahoo 拍賣累積刷滿 2,000 元了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c10-4",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "no-linepay-applepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這一筆不能用 LINE Pay 或 Apple Pay 下單（其他付款方式都可以，分期或一次付清都算）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c11",
+          "label": "博客來App週末加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "ecommerce"
+          ],
+          "merchantListId": "ctbc-uniopen-books",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 3.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 200.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://mkt.ctbcbank.com/long/creditcard/N2025052600033_01/search.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": "sat-sun",
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c11-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c11-2",
+                "stateClass": "recoverable",
+                "type": "registration",
+                "targetId": null,
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你這個月有在博客來 App 裡登記這檔 3% 活動嗎？（每月 1 日 00:00 到月底 23:59 可登記，每月限量 300 名）",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c11-3",
+                "stateClass": "onsite",
+                "type": "spendThreshold",
+                "targetId": null,
+                "operator": "gte",
+                "value": 3000.0,
+                "valueUnit": "TWD",
+                "valuePeriod": null,
+                "countsThisTx": true,
+                "userPrompt": "這一筆在博客來 App 有單筆滿 3,000 元嗎？（滿 2,000 元只有 100 元 E-Coupon，沒有 3% 點數）",
+                "registerUrl": null
+              },
+              {
+                "id": "uniopen-c11-4",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "icashpay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這一筆要在博客來 App 裡用 uniopen 聯名卡直接刷、或用綁了這張卡的 icash Pay 付（OPEN錢包／LINE Pay／台灣行動支付都不算），而且要單筆全額付清（不能分期、不能用紅利折抵）",
+                "registerUrl": null
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ctbc-uniopen-c12",
+          "label": "黑貓宅急便運費加碼",
+          "archetype": "merchantList",
+          "categoryIds": [
+            "delivery"
+          ],
+          "merchantListId": "ctbc-uniopen-takkyubin",
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 5.0,
+          "unit": "point",
+          "pointCurrencyId": "openpoint",
+          "cap": {
+            "type": "amount",
+            "value": 200.0,
+            "period": "calendarMonth",
+            "anchorDays": null
+          },
+          "validFrom": "2026-07-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://mkt.ctbcbank.com/long/creditcard/N2025052600033_01/search.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "uniopen-c12-1",
+                "stateClass": "recoverable",
+                "type": "appBinding",
+                "targetId": "uniopen-member",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "你有在中信銀行 APP 裡把這張卡「連結 uniopen 會員」了嗎？",
+                "registerUrl": null
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ctbc-lol",
+      "name": "英雄聯盟卡",
+      "aliases": [
+        "英雄聯盟信用卡",
+        "中國信託英雄聯盟卡",
+        "中信英雄聯盟卡",
+        "LOL卡",
+        "中信LOL卡",
+        "英雄聯盟聯名卡",
+        "GAMERS ONLY卡",
+        "CTBC LOL"
+      ],
+      "issuer": "中國信託",
+      "status": "discontinued",
+      "rewardProgram": null,
+      "variantOf": null,
+      "officialUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/cc_index/cc_product/cc_introduction_index/B_LOL.html",
+      "applyUrl": null,
+      "lastVerified": "2026-09-05",
+      "components": [
+        {
+          "id": "ctbc-lol-c1",
+          "label": "國內外一般消費基本回饋",
+          "archetype": "base",
+          "categoryIds": [
+            "*"
+          ],
+          "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 1.0,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "unspecified",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/cc_index/cc_product/cc_introduction_index/B_LOL.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": []
+        },
+        {
+          "id": "ctbc-lol-c2",
+          "label": "國外實體商店加碼",
+          "archetype": "channel",
+          "categoryIds": [
+            "overseas"
+          ],
+          "merchantListId": null,
+          "regionListId": null,
+          "regionMode": null,
+          "rate": 1.5,
+          "unit": "percent",
+          "pointCurrencyId": null,
+          "cap": {
+            "type": "unspecified",
+            "value": null,
+            "period": null,
+            "anchorDays": null
+          },
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "stackMode": "add",
+          "stackGroup": null,
+          "minSpend": null,
+          "activityUrl": "https://www.ctbcbank.com/content/twrbo/zh_tw/cc_index/cc_product/cc_introduction_index/B_LOL.html",
+          "capGroup": null,
+          "replaceGroup": null,
+          "validDays": null,
+          "conditionPaths": [
+            [
+              {
+                "id": "lol-c2-1",
+                "stateClass": "onsite",
+                "type": "payment",
+                "targetId": "instore-inc-googlepay",
+                "operator": null,
+                "value": null,
+                "valueUnit": null,
+                "valuePeriod": null,
+                "countsThisTx": null,
+                "userPrompt": "這一筆是在國外的實體店面「當面刷」的嗎？（實體卡／Apple Pay／Google Pay／Samsung Pay 都算；網購、掃條碼、第三方支付都不算）",
                 "registerUrl": null
               }
             ]
